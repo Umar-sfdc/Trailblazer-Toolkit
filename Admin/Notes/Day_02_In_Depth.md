@@ -1,4 +1,4 @@
-# Day 01: Multi-Tenant Architecture in Salesforce  
+# Day 02: Multi-Tenant Architecture in Salesforce  
 
 In Salesforce, **Multi-Tenant Architecture** refers to the design where a single instance of the software serves multiple customers (tenants). Each tenant’s data and configurations are kept separate, even though they run on the same system. This ensures:  
 - Security  

@@ -1,4 +1,4 @@
-# Day 02: Introduction to Salesforce and Related Platforms  
+# Day 01: Introduction to Salesforce and Related Platforms  
 
 ## What is Salesforce?  
 Salesforce is a cloud-based **Customer Relationship Management (CRM)** platform. It helps businesses:  
