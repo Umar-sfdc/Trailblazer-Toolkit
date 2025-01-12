@@ -1,4 +1,4 @@
-# Day 11: Salesforce Validation Rules
+# Salesforce Validation Rules
 
 Validation rules in Salesforce are powerful tools to ensure data integrity by enforcing business rules on the data entered by users. These rules are written in Salesforce's formula language and evaluate to `true` or `false`. If a validation rule evaluates to `true`, an error message is displayed, and the user cannot save the record.
 
@@ -98,6 +98,87 @@ Ensure that the "Close Date" for an Opportunity falls within the current fiscal 
 NOT(AND(YEAR(CloseDate) = YEAR(TODAY()), MONTH(CloseDate) <= 12))
 ```
 **Error Message:** "Close Date must fall within the current fiscal year."
+
+---
+
+## 🔍 Functions in Validation Rules with Examples
+
+Salesforce provides a wide range of functions that can be used in validation rules. Below are some key functions with advanced examples:
+
+### 1. **ISBLANK / ISNULL**
+**Purpose:** Check if a field is blank or null.
+
+**Example:** Prevent saving a record if both "Phone" and "Email" are blank.
+```plaintext
+AND(ISBLANK(Phone), ISBLANK(Email))
+```
+**Error Message:** "Either Phone or Email must be filled."
+
+---
+
+### 2. **ISPICKVAL**
+**Purpose:** Evaluate picklist values.
+
+**Example:** Ensure "Reason for Loss" is provided when "Stage" is set to "Closed Lost".
+```plaintext
+AND(ISPICKVAL(StageName, "Closed Lost"), ISBLANK(Reason_for_Loss__c))
+```
+**Error Message:** "Reason for Loss is required for Closed Lost opportunities."
+
+---
+
+### 3. **CONTAINS**
+**Purpose:** Check if a text field contains a specific substring.
+
+**Example:** Prevent the use of certain words in a "Comments" field.
+```plaintext
+CONTAINS(Comments__c, "confidential")
+```
+**Error Message:** "The word 'confidential' is not allowed in Comments."
+
+---
+
+### 4. **REGEX**
+**Purpose:** Validate input using regular expressions.
+
+**Example:** Ensure a "Phone" field matches a specific format (e.g., (123) 456-7890).
+```plaintext
+NOT(REGEX(Phone, "^\\(\\d{3}\\) \\d{3}-\\d{4}$"))
+```
+**Error Message:** "Phone number must be in the format (123) 456-7890."
+
+---
+
+### 5. **LEN**
+**Purpose:** Check the length of a text field.
+
+**Example:** Ensure "Description" does not exceed 255 characters.
+```plaintext
+LEN(Description) > 255
+```
+**Error Message:** "Description cannot exceed 255 characters."
+
+---
+
+### 6. **TEXT**
+**Purpose:** Convert picklist or other non-text values to text.
+
+**Example:** Validate that "Industry" is not set to "Other".
+```plaintext
+TEXT(Industry) = "Other"
+```
+**Error Message:** "Please specify a valid Industry."
+
+---
+
+### 7. **AND / OR**
+**Purpose:** Combine multiple conditions.
+
+**Example:** Ensure "Budget" is provided for high-priority opportunities.
+```plaintext
+AND(ISPICKVAL(Priority__c, "High"), ISBLANK(Budget__c))
+```
+**Error Message:** "Budget is required for High Priority opportunities."
 
 ---
 
