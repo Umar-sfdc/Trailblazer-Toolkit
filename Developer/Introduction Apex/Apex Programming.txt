@@ -1,0 +1,36 @@
+Apex Programming
+=================
+
+Apex programming language is the world's first cloud based and object oriented programming language.
+
+Each business logic should be implemented interm of "Classes & Objects".
+
+By using this programming language, we can implement the complex validation rules and the complex transactional flow.
+
+Each statement in the apex programming should be ends with a "semi colon".
+
+Apex is tightly coupled with programming language. we need to define the variables before it's usage.
+
+By using apex programming language, we can built the custom business logic.
+
+By using apex, we can perform all the DML (Insert, Update, Delete, Upsert, Undelete) manipulations in the salesforce object.
+
+Apex programming is tightly integrated with "Salesforce objects".
+
+By using apex programming, we can retreive the record from the salesforce objects with the help of "SOQL queries".
+
+By using apex, we can integrate the salesforce application with the external systems with the help of "REST / SOAP API".
+
+Each apex programming code / statement, should be compiled and executed by the application server inside the force.com platform.
+
+Apex is not a case-sensitive programming.
+
+
+When Should I Use Apex?
+-----------------------
+1. To create Email services
+2. Create web services
+3. Perform complex validation over multiple objects
+4. To create complex business processes that are not supported by workflow.
+5. Create custom transaction logic
+6. Attach custom logic to another operation

@@ -1,0 +1,44 @@
+Commenting Statements:
+----------------------
+Apex provides the below formats to comment the code, which no longer needed in the application.
+
+
+Single Line Comment:
+---------------------
+By using this option we can comment one or more statements in the application.
+	
+Syntax:
+	// Statement.....
+		
+Ex:
+	studentId = 10001;
+	// studentName = 'Sampath Kumar';
+
+	system.debug(studentid);
+	// system.debug(studentName);
+
+
+Multiline Comment:
+-------------------
+By using this option, we can comment a collection of statements at a time.
+	
+Syntax:
+	/*
+		....
+		....
+		Statements
+		...
+	*/	
+
+Example:
+		studentId = 10001;
+		studentName = 'Sampath Kumar';
+
+		/*
+			system.debug(studentid);
+			system.debug(studentName);
+		*/
+		
+		system.debug('Student Id is...: '+ studentid);
+		system.debug('Student Name is...: '+ studentName);
+					

@@ -1,0 +1,83 @@
+Object Oriented Programming:
+------------------------------
+
+1. Encapsulation:
+------------------
+Encapsulation is used to binding a collection of features together into the smaller units called as "Classes".
+		
+Encapsulation can be achieved by using "Classes and Interfaces".
+		
+Class:
+-------		
+	It is blueprint or a physical entity, which contains a collection of members inside it.
+			
+	A class can have one or more variables, functions, procedures, properties, constructors, etc.
+			
+	We can define the secutity for each member of the class.
+			
+	To access the class members, we need a reference called as an "Object".
+			
+Object:
+-------
+	It is a logical entity, which holds the values for the class members.
+			
+	It is also called as a Class Variable. Or called as an instance of a class.
+			
+	Every thing in the real-word will be treated as an object (Ex: Human beings, Fan, Comnputer, Keyboard, Car, etc.)
+			
+	By using object, we can reference the class members and we can assign / retrieve the values from the class members.
+			
+	Note: A class can have one or more objects.
+			
+	Note: 
+		Memory will be allocated to the object. Not for the class.
+			
+		Each object holds a seperate set of memory, which can holds different values.		
+		
+2. Abstraction:
+----------------
+It is nothing but providing the interface to the user, but without providing the complexity of the implementation.
+		
+Note: Abstraction is used to maintain the data security.
+		
+Note:
+	This can be implemented with the help of Access Specifiers and Abstract classes.
+	
+
+3. Inheritance:
+----------------
+	This feature is used to aquire / access the features of one class into another.
+		
+	The Parent class ia called as "Super Class / Base Class".
+		
+	And the newly created class is called as "Sub class / Derived class/ child class".
+		
+	Child class will access the functionality of parent class.
+		
+	Note: 
+		By using Inheritance, we can achieve the "Re-usability".
+		
+4. Polymorphism:
+-----------------
+		Poly --> means "Many"
+		morphism --> means  "Forms"
+		
+By using this feature, we can define multiple functions in the class with the same name.
+		
+Note: Functions will be differentated, in terms of	
+	1. Number Of Parameters
+		2. Order of the parameters
+			3. Type of the parameters.
+				
+Note:
+	This can be achieved by using Overloading and Overriding.
+			
+
+1. Compile Time Polymorphism / Early Binding:
+	This can be achieved by using "Overloading". We can overload both functions and constructors
+		i.e. Function Overloading and Constructor Overloading.
+				
+		
+2. Runtime Polymorphism / Late Binding:
+			This can be achieved by using "Overriding" features.
+			We can perform "Function overriding" inside the classes.

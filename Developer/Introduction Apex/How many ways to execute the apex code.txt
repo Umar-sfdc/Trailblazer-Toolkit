@@ -1,0 +1,14 @@
+How many ways to execute the Apex code
+---------------------------------------
+
+We can invoke the apex code with the below options
+	
+1. By using "Execute Anonymous Window"
+2. By using "Trigger"
+3. By using "Visual Force Pages"
+4. By using "Batch Apex Programming"
+5. By using "Schedule Apex Programming"
+6. By using "Email Services"
+7. By using "API's"
+8. By using "Eclipse IDE"
+			

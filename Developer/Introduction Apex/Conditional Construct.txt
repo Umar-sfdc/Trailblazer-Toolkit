@@ -1,0 +1,100 @@
+You can control the flow of program by using conditional constructs. 
+
+Conditional statement are used to execute the statement based on the condition.
+
+Apex programming providesthe below conditional statement
+	1. If conditional Statement
+	2. Ternary Operator
+	
+	
+If conditional Statement
+-------------------------
+
+by using IF statement, we can add one or more user defined conditions before performing the operation.
+
+Apex provides four format of IF Conditional Statement.
+
+	1. Simple IF Condition
+	2. IF Else Statement
+	3. Else IF Statement
+	4. Nested IF Statement
+
+
+1. Simple IF Condition
+-----------------------
+		Syntax:
+				
+				if(<Condition>)
+				{
+					// Write the statement.
+					...
+					...
+				}
+				
+In this approach if specified condition are satisfied then it will enter into the block and will execute the statement.
+
+The user can specify one or more condition, we can club the multiple conditions together by using the "Logical IOperator (&&, ||, !)".
+
+
+2. IF Else Statement
+---------------------
+	if(<Condition>)
+	{
+		// True block statement.
+	}
+	else
+	{
+		// False block statement.
+	}
+	
+	
+If all the specified condition are satisfied, then it will enter into the true block and will execute the statement.
+
+If any of the condition is falied, then it will execute the False block statement.
+
+
+
+3. Else IF Statement
+---------------------
+
+Syntax:
+	
+		if(<condition>)
+		{
+			// Statements
+		}
+		else if(<condition>)
+		{
+			// Statements
+		}
+		else if(<condition>)
+		{
+			// Statements
+		}
+		....
+		....
+		else
+		{
+			// statement
+		}
+		
+
+
+4. Nested IF Statement
+------------------------
+By using this format, we can include one if condition into an another if condition base don the need.
+
+Syntax:
+		if (<Condition>)
+		{
+			// Statement
+				
+			if (<Condition>)
+			{
+				// Statements
+			}
+			else
+			{
+				// Statements
+			}	
+		}

@@ -1,0 +1,50 @@
+Access Sepcifiers:
+-------------------
+Access specifiers are used to define the level of access for each class and the class members.
+
+We can define a seperate access specifier for each member in the class.
+
+
+Apex provides 4 access specifiers as below.
+
+1. Private:
+------------
+	This access specifier can be applicable for both class and the class members.
+	
+	Private members of the class can be accessible from within the class only. We can't access private members from outside of the class.
+	
+	Note:
+		If the user didn't specify any access specifier upon defining a class member, then apex consider the member as a private by default. (i.e. All class members are private by default.)
+	
+	Ex:
+		Public class SampleClass
+		{
+			Public string customerName; --> Public member
+			Private integer accountBalance; --> Private member.
+			string branchName; --> Private member..
+		}	
+	
+2. Public:
+------------
+	Public members can be accessible within the class as well as outside of the class also within the entire salesforce application.
+	
+	Note: 
+		We can't access the Public members from the Outside of the salesforce organization.
+
+3. Protected:
+--------------
+	This access specifier will be used during the "Inheritance" feature.
+	
+	When the class members has been defined as "Protected", then the members can be accessible within the class and from all derived classes.
+	
+	Other classed in the application, cannot able to access the "Protected" members.
+	
+4. Global.
+------------
+	This access specifier is used to define the class members to be accessible from outside of the salesforce application.
+	
+	Global members can be accessible from within the class and outside of the class and outside of the salesforce application also.
+	
+	Note:
+		All Webervice classes, API's, Batch Apex classes, Schedule Apex classes should be defined as "Global".
+		

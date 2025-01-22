@@ -1,0 +1,18 @@
+Procedural Programming / Structure Oriented Programming
+--------------------------------------------------------
+
+Each functionlaity of the application will be segrated into the small individuals pieces are called as "Procedural Programming".
+
+Procedural function are comes under "Sub-Programs". Each procedure / function will have one or more statement to perform certain operation in the application.
+
+Example:
+		Basic, Pascal, C, ...etc
+		
+Drawback
+--------
+1. The data will be moving around the application, so there is no proper data secuirty.
+
+2. We can not restrict the member inside the application. i.e (one function can invoke the other function inside the application).
+
+To avoid the Data security problems, We have to use "Object Oriented Programming".
+		

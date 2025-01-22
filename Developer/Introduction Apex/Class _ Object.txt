@@ -1,0 +1,85 @@
+Class:
+----------
+Class is nothing but a physical entity or a blue print which contains a collection of members.
+
+A class can have one or more variables, procedures, functions, properties, constructors, etc.
+
+We can define one or more class inside an organization.
+
+Note: 
+	In an organization, we can have max. of 30,00,000 apex characters code.
+			
+Each class should be compiled by using "Apex Compiler" and store the compiled apex classes inside the metadata repository.
+
+Note:
+	All apex classes will get resides inside an object called as "ApexClass".
+	
+Example:
+		select id, name, body from apexclass
+	
+Syntax:
+	<Access Specifier> Class <ClassName>
+	{
+		// Define class members...
+		...
+		...
+	}
+	
+Note:
+	1. Upon creating a class, the class name should starts with a character.
+	
+	2. Class name should be always a single word. Class name includes Alphabetical characters, numbers and a special character "_"(Undersore).
+	
+	Ex:
+		AccountManagement
+		Contact_Handler
+		Product2_Handler
+		
+	3. We can't create Two classes with the same name in an organization.(i.e. ClassName should be unique.)
+
+	4. As a best practice, we have to provide a proper documentation / comment for each class.
+
+
+
+
+Object:
+-------
+Object is a logical entity, which reserves the memory for the class variables.
+
+By using object, we can access each member of the class. 
+
+(i.e by using object, we can assign or retrieve the values from the class members.)
+
+Syntax:
+	<ClassName> <ObjectName> = new <ClassName>();
+	
+Ex:
+	StudentDetails stObject = new StudentDetails();
+	
+	
+New Keyword:
+	This keyword will calculate the required amount of memory to be allocated to the object.
+	
+StudentDetails(): (Default Constructor)
+	Upon creating an object, it calls the default constructor of class.
+	
+	Default constructor is used to assign the predefined / default values to the class members.
+
+	Note:
+		If the user didn't provdes any default constructor for a class, then apex compiler will provides a default constructor for the class and assign the default values to the class members.
+		
+Note:
+	Upon creating the object, memory will allocated for the object. Not for the class.
+	
+Note:
+	A class can have one or more objects, where each object should have a unique name.
+	
+	Each object contains its own set of memory and will hold a different value for each class member.
+	
+Ex:
+	StudentDetails st = new StudentDetails();
+	
+	StudentDetails st1= new StudentDetails();
+	
+	StudentDetails st3 = new StudentDetails();
+	

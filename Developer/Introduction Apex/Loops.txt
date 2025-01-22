@@ -1,0 +1,99 @@
+Iterative and Looping statement
+---------------------------------
+Iterative statements are used to execute a set of statements iteratively upto the specific number of times.
+
+We are used loop to execute a block of statement or code repetively.
+
+Apex programming provides the below iterative statement
+	1. While Statement
+	2. Do while statement
+	3. For Loop
+	4. Enhanced For Loop
+
+(1.) While loop: 
+-----------------
+While loop always check the condition first before execute the statement.
+		
+Once the statements has been executed , again it will verify the conditions and keep on executing the statement till the condition is satisfied.
+		
+Once the conditions get failed, it will stop executing the statements and comes out of the block.
+
+		
+	Syntax:	
+
+	while(<condition>)
+	{
+		statement;
+		....
+		....
+		....
+	}
+
+
+(2.) Do While loop: 
+--------------------
+Do while loop always execute the statement at least once and after that check the condition.
+		
+Once the statements has been executed , again it will verify the conditions and keep on executing the statement till the condition is satisfied.
+		
+Once the condition get failed, it will comes out of the blocks.
+		
+	
+Syntax:
+
+		do 
+		{
+			statement;
+		} 
+		while(<condition>);
+		
+
+(3.) For loop: 
+----------------
+For loop is used to execute a block of statement or code for a specific number of time. 
+
+	Syntax:
+		
+		for (<initialization>; <condition>; <increment/ decrement>)
+		{
+			// Statement;
+		} 
+
+
+
+(4.) Enhanced For Loop: 
+-----------------------
+Locating the array elements based on the index position is very costly(i.e. in terms of Performance), which involves more operations.
+
+to improve the performance of the application, upon managing the collections we have to use "Enhanced For Loop", which retrieves the elements very fastly.
+
+Syntax:
+	for(<Datatype> <referenceName> : <Collection Name>)
+	{
+		// Print the element values...
+	}
+
+Example:
+	// defining array...
+	integer[] customerIDs = new integer[]{100,456,23,4567,90};
+	
+	// printing the elements..
+	
+	for(integer ele : customerIDs)
+	{
+		system.debug('Element Value is...: '+ ele);
+	}
+
+
+Note: 
+	Enhanced FOR loop will iterate the collection from starting to ending automatically.	
+	
+	
+Ex:
+	string[] names = new string[]{'Ramesh','Pawan','Karthik'};
+	
+	for(string st : names)
+	{
+		system.debug('Employee Names are...: '+ st);
+	}
+				

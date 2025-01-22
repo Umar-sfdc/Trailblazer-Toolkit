@@ -1,0 +1,284 @@
+Collections:
+============
+Collections supports to store both Homogeneous and Heterogeneous elements.
+
+Collections supports dynamic memory allocation, Which allows the collection size can grow / shrink at runtime.
+
+Collections provides a set of readymade methods to manage the elements.
+
+Apex provides the below collection classes.
+
+	1. List Collection
+	2. Set Collection
+	3. Map Collection
+	
+	
+
+List Collection:
+-----------------
+1. List is an ordered collection. 
+
+i.e. the elements will be available in the collection, in the same order which they were inserted.
+
+i.e. In list collection, insertion order will get preserved.
+	
+2. List collection supports to store the elements of type Primitive types, Sobject Types, Collection type, Apex type and user defined type.
+	
+3. It supports the Dynamic Memory allocation, which allows the List collection size can grow / shrink at runtime.
+
+4. List allows us to store Duplicate Elements.
+
+5. Each element in the List collection, will be identified by using an index position, which starts from "Zero".
+
+
+Syntax:
+	List<Datatype> <CollectionName> = new List<Datatype>();
+	
+Ex:
+	List<Integer> lstCustomerIds = new List<Integer>(); 
+					--> It holds a collection of integer elements.
+		
+	List<string> countryNames = new List<string>();
+					--> It holds a collection of string elements.
+		
+	List<ID> recordIds = new List<ID>();
+					--> It holds a collection of 18 character Id's.
+		
+	List<Account> lstAccounts = new List<Account>();
+					--> It holds a collection of Account records.
+		
+	List<Lead> lstLeads = new List<Lead>();
+					--> It holds a collection of lead records.
+		
+	List<Position__C> lstPos = new List<Position__C>();
+					--> It holds a collection of Position records.
+			
+
+Note:
+	List collection supports, the Nested List upto 5 Levels.
+	
+	Ex:
+		List<List<List<List<List<string>>>>> lstNames = new 
+				List<List<List<List<List<string>>>>>();
+	
+List collection provides a set of "Instance Methods", to manage the elements inside the collection.
+
+
+Methods:
+--------
+Example:
+	List<string> lstNames = new Lis<string>();
+
+
+1. Add(<Element Name>):
+------------------------
+By using this method, we can add a new element to the collection.
+	
+Ex:
+	lstNames.Add('Welcome');
+	lstNames.Add('Hyderabad');
+	lstNames.Add('Apex');
+	lstNames.Add('23423');
+	
+Note: 
+	Add() method will add the new element to the collection at the end of the list.
+	
+Note:
+	Once the Element has been added to the collection, apex allocates an index position to the element.
+		
+2. Add(Integer Index, <Element Name>):
+----------------------------------------
+By using this method, we can insert a new element at the specified index position.
+	
+Ex:
+	lstNames.Add(1, 'Ramesh Kumar');
+		
+3. AddAll(<CollectionName>):
+-----------------------------
+This method is used to insert all the elements from the specified collection into the List Object.
+	
+Ex:
+	string[] countryNames = new string[]{'India','USA','China','Middle East','Australia'};
+			           
+	lstNames.AddAll(countryNames);
+		
+4. Size():
+-----------
+This method returns an integer value, which indicates the number of elements exist in the collection.
+	
+Ex:
+	lstNames.Size();
+
+5. Boolean isEmpty():
+------------------------
+It returns TRUE, when the collection is empty. Else it returns FALSE.
+	
+Ex:
+	lstNames.isEmpty();
+		
+6. Get(<Index Position>):
+--------------------------
+By using this method, we can get the element value based on the specified inedx position.
+	
+Ex:
+	lstNames.get(2);
+		
+7. Sort():
+-------------
+This method will arrange the elements in ascending order.
+
+Ex:
+	lstNames.sort();
+		
+8. Remove(<Index Position>):
+-----------------------------
+This method will remove the element from the collection exist at the specified index position.
+	
+Ex:
+	lstNames.remove(4);
+		
+9. Clear():
+-----------
+This method will remove all the elements from the collection.
+	
+Ex:
+	lstNames.clear();
+		
+10. Set(<Index Position>, <Element Name>):
+---------------------------------------------
+This method will override the element name with the "New Name" exist at the specified index position.
+	
+Ex:
+	lstNames.Set(2,'Bangalore');
+
+
+
+SET Collection:
+----------------
+
+It is a unordered collection. Which doesn't preserve the insertion order.
+(i.e. The elements will not be available in the same order, which they were inserted.)
+
+Set Collection supports to store the elements of Primitive type, sobject type, collection type, apex types and user defined types.
+
+Note:
+	Set collection will not accept the duplicate elements. 
+	
+	(i.e. When the user tries to insert a new element, it will check for the duplications and if any similar element found, simply it will ignore the insertion process. It won't insert the element and it won't display the error message.)
+	
+	i.e. Set collection maintains the uniqueness of the elements by using "Binary Comparision".
+	
+	Ex:
+		apex,  Apex --> Both are different.
+
+List collection supports Dynamic memory allocation, hence the Collection size can grow / shrink at runtime.
+
+Syntax:
+	Set<Datatype> <collectionName> = new Set<Datatype>();
+	
+	
+Example:
+	Set<Integer> customerIDs = new Set<Integer>();
+	Set<string> customerNames = new Set<string>();
+	set<ID> recordIDsSet = new Set<ID>();
+	Set<Account> accountsSet = new Set<Account>();
+	Set<Position__c> positionsSet = new Set<Position__c>();
+	...
+	...
+
+Methods:
+--------
+Ex: 
+	Set<string> customerNames = new Set<string>();
+	
+1. Add(<Element Name>):
+By using this method, we can add a new element to the collection.
+	
+Ex:
+	customerNames.Add('Ramesh');
+	customerNames.Add('India');
+	customerNames.Add('Bangalore');
+	customerNames.Add('Merck Pharma');
+	....
+	...
+Note: Duplicate elements will be ignored automatically.
+	
+2. AddAll(<CollectionName>):
+By using this method, we can add a collection of elements to the Set collection at a time.
+	
+Ex:
+	string[] locations =new string[]{'Chennai', Hyderabad', 'Pune','Delhi','Kochi'};
+		
+	customerNames.AddAll(locations);
+		
+3. Integer Size():
+It returns an integer, which indicates the size of the collection.
+	
+Ex:
+	customerNames.size();
+		
+4. Boolean isEmpty():
+It returns TRUE, when the specified collection is empty. Else it returns FALSE.
+	
+Ex:
+	customerNames.isEmpty();
+		
+5. Remove(<ElementName>):
+By using this method, we can remove the specified element from the collection.
+	
+Ex:
+	customerNames.Remove('Bangalore');
+		
+6. Clear():
+This method is used to remove all elements from the collection.
+	
+Ex:
+	customerNames.Clear();
+
+
+MAP Collection:
+===============
+Map is an unordered collection, which doesn't preserve the insertion order.
+
+Map collection can have one or more elements, where each element should be a "Kay - Value pair".
+
+i.e. Each element in the Map collection, should have a Key and a value.
+
+Note:
+	Key should be always unique. 
+	Value may be unique or it may be duplicate.
+	
+To fetch the elements from the Map collection, we have to supply the "Key" as an input. It returns the value based on the specified key.
+
+Syntax:
+	Map<Datatype, Datatype> <objectName> = new Map<Datatype, Datatype>();
+
+								
+KeyDatatype: 
+	Should be either a Primitive Type or an SObject Type.
+
+ValueDatatype:
+	May be either Primitive type, Sobject type, Collection type, Apex type or an User Defined type.
+	
+Note:
+	Map Supports the Dynamic memory allocation, hence the collection size can grow / shrink at runtime.
+	
+Note:
+	Map doesn't accept the duplicate elements, As it will verify the duplication check upon inserting a new elements into the collection by using the "Key".
+	
+Ex:
+
+Map<integer, integer> customerIDs = new Map<integer,integer>();
+								
+
+Map<Id,Id> accountsIds = new Map<Id,Id>();
+
+Map<string, stgring> customerNames = Map<string,string>();
+
+Map<Id,Account> accountsMap = new Map<Id,Account>();
+
+Map<Account, List<Contact>> accContacts = new Map<Account, List<Contact>>();
+							
+Map<Position__C, List<Candidate__C>> positionsMap = new Map<Position__C, List<Candidate__c>>();
+
+					

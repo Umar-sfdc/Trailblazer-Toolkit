@@ -1,0 +1,79 @@
+Array
+-------
+	
+Arrays are used to store a collection of homogeneous elements inside a single variable.
+
+i.e. Inside an array we can store a collection of similer data type element.
+	
+Arrays doesn't support to store heterogenous(Different datatype) elements.
+	
+Array are comes under the primitive data type, array are also supporting the static memory allocation.
+	
+The variable of an array are called array element. Array element are accessed using a single name.
+
+Index number representing the positioning of the array element within the array. Indexing of array begin with 0.
+	
+Note: 
+	Upon defining an array,we need to specify the size of the array. Which is used to calculate the required amount of memory to be allocated to the array variable.
+
+Note:
+	Arrays will supports "Static Memory Allocation". Hence array size cannot be grow/ shrink at runtime. (i.e. we can't increase the size of array at runtime.)
+	
+	
+Syntax:
+	<Datatype>[] <arrayName> = new <Datatype>[<Size>];
+		
+Example:
+	
+	Integer[] customerIDs = new Integer[10]; --> It can cable to hold max. of 10 Integer elements.
+	
+	string[] countryNames = new string[20]; --> It can able to hold max. of 20 string elements.
+	
+	Account[] accountRecords = new Account[5]; --> It can able to hold 5 Account records data.
+	
+	Position__c[] positionRecords = new Position__C[15]; --> It can able to hold max of 15 Position records.		
+						
+Note:
+	For all arrays elements, memory will be allocated in contegeous memory locations(Side by side).
+	
+	To identity each element in the array,  we have to use "Index positions", which are starting from "Zero".
+	
+	Each partition in the array will be identitied by using "Array Name and Index Position".
+	
+	Syntax:
+		<ArrayVariableName>[<index position>];
+		
+	Ex:
+		customerIDs[0];
+		customerIDs[1];
+		customerIDs[2], ...etc.
+	
+	To assign the value or to retrieve the value from the array, we have to use index positions.
+
+		
+Assigning Values:
+-------------------
+	Integer[] customerIds = new integer[5];
+	
+		customerIDs[0] = 100;
+		customerIDs[1] = 200;
+		customerIDs[2] = 300;
+		customerIDs[3] = 780;
+		customerIDs[4] = 60;
+	
+------------------------------------------------------------	
+   |  100  |  200	|  300	| 	780	  |  60	  |
+------------------------------------------------------------	
+Index: 0	1	   2		 3           4
+	
+
+To retrieve the values from the array, we have to use index positions as below.
+	
+	
+Retrieving the array elements:
+----------------------------------
+	system.debug('First Element is...: '+ customerIDs[0] );
+	system.debug('Second Element is...: '+ customerIDs[1] );
+	system.debug('Third Element is...: '+ customerIDs[2] );
+	system.debug('Fourth Element is...: '+ customerIDs[3] );
+	system.debug('Fifth Element is...: '+ customerIDs[4] );

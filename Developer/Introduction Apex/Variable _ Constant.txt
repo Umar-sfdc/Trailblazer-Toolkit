@@ -1,0 +1,53 @@
+Variable
+---------
+
+Variable is a location in the memory that is used to store the value and the value could be integer or character. 
+
+Variable can hold only single value at a time. And the value can be changed if requierd.
+
+Variable are used to store the value temporarily for some time, to perform some operation. 
+
+Each variable is associated with a datatype.
+
+Syntax:
+		[Access Specifier] <Data Type> <Variable Name> = <Value>;
+		
+		integer customerID;
+		string customerName;
+		string customerAddress;
+		string customerEmailId;
+		
+		Boolean isCustomerActive;
+		decimal balanceAmount;
+		Date dateOfBirth;
+		
+Note:
+		We can define a set of variables in a single statement as below.
+		
+		Ex:	
+			string customerName, customerAddress, location, city;
+			integer customerId, accountNumber;	
+			Date dateOfBirth, joiningDate;		
+		
+Note: 
+		Upon defining the variable, if the user didn't assigned the value, then salesforce will store "NULL" value by default.
+
+		Ex:
+			integer customerID;  --> Default value : Null
+			string customerName; --> Default Value : Null
+			
+	Note: 
+		Upon defining the variable, we can assign the value as below.
+
+		Ex:
+			integer customerID  = 1000001;
+			string customerName = 'Pawan Kumar';
+			
+Note:
+	1. Variable name should be always start with a character.
+	2. We can not define two variable with the same name.	
+	3. Varaible name should be a single word always. (It can have one special character "_")
+	
+	
+Note: if the user, did not assign any value to the variable, then apex will assign "Null" value to the 
+variable by default.

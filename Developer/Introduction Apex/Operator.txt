@@ -1,0 +1,96 @@
+Operator:
+-----------
+Operator is nothing but a symbol, which performs operations on the operands.
+
+Example: x + y, here is x & y is operand and + is operator.
+
+Apex provides the below category of operators.
+
+1. Arithmatic Operator:
+------------------------
+Arithmatic operation are used to perform arithmatic operation such as addition, subtraction, division, multiplication. 
+
+Modulo return the reminder value when one number is divisible by another.
+	
+Example:
+		Addition --> +
+		Subtraction --> -
+		Multuplication --> *
+		Division --> /
+		Reminder --> Math.Mod(Number, Number)
+
+  
+Note: 	When the addition operator (+) has been used between the string variable, then It will perform "Contactenation Operation".  
+
+
+2. Relational / Comparison Operator: 
+-------------------------------------
+These are used to compare the two numerical values or string values.
+	
+Ex:
+		Less Than --> <
+		Greater Than --> >
+		Less than or Equals --> <=
+		Greater than or Equals --> >=
+		Equals --> ==
+		Not Equals --> !=
+		
+Note: 
+	1. "==" operator will compare the values by using "Text Comparison"
+		
+	2. Equals() functions will compare the values by using "Binary Comparison"
+		
+		Ex:
+			'Welcome' == 'welcome'  --> O/p: strings are Equals
+			Equals() --> O/p: Strings are Not Equals.
+
+
+3. Assignment Operator: 
+-------------------------
+These are used to assign the values to the variables.
+	
+Example:
+		integer balanceAmount;
+		
+		1. =  
+			balanceAmount = 40000;
+			
+		2. +=
+			balanceAmount += 5000; 
+				(i.e. balanceAmount = balanceAmount + 5000)
+		3. -=
+			balanceAmount -= 6000;
+				(i.e. balanceAmount = balanceAmount - 6000)
+		4. *=
+			balanceAmount *= 4;
+				(i.e. balanceAmount = balanceAmount * 4)
+		5. /=
+			balanceAmount /= 3;
+				(i.e. balanceAmount = balanceAmount / 3)
+		
+		
+4. Increment / Decrement Operators:
+-------------------------------------
+By using these operators, we can increment / decrement the values by 1.
+	
+Ex:
+		++ --> Increments the value by 1.
+		-- --> Decrement the value by 1.
+	
+	
+(5.) Logical Operator: 
+-----------------------
+Logical operator are used to perform some logical operation such as And, Or, Not. 
+			
+Each logical operator will return boolean value (True / False) value as the result.
+			
+Apex provides three logical opertaor.
+			
+1. AND (&&):
+	It returns TRUE, when all the specified conditions are satisfied. And returns False, if any of the condition fails.
+		
+2. OR (||):
+	It returns TRUE, if any of the condition satisfied. And returns FALSE, if all the conditions are failed.
+		
+3. NOT (!):
+	This operator is used to change the symbol from "TRUE to FALSE" and vice versa.

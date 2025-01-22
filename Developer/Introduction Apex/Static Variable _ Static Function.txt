@@ -1,0 +1,37 @@
+Static variable is also know as class variable.
+
+In case of static variable memory can be allocated only at once.
+
+Static variable maintain there previous value.
+
+Static variable are intialized outside the member function or class definition.
+
+Static variable always access by with the help of the class name.
+
+Static variable can be accessed in both static method and non static method.
+
+
+
+
+Static function can access only static variable, non static variable can not access by using static variable.
+
+Static function can be access by using the class name.
+
+
+
+
+Static class is similer to the non static class but only one difference static class can not instantiated.
+
+Static class can contain only static members (static data member and static function).
+
+You can not create the object for the static class.
+
+Static class can not be inherited. Like Sealed 
+
+static class class_name
+{
+	static data memebers;
+	static methods;
+} 
+
+Static class can contain a static constructor.

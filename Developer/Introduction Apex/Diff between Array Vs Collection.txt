@@ -1,0 +1,22 @@
+1. Array supports to store only Hmogeneous(Similar type) elements.
+	
+2. Array size can't be grow / shrink at runtime. 
+	
+3. Arrays Supports Static Memory Allocation, Which causes the memory wastage.
+	
+4. Array doesn't provide the readymade methods to manage the elements.
+
+To avoid the above problems, Apex provides a set of collection classes to manage the bulk records.
+
+
+1. Collections supports to store both Homogeneous and Heterogeneous elements.
+
+2. Collections supports dynamic memory allocation, Which allows the collection size can grow / shrink at runtime.
+
+3. Collections provides a set of readymade methods to manage the elements.
+
+Apex provides the below collection classes.
+
+	1. List Collection
+	2. Set Collection
+	3. Map Collection
