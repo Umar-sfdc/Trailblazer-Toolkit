@@ -1,4 +1,4 @@
-# Page Layouts, Compact Layouts, and List Views in Salesforce
+# Day 12: Page Layouts, Compact Layouts, and List Views in Salesforce
 
 ## 1. **Page Layouts**
 ### What is a Page Layout?
