@@ -1,4 +1,4 @@
-# Salesforce Permission Groups: In-Depth Explanation
+# Day 14: Salesforce Permission Groups: In-Depth Explanation
 
 ## What is a Salesforce Permission Group?
 A **Salesforce Permission Group** is a collection of **permission sets** that you can group together and assign to users. It is designed to simplify user access management by allowing admins to bundle multiple permission sets, which can then be assigned as a single unit.
