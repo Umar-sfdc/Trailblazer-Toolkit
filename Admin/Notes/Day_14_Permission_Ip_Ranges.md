@@ -1,4 +1,4 @@
-# Salesforce IP Range, Network Access, Login History, and Login Hours: In-Depth Guide
+# Day 14: Salesforce IP Range, Network Access, Login History, and Login Hours: In-Depth Guide
 
 ## What Are IP Ranges in Salesforce?
 **IP Ranges** define specific IP addresses or ranges of addresses that Salesforce trusts for login purposes. When a user logs in from an IP address within the defined range, they are granted access without requiring additional verification (e.g., email or SMS verification).
