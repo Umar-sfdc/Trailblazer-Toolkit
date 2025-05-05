@@ -105,12 +105,3 @@ These are actions you create for **a specific object** (like Contact, Account, o
 | Object-Specific Quick Actions | Buttons/Shortcuts | ✅ (Limited)     | ❌ No      | Object-specific only      |
 
 ---
-
-## 🧠 Final Tips:
-- Use **Dynamic Forms** to simplify and customize user experience per role.
-- Use **Dynamic Related Lists** to make related data more meaningful.
-- Use **Quick Actions** to let users do common tasks quickly and easily.
-- Always test on different **profiles and devices** for visibility logic.
-- For large orgs, document which fields/components have **visibility conditions** to avoid confusion later.
-
----
