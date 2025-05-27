@@ -1,0 +1,30 @@
+Order Of execution
+===================
+
+1. The original record is loaded from the database (or initialized for an insert statement).
+
+2. The new record field values are loaded from the request and overwrite the old values.
+
+3. All before triggers execute (TRIGGERS)
+
+4. System validation occurs, such as verifying that all required fields have a non-null value, and running any user-defined validation rules (User defined VALIDATIONS rule)
+
+5. The record is saved to the database, but not yet committed.
+
+6. All after triggers execute
+
+7. Assignment rules execute
+
+8. Auto-response rules execute
+
+9. Workflow rules execute (WORKFLOW)
+
+10. If there are workflow field updates, the record is updated again
+
+11. If the record was updated with workflow field updates, before and after triggers fire one more time along with standard validation rule. In this case custom validation rule will not fire.  
+
+12. Escalation rules execute
+
+13. All DML operations are committed to the database
+
+14. Post-commit logic executes, such as sending email

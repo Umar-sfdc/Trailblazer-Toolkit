@@ -1,0 +1,29 @@
+Difference Trigger.New & Trigger.Old
+=========================================
+
+Trigger.new:
+============
+Trigger.New is a context variable, which contains the current context record in "List" collection format.
+
+Upon inserting the record or updating the record the new value will get resides into "trigger.New" context variable.
+
+Example: List <Object_Name> Trigger.New
+
+
+Note Point
+===========
+1. Trigger.New will be available only in "Insert" and "Update" operation.
+2. Trigger.New will not be available only in "Delete" operation.
+
+
+
+Trigger.Old
+==================
+It contain the previous context (old) record in the "List" collection format.
+
+Example: List <Object_Name> Trigger.Old
+
+NotePoint
+==========
+1. Trigger.Old will be available in both "Update" and "Delete" operation
+2. Trigger.Old will not be available only in "Insert" operation.

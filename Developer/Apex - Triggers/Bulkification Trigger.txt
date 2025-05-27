@@ -1,0 +1,73 @@
+Bulkify Trigger
+===============
+
+Upon implementing the trigger, we need to make the trigger bulkify .
+
+As it can be handle one or more records at a time.
+
+Bulkification process can be done with the help of "Collection" & "For Loop".
+
+
+Example:
+
+Trigger LeadTrigger On Lead (Before Insert, After Insert, Before Update)
+{
+	if (Trigger.IsInsert && Trogger.isBefore)
+	{
+		for (Lead Ld : Trigger.New)
+		{
+			//Code
+		}
+	}
+}
+
+The best practices to write a bulkified trigger.
+
+1. Never ever write a SOQL query inside any “for” loop for whatsoever reason. If you do that, your trigger is guaranteed to hit the governor limits.
+
+2. If you need to fetch large amount of data from an object (More than 50,000 records), then go for batch apex to pull that data, else you will again bump into another governor limit that wouldn’t allow you to fetch more than 50,000 records.
+
+3. Never ever perform a DML operation inside a “for” loop.
+
+4. Do not fetch unnecessary data. Only fetch those fields and objects in your SOQL that you really require.
+
+
+
+
+
+
+
+
+
+
+
+Bulkification Example: Let’s analyze the governor limit for DML statements.
+
+This code is not bulkified and will go over the 150 DML statements limit:
+
+// Remember that up to 200 records can be in Trigger.new
+
+for (Opportunity opp : Trigger.new) 
+{
+  Task t   = new Task();
+  t.Name   = 'Give your prospect a free t-shirt';
+  t.WhatId = opp.Id;
+  insert t;  // You'll get an error after the 150th opp!
+}
+
+
+
+This code is bulkified and will not hit any governor limits. It uses Lists and will only do one DML statement no matter how many records are in the trigger:
+
+// Do an insert DML on all tasks at once using a List
+
+List<Task> taskList = new List<Task>();
+for (Opportunity opp : Trigger.new) 
+{
+  Task t   = new Task();
+  t.Name   = 'Give your prospect a free t-shirt';
+  t.WhatId = opp.Id;
+  taskList.add(t);
+}
+insert taskList;  // Notice this is outside the loop
+

@@ -1,0 +1,3 @@
+How to run trigger asynchronuosly
+
+If you use @future method trigger will run asynchronously. 

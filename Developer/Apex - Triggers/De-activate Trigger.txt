@@ -1,0 +1,12 @@
+Deactivated Trigger
+===================
+
+
+We can de activete the trigger when it's no longer needed.
+
+1. Go to the "SetUp" and click on "build" menu
+2. Click on "develop" and expand it.
+3. Click on "Apex Trigger"
+4. Select the trigger to deactivate
+5. Unselect the "Active" checkbox
+6. Save

@@ -1,0 +1,24 @@
+Difference Trigger and Workflow?
+===================================
+
+Workflow:
+==============
+1. Workflow is based on certain criteria, by using workflow we can automate the business process like send an email alert, tasks assign, field update and send outbound messages.
+2. Coding is not required in workflow.
+3. we can not performed DML operation in workflow.
+4. We can not fetch the record by using workflow.
+4. We can access the workflow across the object.
+5. We can not query from the database.
+6. Workflows will fire always after performing the operations.
+7. You can't implements complex business logic using workflow.
+8. We can update the field in the same object or in the parent object which is associated with "Master-details" association. (Child to Parent we can update).
+9. We can update only one field at a time, we can't update multiple value in a single shot.  
+
+Trigger:
+=============
+1. Trigger is a pieace of code that is execute before and after record is inserted or updated.
+2. Codding is required in Trigger.
+3. We can use 20 DML operation in one trigger.
+4. We can access the trigger across the object and to the related object.
+5. We can use 20 SOQL from database in a trigger.
+6. The trigger works before and after some actions.

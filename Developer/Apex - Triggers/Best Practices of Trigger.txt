@@ -1,0 +1,26 @@
+Trigger Best Practices
+=======================
+
+1. Trigger should support bulk record as well always use "For loop" to process record inside the trigger.
+
+2. Always check for null pointer exception.
+
+3. Always use try and catch block in the trigger to handle exception.
+
+4. Do not use SOQL & SOSL statement inside the loop.
+
+5. Don't use DML operation inside the for loop, add them into the list and insert/update/delete the list outside the for loop.
+
+6. Write the proper test classes for the trigger and maintain 1% of the code coverage for each trigger. And overall organization wise we have to maintain 75% of code coverage while moving the code from one sandbox to production.
+
+7. Avoid recursiveness in trigger by putting the proper conditions.
+
+8. As the best practice, it's recommended to maintain only one trigger per an object because If we have multiple trigger on an object, then we can not control the order of execution of the trigger. So the best practices it's only have one trigger per an object.  
+
+9. it's recommended to maintain trigger handler factory.
+i.e. instaed of writting the trigger code inside the trigger, we can write the code in a class and call the class from the trigger.
+
+
+
+
+

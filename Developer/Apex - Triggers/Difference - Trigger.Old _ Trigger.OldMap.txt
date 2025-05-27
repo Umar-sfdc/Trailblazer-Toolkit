@@ -1,0 +1,29 @@
+1. Trigger.Old
+==================
+It contain the previous context (old) record in the "List" collection format.
+
+Example: List <Object_Name> Trigger.Old
+
+NotePoint
+==========
+1. Trigger.Old will be available in both "Update" and "Delete" operation
+2. Trigger.Old will not be available only in "Insert" operation.
+
+
+
+2. Trigger.OldMap
+==================
+It contain the previous context (old) record in the "Map" collection format.
+
+where:-
+
+Key	--> ID of the record
+Value  	--> The whole record
+
+
+Example: Map <ID, SObject> Trigger.OldMap
+
+NotePoint
+==========
+1. Trigger.OldMap will be available in both "Update" and "Delete" operation
+2. Trigger.OldMap will not be available only in "Insert" operation.

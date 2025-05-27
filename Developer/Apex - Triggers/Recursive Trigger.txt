@@ -1,0 +1,38 @@
+Recursive Trigger
+==================
+
+Recursion means when same code is executing again and again & it exceeds the “Governor Limit”.
+
+When Trigger is called Over and Over and It Exceed the Maximum Trigger Depth that is Called Recursive Trigger.
+
+Error: "Maximum trigger depth exceeded"
+
+
+Apex Trigger Best practices to avoid recursion
+================================================
+
+Best practice for triggers:
+============================
+
+1. One trigger per object so you don't have to think about the execution order as there is no control over which trigger would be executed first.
+
+2. Logic-less Triggers - use Helper classes to handle logic.
+
+3. Code coverage 100%
+
+4. Handle recursion - To avoid the recursion on a trigger, make sure your trigger is getting executed only one time. You may encounter the error : 'Maximum trigger depth exceeded', if recursion is not handled well. You can use Static Boolean variable in apex class and check the variable in Apex Trigger IF it is true then execute your logic and make it false so that trigger can not execute Again.
+
+
+public class p { 
+   public static boolean firstRun = true; 
+}
+
+
+
+trigger TestTrigger on Test__c (before insert) {
+    if(p.firstRun)
+    {
+        p.firstRun = false;
+        insert new Test__c();
+    }    
+}

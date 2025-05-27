@@ -1,0 +1,35 @@
+Trigger.New
+================
+Trigger.New is a context variable, which contains the current context record in "List" collection format.
+
+Upon inserting the record or updating the record the new value will get resides into "trigger.New" context variable.
+
+Example: List <Object_Name> Trigger.New
+
+
+Note Point
+===========
+1. Trigger.New will be available only in "Insert" and "Update" operation.
+2. Trigger.New will not be available only in "Delete" operation.
+
+
+
+Trigger.NewMap
+==================
+Trigger.NewMap is a context variable, which contains the current context record in "Map" collection format.
+
+where
+
+Key	--> ID of the record
+Value  	--> The whole record
+
+
+Noted Point:	
+=============
+1. Trigger.NewMap will not be available in "Before Insert" operation, as the ID are not yet generated. 
+2. Trigger.NewMap will be available in both "Insert (After Insert)" and "Update" operation
+3. Trigger.New will not be available only in "Delete" operation.
+
+
+
+Example: Map <ID, SObject> Trigger.NewMap
