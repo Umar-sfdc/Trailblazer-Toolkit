@@ -1,0 +1,30 @@
+Best Practice Of Governor Limit
+================================
+
+1) One Trigger Per Object
+A single Apex Trigger is all you need for one particular object. If you develop multiple Triggers for a single object, you have no way of controlling the order of execution if those Triggers can run in the same contexts
+
+2) Logic-less Triggers
+If you write methods in your Triggers, those can’t be exposed for test purposes. You also can’t expose logic to be re-used anywhere else in your org.
+
+3) Context-Specific Handler Methods
+Create context-specific handler methods in Trigger handlers
+
+
+4) Bulkify your Code
+Bulkifying Apex code refers to the concept of making sure the code properly handles more than one record at a time.
+
+5) Avoid SOQL Queries or DML statements inside FOR Loops
+An individual Apex request gets a maximum of 100 SOQL queries before exceeding that governor limit. So if this trigger is invoked by a batch of more than 100 Account records, the governor limit will throw a runtime exception
+
+6) Using Collections, Streamlining Queries, and Efficient For Loops
+It is important to use Apex Collections to efficiently query data and store the data in memory. A combination of using collections and streamlining SOQL queries can substantially help writing efficient Apex code and avoid governor limits
+
+7) Querying Large Data Sets
+The total number of records that can be returned by SOQL queries in a request is 50,000. If returning a large set of queries causes you to exceed your heap limit, then a SOQL query for loop must be used instead. It can process multiple batches of records through the use of internal calls to query and queryMore
+
+8) Use @future Appropriately
+It is critical to write your Apex code to efficiently handle bulk or many records at a time. This is also true for asynchronous Apex methods (those annotated with the @future keyword). The differences between synchronous and asynchronous Apex can be found
+
+9) Avoid Hardcoding IDs
+When deploying Apex code between sandbox and production environments, or installing Force.com AppExchange packages, it is essential to avoid hardcoding IDs in the Apex code. By doing so, if the record IDs change between environments, the logic can dynamically identify the proper data to operate against and not fail

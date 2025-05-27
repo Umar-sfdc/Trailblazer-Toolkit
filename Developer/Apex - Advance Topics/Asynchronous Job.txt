@@ -1,0 +1,12 @@
+What is Asynchronous Job?
+
+In an Asynchronous call, the thread will not wait until it completes its tasks before proceeding to next. Instead it proceeds to next leaving it runs in separate thread. In an Asynchronous call, the code runs in multiple threads which helps to do many tasks as background jobs Apex offers multiple ways for running your Apex code asynchronously. Choose the asynchronous Apex feature that best suits your needs. In an Asynchronous call, the code runs in multiple threads which help to do many tasks as background jobs. 
+
+Example:
+
+Types of Asynchronous Job
+
+Future Methods
+Batch Apex
+Queueable Apex
+Scheduled Apex

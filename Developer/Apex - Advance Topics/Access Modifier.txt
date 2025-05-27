@@ -1,0 +1,15 @@
+Class Access Modifiers
+• Classes have different access levels depending on the keywords used in the class definition.
+– global: this class is accessible by all Apex everywhere.
+• All methods/variables with the webService keyword must be global.
+• All methods/variables dealing with email services must be global.
+• All methods/variables/inner classes that are global must be within an global class to be accessible.
+
+– public: this class is visible across you application or name space.
+
+– private: this class is an inner class and is only accessible to the outer class, or is a test class.
+• Top-Level (or outer) classes must have one of these keywords.
+– There is no default access level for top-level classes.
+– The default access level for inner classes is private.
+
+– protected: this means that the method or variable is visible to any inner classes in the defining Apex class. You can only use this access modifier for instance methods and member variables.

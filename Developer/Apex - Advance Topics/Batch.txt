@@ -1,0 +1,33 @@
+What is Batch Apex?
+
+Batch apex is asynchonous process and it is used to process huge amount of records. It can process up to 50 million records.
+
+It is a class which is capable of accepting record in bulk and them depending upon the batch size the group of record are broken into batches and are processed asunchonously.
+
+Batch class implements database.Batchable interface. 
+
+
+When should we use a batch class?
+
+We should batch apex when we are dealing with records in bulk mainly the record size above 10000 and cannot be handled by the normal DML operations.
+
+ 
+What is the basic structure of a Batch class?
+
+the basic structure of a batch consists of three methods:
+
+Start: usually require a query
+Execute: is used to process the records and it happened continuously.this method is executes only once for each batch.
+Finish : execute at the end of all batches.
+
+Note:  ALL batch apex class and variable should be global.
+
+
+			Normal Context		Batch Context
+SOQL Queries 		100 SOQL per cycle		200 SOQL per cycle
+Record retrieve by		50,000			50 Million
+SOQL Queries	
+
+
+
+ 

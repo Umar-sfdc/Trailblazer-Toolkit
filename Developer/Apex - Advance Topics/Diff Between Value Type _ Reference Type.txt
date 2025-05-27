@@ -1,0 +1,26 @@
+Value type contain only data. Some example are int, char, float which stored number, character and floating point numbers respectively.  
+
+Value type are also called direct type.
+
+Value type are stored on stack.
+
+Value type can not contain null value.
+
+Memory is allocated at compile time.
+
+Ex:- Int, enum, structs
+
+
+
+References type does not contain any data, it contain only reference to the variable which are stored in the memory. 
+
+Reference type are also called indirect type.
+
+Reference type are stored in heap.
+
+Reference type can contain null value.
+ 
+Memory is allocate at run time.
+
+Ex:- Class, object, Array, string
+

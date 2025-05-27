@@ -1,0 +1,52 @@
+Array is a reference type and data type.
+
+An array stored a fixed size.
+
+Array is a collection of similer data type. you need to use the new keyword to create the instance of an array.
+
+The variable of an array are called array element. Array element are accessed using a single name.
+
+Index number representing the positioning of the array element within the array. Indexing of array begin with 0.
+
+There are two type of array
+1. Single-Dimensional Array: In a single dimentional array the value are stored in a row.
+int [] score = new int[5];
+
+2. Multi-Dimensional Array: In a multi-dimentional array the value are stored in a row and column format.
+Multi dimentional array is also known as rectangular array. It can be two dimentional or three dimentional.
+
+int[,] arr = new int[3,3];
+  
+There are two types of multidimentional array:
+(i) Rectangle array: Each row will contain and equal number of column. Ex. (3,3 Matrix)
+(ii) Jugged array: The element of jugged array can be of different dimensions and size.
+
+
+Syntax:
+
+<String> [] arrayOfProducts = new List<String>();
+
+//Defining array
+String [] arrayOfProducts = new List<String>();
+
+//Adding elements in Array
+arrayOfProducts.add('HCL');
+arrayOfProducts.add('H2SO4');
+arrayOfProducts.add('NACL');
+arrayOfProducts.add('H2O');
+arrayOfProducts.add('N2');
+arrayOfProducts.add('U296');
+
+for (Integer i = 0; i<arrayOfProducts.size(); i++) {
+   //This loop will print all the elements in array
+   system.debug('Values In Array: '+arrayOfProducts[i]);
+}
+
+
+
+Accessing array element by using index
+You can access any element in array by using the index
+
+//Accessing the element in array
+//We would access the element at Index 3
+System.debug('Value at Index 3 is :'+arrayOfProducts[3]); 

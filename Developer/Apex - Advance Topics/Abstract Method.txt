@@ -1,0 +1,11 @@
+A abstarct method is  method without a body.
+
+The implementation of the abstract method is done by a derived class.
+
+A class that contain abstract methid can not be instantiated. It can only be inherited.
+
+Abstract methid are by default emppty.
+
+<access_specifier> abstarct <return_type> methid_name (parameter)
+
+ 

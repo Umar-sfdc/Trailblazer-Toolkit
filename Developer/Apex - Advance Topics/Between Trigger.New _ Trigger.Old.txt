@@ -1,0 +1,15 @@
+What is the difference Trigger.New & Trigger.Old
+
+Trigger.new:
+
+Returns a list of the new versions of the sObject records
+Note that this sObject list is only available in insert and update triggers
+i.e., Trigger.new is available in before insert, after insert, before update and after update
+In Trigger.new the records can only be modified in before triggers.
+
+
+Trigger.old:
+
+Returns a list of the old versions of the sObject records
+Note that this sObject list is only available in update and delete triggers.
+i.e., Trigger.old is available in after insert, after update, before delete and after update.

@@ -1,0 +1,9 @@
+Explain Apex Data Types?
+
+Apex primitive data types include
+• String
+• Blob (for storing binary data)
+• Boolean
+• Date, DateTime and Time
+• Integer, Long, Decimal, Double
+• ID (Force.com database record identifier)

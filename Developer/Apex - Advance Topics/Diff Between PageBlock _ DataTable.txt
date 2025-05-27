@@ -1,0 +1,3 @@
+Page Block:  Is used for default salesforce standard format.
+
+Data Table: is used to design custom format.

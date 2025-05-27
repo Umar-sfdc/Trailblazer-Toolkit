@@ -1,0 +1,6 @@
+Q. What is Apex Email Service?
+
+Email services is an automated process that use Apex classes to process the contents, Headers, Attachments of Inbound Email.
+Note:
+Visualforce email templates can not be used for mass emails.
+We can associate each email services with one or more salesforce generated email address to which the users can send messages for processing.

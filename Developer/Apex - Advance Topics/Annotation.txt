@@ -1,0 +1,25 @@
+Annotations
+An Apex annotation modifies the way that a method or class is used, similar to annotations in Java.
+Annotations are defined with an initial @ symbol, followed by the appropriate keyword. To add an annotation to a method, specify it immediately before the method or class definition. 
+
+For example:
+
+global class MyClass {
+@future
+Public static void myMethod(String a)
+{
+//long-running Apex code
+}
+}
+
+Apex supports the following annotations.
+• @AuraEnabled
+• @Deprecated
+• @Future
+• @InvocableMethod
+• @InvocableVariable
+• @IsTest
+• @ReadOnly
+• @RemoteAction
+• @TestSetup
+• @TestVisible

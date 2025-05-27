@@ -1,0 +1,17 @@
+Abstract Classis a special type of class which can not be instantiated and act as a base class to another class.
+
+There are some feature of abstract class
+
+1 Abstract class can not be instantiated, means you have no need to create an object of abstarct class. 
+2 Abstarct classes are classes that contain abstract method as well as non abstract method.
+3 Abstract class can not support multiple inheritance.
+4 Abstarct class can has constructor and destructor.
+5 Abstarct class cen be inherited from a class and one or more interface.   
+
+
+
+
+
+
+ 
+ 

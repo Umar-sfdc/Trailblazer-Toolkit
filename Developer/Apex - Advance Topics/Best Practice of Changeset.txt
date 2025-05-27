@@ -1,0 +1,62 @@
+https://help.salesforce.com/articleView?id=changesets_best_practices.htm&type=5
+
+Best Practice of ChangeSet deployement
+=========================================
+
+
+1. Deploy all dependent components
+-----------------------------------------
+Make sure each outbound change set contains all interdependent components that don't exist in the target org. If you try to deploy a component that refers to another component missing from the target org and from the change set, the deployment fails.
+Change sets give you fine-grained control over what you deploy. For example, you can migrate custom fields individually. To deploy a custom object and all of its fields, you must add the custom object and every field to the change set; adding just the custom object to the change set won't cause deployment to fail, but results in an empty custom object.
+
+
+2. Add permissions and access settings to outbound change sets
+--------------------------------------------------------------------
+Adding profiles or permission sets to outbound change sets allows administrators to migrate permissions for users so they can access the new functionality. There are significant differences between permission sets and profile settings in change sets.
+
+
+3. Clone a change set to add dependent components to an uploaded change set
+-----------------------------------------------------------------------------------
+After you upload a change set, you can't change its contents. If you need to add dependent components to a change set you already uploaded, clone the change set, add the dependent components, and then upload it again.
+
+
+4. Plan deployments around maintenance schedule
+--------------------------------------------------
+Plan your deployment activities around the maintenance schedule for both your production and sandbox orgs. Some features require information from your production org when accessed from a sandbox. In addition, the originating org is locked while validating an outbound change set, and the target org is locked while deploying an inbound change set.
+
+
+
+5. Use distinct names for global publisher layouts and Outlook publisher layouts
+------------------------------------------------------------------------------------
+When you add page layouts to an outbound change set, the type for global publisher layouts and Outlook publisher layouts isn’t displayed. Make sure that you provide unique names for your global publisher layouts and Outlook publisher layouts so that you can differentiate them in an outbound change set.
+
+
+6. Validate change sets before deployment
+-------------------------------------------
+You can perform a test deployment of an inbound change set to view the success or failure messages that would occur with an actual deployment. This is a good idea if you are planning a deployment on a schedule (for example during low-use hours) and want to determine if the deployment will succeed ahead of time. However, you don't need to perform a test deployment every time you deploy, as this process takes time to complete and the org is locked for the duration. (You can still read and write data to the org, but you can’t make any setup changes that would modify the metadata.) To test deploy an inbound change set, click its name and then click Validate.
+
+
+7. View component details
+------------------------------
+You can view the XML representation of a component after you upload an outbound change set or before you deploy an inbound change set.
+
+
+8. Limit change sets to 10,000 files
+--------------------------------------
+Change sets are limited to 10,000 files. If your change set exceeds this limit, you can create separate change sets for email templates, dashboards, and reports. These components are often the most numerous and have fewer dependencies.
+
+
+
+8. Delete or rename components using the Web interface
+---------------------------------------------------------
+You can't use change sets to delete or rename components. To delete components, use the Web interface on the target org. To rename a component, first delete the component on the target org and then upload the new component in a change set.
+
+
+9. Consider possible delays in deployment time when a change set includes field type changes
+-----------------------------------------------------------------------------------------------------
+If a change set includes changes to custom field types, the deployment time might be delayed by an extended period of time because custom field type changes might require changes in a large number of records. To avoid long delays in deployment, an alternative is to apply the field type change manually after the change set is deployed.
+
+
+10. Plan for tests to run in the target org
+-----------------------------------------------
+When a change set is deployed to a production org, all local Apex tests in that org are run by default if you’re deploying any Apex classes or triggers. If the target org is a sandbox, however, tests aren’t automatically run.

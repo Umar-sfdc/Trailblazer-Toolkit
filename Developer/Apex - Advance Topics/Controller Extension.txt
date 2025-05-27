@@ -1,0 +1,15 @@
+What is the controller extension?
+
+
+Any apex class having a public constructor with Custom Controller or Standard Controller object as a single argument is known as controller extension.
+
+
+
+Explain the need or importance of the controller extension.
+
+Controller extension is very useful and important concept introduced by the salesforce recently. It gives the power to programmer to extend the functionality of existing custom controller or standard controller.
+A Visualforce can have a single Custom controller or standard controller but many controller extensions.
+We can say that the custom extension is the supporter of custom or standard controller.
+
+
+Consider one example: If there is one controller written and used by the multiple visualforce pages and one of them needs some extra logic. Then instead of writing that logic to controller class (Which is used by many visualforce pages) we can create a controller extension and apply to that page only.

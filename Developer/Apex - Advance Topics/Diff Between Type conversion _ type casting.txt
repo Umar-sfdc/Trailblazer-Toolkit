@@ -1,0 +1,16 @@
+Type conversion or casting is a process to convert one datatype value to another one. Type conversion is possibe if both the datatype are compatible to each other. Otherwise you will get an InvalidCastException. This process is performed implicitly.
+
+There are two type of type conversion
+1. Implicit type conversion: If a compiler convert one type of data to another type of data automatically. This process is called implicit conversion. There is no data loss in implicit conversion.
+ 
+2. Explicit type conversion: When the data of one type is converted explicitly to another type with the help of some pre-defined functions it is called as explicit conversion and there may be data loss in this process because the conversion is forceful. 
+
+Example:
+
+int a = 100;
+double d = a;
+
+Double d = 100;
+int a;
+a = (int) d;
+

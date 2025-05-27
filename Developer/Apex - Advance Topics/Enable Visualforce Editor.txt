@@ -1,0 +1,5 @@
+Question # 10. How can we enable visualforce editor?
+
+Answer # We need to check the “development mode” check box at user level to enable visualforce editor.
+
+To enable this, go to user details page check the development mode check box.

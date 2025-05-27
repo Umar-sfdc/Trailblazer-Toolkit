@@ -1,0 +1,19 @@
+Explain ActionFunction, ActionSupport and ActionPoller in Visualforce.
+
+Apex:ActionFunction : This component helps to invoke AJAX request (Call Controllers method) directly from Javascript method. It must be child of apex:form.
+
+Apex:ActionSupport : This component adds Ajax request to any other Visualforce component.
+Example: Commandlink button has inbuilt AJAX functionality however few components like OutputPanel does not have inbuilt AJAX capabilities. So with the help of this component, we can enable AJAX.
+
+Apex:ActionPoller : Action poller acts as a timer in visualforce page. It is used to send an AJAX request to the server depending on the time interval (time interval has to be specified or else it defaults to 60 seconds).
+
+This is timer component which can send AJAX request on pre-defined interval. Minimum interval is 5 sec and default is 60 sec.
+
+
+actionfunction used to call the server side method using javascript
+
+actionsupport used to call the server based on the client side event i.e. like onclick ,onchange..etc
+
+actionpoller used to call the server side method in a regular interval of time,,.....
+
+-------------------------------------------------------------------------------------------------------------------------------------------

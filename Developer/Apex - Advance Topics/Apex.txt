@@ -1,0 +1,22 @@
+Q. What is Apex in Salesforce?
+>>Apex is a strongly typed object oriented programming language.
+>>It allow the developer to execute flows and transaction control statements.
+>>Apex enables developers to add business logic to most system events like button clicks related record updates and visualforce pages.
+
+
+Q. What is Apex Programming Language?
+1. Integrated: It provides built in support for DML Calls
+2. Inline Salesforce Object Query Language
+3. Easy to Use
+4. Easy to Test
+5. Version
+6. Multi Tenant Aware Applications
+
+
+Q. When Should I Use Apex?
+To create Email services
+Create web services
+Perform complex validation over multiple objects
+To create complex business processes that are not supported by workflow.
+Create custom transaction logic
+Attach custom logic to another operation

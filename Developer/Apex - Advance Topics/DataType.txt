@@ -1,0 +1,53 @@
+Datatype means types of data.
+
+Apex supports the following data types -
+
+(i) Primitive (Integer, Double, Long, Date, Datetime, String, ID, or Boolean)
+(ii) Collections (Lists, Sets and Maps)
+(iii) sObject
+(iv) Enums
+(v) Classes, Objects and Interfaces
+
+Primitive Data Types
+=================
+
+Integer:
+======
+A 32-bit number that does not include any decimal point. The value range for this starts from -2,147,483,648 and the maximum value is up to 2,147,483,647.
+
+Integer barrelNumbers = 1000;
+system.debug(' value of barrelNumbers variable: '+barrelNumbers);
+
+Boolean
+=======
+This variable can either be true, false or null.
+
+Boolean shipmentDispatched;
+shipmentDispatched = true;
+System.debug('Value of shipmentDispatched '+shipmentDispatched);
+
+Date
+====
+This variable type indicates a date. This can only store the date and not the time. For saving the date along with time, we will need to store it in variable of DateTime.
+
+Date ShipmentDate = date.today();
+System.debug('ShipmentDate '+ShipmentDate);
+
+Long
+====
+This is a 64-bit number without a decimal point. This is used when we need a range of values wider than those provided by Integer.
+
+Long companyRevenue = 21474838973344648L;
+system.debug('companyRevenue'+companyRevenue);
+
+String
+=====
+String is any set of characters within single quotes. It does not have any limit for the number of characters.
+
+String companyName = 'Abc International';
+System.debug('Value companyName variable'+companyName);
+
+
+
+
+

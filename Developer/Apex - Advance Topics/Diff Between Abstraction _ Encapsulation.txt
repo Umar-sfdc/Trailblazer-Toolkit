@@ -1,0 +1,34 @@
+Abstraction is a process that provide relevant information and hide complixity and background details.
+
+Ex:- Automobile sales person
+
+Encapsulation allow some information to be visible and some informion to be hide.
+
+Ex: Access specifier is the best example of encapsulation.
+
+Access Specifier:- Access specifier defines the scope of the class members. And the class member can be variable or function. There are five types of access specifier are avaliable.
+
+1 Public
+2 Private
+3 Protected
+4 Internal
+5 Protected Internal
+
+Public access specifier allow a class to expose its member variable and member function to other function and object. Public member can be accessed outside the class.
+
+Private access specifier allow a class to hide its member variable and member function to other function and object. Private member can not be accessed outside the class. it can be access only within the class.
+
+Protected access specifier become important while implementing inheritance. Protected access specifier allow a child class to access the member variable and member function of its base class.
+
+Internal access specifier behave public in the same namespace. It's a by default access specifier.
+
+Protecteed internal access specifier act as a internal within the same namespace and other namespace its acts as a protected.
+
+ 
+
+
+
+ 
+
+
+  

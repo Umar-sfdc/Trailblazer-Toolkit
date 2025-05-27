@@ -1,0 +1,5 @@
+What is the difference Trigger.New & Trigger.Old
+
+Trigger.New is return a list of new version of sObject record.  Note that this sObject list is only available in insert and update triggers, and the records can only be modified in before triggers.
+
+Trigger.Old is return a list of old version of sObject record.  Note that this sObject list is only available in update and delete triggers.

@@ -1,0 +1,5 @@
+Question # 16. Compare and contrast custom controllers and controller extensions. How are they the same? How are they different?
+
+Answer # Both allow for custom code to be used, allowing for custom data sets and custom actions. Extensions leverage the existing data and actions within a standard or custom controller.
+
+Custom controllers must contain all data and actions that need to be executed by the page. Extensions that extend standard controller allow for the pages which use those extensions to be used in custom buttons, standard button overrides, and over declarative features.

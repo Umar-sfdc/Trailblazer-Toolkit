@@ -1,0 +1,9 @@
+Custom Controller: A custom controller is an Apex class that implements all of the logic for a page without leveraging a standard controller. Use custom controllers when you want your Visualforce page to run entirely in system mode, which does not enforce the permissions and field-level security of the current user.
+
+
+
+Controller extension: A controller extension is an Apex class that extends the functionality of a standard or custom controller. Use controller extensions when:
+•         You want to leverage the built-in functionality of a standard controller but override one or more actions, such as edit, view, save, or delete.
+•         You want to add new actions.
+•         You want to build a Visualforce page that respects user permissions. Although a controller extension class executes in system mode, if a controller extension extends a standard controller, the logic from the standard controller does not execute in system mode. Instead, it executes in user mode, in which permissions, field-level security, and sharing rules of the current user apply.
+A controller extension is any Apex class containing a constructor that takes a single argument of type ApexPages.StandardController or CustomControllerName, whereCustomControllerName is the name of a custom controller you want to extend.

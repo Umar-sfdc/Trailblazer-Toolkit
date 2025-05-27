@@ -1,0 +1,16 @@
+BestPractice of Visualforce page
+================================
+
+1. Do not hardcode picklists in Visualforce pages; include them in the controller instead.
+
+2. Javascript and CSS should be included as Static Resources allowing the browser to cache them.
+
+3. Refer all CSS on the top of the page and the script tags at the bottom of the page. This helps in improving the performance of the pages.
+
+4. Mark controller variables as “transient” if they are not needed between server calls. This will make your page load faster as it reduces the size of the View State :View State Size: 135kb.
+
+5. Use to iterate over large collections.
+
+6. Allow cache the icon graphics and images frequently used for fast loading of vf page.
+
+7. Do not use soql queries in getters and setters. This would affect the performance of the page.

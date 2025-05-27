@@ -1,0 +1,25 @@
+What is the Salesforce Trigger best Practice
+
+
+1. There should only be one trigger for each object because you can’t manage the order of execution of multiple triggers on single object.
+
+2. Avoid complex logic in triggers. For testing and reuse, you should create Apex classes which contain the actual execution logic.
+
+3. Methods should be bulkified.
+
+4. Triggers should be “bulkified” and be able to process up to 200 records for each call.
+
+Execute DML statements using collections instead of individual records per DML statement.
+
+For Example:
+List acclist; // Collection of records
+Update acclist; //DML Operation. 
+
+5. Use Collections in SOQL “WHERE” clauses to retrieve all records back in single query.
+
+For Example: Set Ids;
+SOQL=[Select Id,Name From Account WHERE Id IN :Ids];
+Use a consistent naming convention including the object name (e.g., AccountTrigger)
+
+
+

@@ -1,0 +1,28 @@
+What is Apex in Salesforce?
+• Apex is a procedural scripting language in discrete and executed by the Force.com platform.
+• It runs natively on the Salesforce servers, making it more powerful and faster than non-server code, such as JavaScript/AJAX.
+• It uses syntax that looks like Java
+• Apex can written in triggers that act like database stored procedures.
+• Apex allows developers to attach business logic to the record save process.
+• It has built-in support for unit test creation and execution.
+
+Apex provides built-in support for common Force.com platform idioms, including:
+• Data manipulation language (DML) calls, such as INSERT, UPDATE, and DELETE, that include built-in DmlException handling
+• Inline Salesforce Object Query Language (SOQL) and Salesforce Object Search Language (SOSL) queries that return lists of sObject records
+
+
+Apex vs. Java: Similarties
+
+• Both have classes, inheritance, polymorphism, and other common OOP features.
+• Both have the same name variable, expression, and looping syntax.
+• Both have the same block and conditional statement syntax.
+• Both use the same object, array, and comment notation.
+• Both are compiled, strongly-typed, and transactional. 
+
+Apex vs. Java: Differences 
+
+• Apex runs in a multi-tenant environment and is very controlled in its invocation and governor limits.
+• To avoid confusion with case-insensitive SOQL queries, Apex is also case-insensitive.
+• Apex is on-demand and is compiled and executed in cloud.
+• Apex is not a general-purpose programming language but is instead a proprietary language used for specific business logic functions.
+• Apex requires unit testing for development into a production environment. 

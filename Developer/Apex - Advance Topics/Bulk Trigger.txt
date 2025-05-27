@@ -1,0 +1,8 @@
+What is bulk Trigger?
+
+
+All triggers are bulk triggers by default, and can process multiple records at a time. 
+
+You should always plan on processing more than one record at a time.
+
+An Event object that is defined as recurring is not processed in bulk for insert, delete, or update triggers.

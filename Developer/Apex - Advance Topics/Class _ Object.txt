@@ -1,0 +1,84 @@
+What is a Class?
+=============
+
+A class is a template or blueprint from which objects are created. An object is an instance of a class. This is the standard definition of Class. Apex Classes are similar to Java Classes.
+
+Class is a collection of related object that has a common attribute & behaviour.  
+
+Class is a user defined data type. Class is a blueprint for an object.
+
+Creating Classes
+
+You can create class in Apex from the Developer Console, Force.com Eclipse IDE and from Apex Class detail page as well.
+
+Example:
+========
+public class MySampleApexClass {       //Class definition and body
+   public static Integer myValue = 0;  //Class Member variable
+   public static String myString = ''; //Class Member variable
+   
+   public static Integer getCalculatedValue () {
+   // Method definition and body
+   // do some calculation
+      myValue = myValue+10;
+      return myValue;
+   }
+}
+
+
+
+Object
+=====
+
+
+Object is a discrit entity that has a well defined attribute and behavior.
+
+Object is a runtime entity, it is created at the run time.
+
+Object is the instance of the class, all members of class can be accessed through object.
+
+
+Student st = new student();
+
+
+
+using system;
+public class car
+{
+	public static void Main(String [] args)
+	{	
+		Console.WriteLine("Hello World");
+		Console.ReadLine();
+	}  
+}
+
+
+
+Using: Using keyword is used to include the system namespace in the program.
+
+Class: Class is a keyword that is used to declare the class name.
+
+System: System is a namespace and namespace is a collection of classes.
+
+Main(): Main method is an entry point of an application. When application is started, the Main method is the first method that is invoked. Main method is used to create object and invoked member variable and member function. Return value of Main method is void by default. 
+
+The string[] args may contain any number of Command line arguments which we want to pass to Main() method.
+
+Comments are the part of the program and complier ignore the comments entry
+
+Console is a class that is belong to the system namespace. WriteLine is a method which is used to display the enclosed text on the screen.
+
+Variable is used to store data. Variable are declare inside the class body. Variable are called data member of a class.
+<Data_type> <variable_name> = <value>;
+
+Function is a set of instruction that perform a specific task. Member function are also declared within the class body. 
+
+
+   
+ 
+ 
+
+
+
+
+

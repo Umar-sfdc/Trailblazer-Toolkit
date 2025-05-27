@@ -1,0 +1,16 @@
+What is the basic structure of a Batch class?
+Start
+Execute
+Finish
+
+1) Start method is automatically called at the beginning of the apex job. This method will collect record or objects on which the operation should be performed. These record are divided into subtasks & passes those to execute method.
+
+Syntax: global Database.QueryLocator start(Database.BatchableContext BC)
+
+2) Execute Method performs operation which we want to perform on the records fetched from start method.
+
+Syntax:  global void execute(Database.BatchableContext BC, List<Account> scope)
+
+3) Finish method executes after all batches are processed. Use this method to send confirmation email notifications.
+
+Syntax: global void finish(Database.BatchableContext BC)

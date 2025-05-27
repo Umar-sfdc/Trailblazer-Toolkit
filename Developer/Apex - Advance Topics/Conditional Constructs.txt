@@ -1,0 +1,30 @@
+You can control the flow of program by using conditional constructs. 
+
+There are two types fo conditional constructs are:
+
+1. If_else statement control the flow of program based on the evaluation of the boolean expression.
+
+Only one else statement is allowed in the if_else chain.  
+
+if (Condition)
+{
+	statement;
+}
+else
+{
+	statement;
+} 
+ 
+
+1.	if statement
+An if statement consists of a Boolean expression followed by one or more statements.
+
+2	if...else statement
+An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.
+
+3	if...elseif...else statement
+An if statement can be followed by an optional else if...else statement, which is very useful to test various conditions using single if...else if statement.
+
+4	nested if statement
+You can use one if or else if statement inside another if or else if statement(s).
+

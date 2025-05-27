@@ -1,0 +1,22 @@
+Abstract Class:
+
+A class may inherit only one abstract class.
+
+Multiple inheritance can not be achieve through abstract class.
+
+We can declare variable in abstract class.
+
+An abstract class does not provide full abstraction.Means both declaration and definition is given an abstract class. 
+
+
+
+
+Interface:
+
+A class may inherit more than one interface.
+
+Multiple inheritance can be achieve through interface.
+
+We can not declare varibale in interface.
+
+Interface does provide full abstraction. 

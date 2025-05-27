@@ -1,0 +1,4 @@
+Implicit conversion convert one data type to another data type automatically. there is no data loss in implicit conversion.
+
+
+When the data of one data type is converted explicitly to another type with the help of some predefined function. it is also called explicit covenrsion. There may be data loss in this process because the conversion is forceful.

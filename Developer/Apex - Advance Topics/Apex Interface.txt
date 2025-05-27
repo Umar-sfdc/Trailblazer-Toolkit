@@ -1,0 +1,5 @@
+Q. What is Apex Interface?
+
+
+Interface is a collection of unimplemented methods. This will specify the signature of the method, types of inputs that we pass the method specifies what type is given as an output.
+NOTE: Generally the interface methods we give it as global.

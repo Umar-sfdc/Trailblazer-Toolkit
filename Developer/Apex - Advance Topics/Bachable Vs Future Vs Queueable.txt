@@ -1,0 +1,23 @@
+Batchable Apex :-
+
+If it is a long running complex process then you should go for Batchable Apex and you can have an option to schedule the batch to run at customized time.
+It can process upto 50 million records in asynchronous mode.
+5 concurrent jobs are allowed to run at a time and future methods are not allowed in Batch class.
+Batch Class should implement Database.Batchable interface and it should ave three methods start(), execute() and finish() methods.
+
+
+Future Method:
+
+For avoiding Mixed_DML_Operations exception, we will be going for future method where it will be running in asynchronous mode when the system resource becomes available.
+If you want to perform complex DML operations and want to make external webservice @future(callout=true) means you can go for future method.
+Future method should be static and return type is void, parameters must be primitive types, sObjects are not accepted as future method parameters.
+
+
+
+Queueable Apex :-
+
+It comes in handy , when you need to have both the operations of Batch and future method and it should implement Queueable Interface.
+If one job is dependent on other job means here we can chain the dependent job in execute method by system.enqueuejob(new secondJob());
+You can also able to chain upto 50 jobs and in developer edition you can able to chain upto 5 jobs only.
+It will accept non-primitive types like sObjects and it also runs in asynchronous mode.
+In this Queueable apex you can get Job Id to monitor the job progress.

@@ -1,0 +1,7 @@
+What is the difference between Action support and Action function?
+
+
+Action function:  Invoke the controller method from java script using AJAX and we can use action function from different places on visual force page.
+
+
+Action support: Invoke the controller method using AJAX when even occurs on page like onMouseOver, onClick, ect… and we can use action support for particular single apex component.

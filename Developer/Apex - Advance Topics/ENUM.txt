@@ -1,0 +1,16 @@
+ENUM
+=====
+
+Enum contain its own value and can not be inherited. You can use the keyword Enum to define an Enum.
+
+Enumeration represent the symbolic name by constant. Enum is nothing but this is a set of constant. Which value are fixed.
+
+Like how many days in a week.
+
+public enum days {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+days obj = days.monday;
+System.debug('value is :' + days.monday);
+
+by default the sequence of value start with 0.
+
+ 

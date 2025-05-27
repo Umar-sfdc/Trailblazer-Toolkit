@@ -1,0 +1,315 @@
+AJAX Request in Visual Force:
+=============================
+-To execute the Actions, we are using Buttons Controls. Which invoke the action method based on the Click Event of the button control.
+Which performs the operation synchronously (i.e. we are invoking the method by using button control).
+
+- Visual Force provides the Asynchronous operations, which can be used to invoke the action methods automatically.
+
+- Asynchronous operations will send the request to the database automatically based on some field value change or changing the picklist value or selecting the checkbox etc.
+
+- It provides the following Tags to perform the Asynchronous calls.
+
+1. Action Support (<apex:ActionSupport>)
+2. Action Function (<apex:ActionFunction>)
+3. ActionPoller (<apex:ActionPoller>)
+4. Action Status (<apex:ActionStatus>)
+5. Action Region (<apex:ActionRegion>)
+
+Action Support:
+---------------
+-Action support component adds AJAX support to another component; this allows the component to call a controller method when a particular event occurs (for example on click, on blur etc.).
+-It also allows re-rendering, rendering page sections as desired.
+-It allowing the component to be refreshed asynchronously by the server when a particular event occurs, such as a button 
+-Used when we want to perform an action on a particular event of any control like on change of any text box or pick list.
+-It allows us to do partial page refresh asynchronously without refreshing full page.
+
+Note: We have to write a separate Action Support event for every control
+
+Syntax:
+---------
+		<apex:actionSupport 
+						event="EventName(Onchange / Onblur)" 
+						action="Method Name" 
+						rerender="Specify the Block to Refresh"/>
+
+Ex:
+	<apex:selectList value="{!selectedAccount}" multiselect="false" size="1">
+		
+		<apex:ActionSupport event="onchange" action="{!LoadContacts}" rerender="pgBlock"/>
+		
+	</apex:selectList>
+
+/*
+	Create a VisualForce Page, to display the contact records associated with the selected account.
+*/
+
+VF Page Code:
+-------------
+<apex:page action="{!LoadAccountNames}" controller="ActionSupportController" sidebar="false" setup="false" showHeader="true" tabStyle="Position__c" >
+<apex:sectionHeader title="Ajax Calls" subtitle="Action Support Feature"/>
+<apex:form >
+    <apex:pageblock title="Accounts PageBlock">
+        <apex:pageblockSection title="Account Records" collapsible="false" columns="1">
+        
+          <apex:selectList label="Select the Account Name" multiselect="false" size="1" value="{!selectedAccountId}">
+          
+              <apex:actionsupport event="onchange" action="{!GetRelatedContacts}" rerender="pgBlock"/>
+              <apex:selectOptions value="{!lstOptions}"></apex:selectOptions>
+          </apex:selectList>  
+          
+        </apex:pageblockSection>
+        
+    </apex:pageblock>
+    
+    <apex:pageblock title="Search Results : {!lstContacts.size} " id="pgBlock">
+        <apex:pageblockTable value="{!lstContacts}" var="con">
+            <apex:column value="{!con.firstName}"/>
+            <apex:column value="{!con.LastName}"/>
+            <apex:column value="{!con.Title}"/>
+            <apex:column value="{!con.Email}"/>
+            <apex:column value="{!con.Phone}"/>
+            <apex:column value="{!con.Fax}"/>
+        </apex:pageblockTable>
+    
+    </apex:pageblock>
+
+</apex:form>
+</apex:page>
+
+
+Controller Class:
+-----------------
+public class ActionSupportController 
+{
+    Public List<Selectoption> lstOptions {get;set;}
+    Public List<Contact> lstContacts {get;set;}
+    
+    Public string selectedAccountId {get;set;}
+    
+    Public void LoadAccountNames()
+    {
+        List<Account> lstAccounts = [select id, name from account order by name];
+        
+        lstOptions = new List<SelectOption>();
+        
+        if(! lstAccounts.isEmpty())
+        {
+            lstOptions.Add(new SelectOption('','---None---'));
+            
+            for(Account acc : lstAccounts)
+            {
+                lstOptions.Add(new SelectOption(acc.id, acc.name));
+            }
+        }
+    }
+    
+    Public void GetRelatedContacts()
+    {
+        lstContacts = [select id, firstname, lastname, email, phone, fax, title, mobilephone from contact
+                where accountid =: selectedAccountID ];
+    }
+}
+
+Task:
+-----
+	Create a VisualForce Page, To implement the Field Dependancy between two picklist controls using "Action Support".
+
+
+ActionPoller:
+-------------
+- It is used to execute the action methods for the specified time intervals
+
+- It will work as the Timer controls for the visual force page
+- It sends the request to the database asynchronously and load the data into the visual force page.
+
+Note: This control has to placed inside the form tag.
+
+Syntax:
+	<apex:ActionPoller
+			Action="Action Method Name"
+			Interval="Time Interval in Seconds"
+			ReRender = "Component to Refresh"/>
+	
+
+	Ex: <apex:actionPoller 
+				action="{!LoadAccountRecords}" 
+				interval="10" 
+				rerender="pgBlock"/>
+
+/*
+	Create a VisualForce Page, Which displays the Position records and Refresh the Data for each 10 seconds.
+*/
+
+VF Page Code:
+-------------
+<apex:page action="{!GetPositionRecords}" controller="SyncPositionRecordsController" setup="false" sidebar="false" showHeader="true" tabStyle="Position__c">
+<apex:sectionHeader title="Ajax Calls" subtitle="Action Poller Sample"/>
+<apex:form >
+    
+    <apex:actionPoller interval="10" action="{!GetPositionRecords}" rerender="pgBlock"/>
+    
+    <apex:pageblock title="Position Records PageBlock : ( {!lstPositions.size} )" id="pgBlock">
+        <apex:pageblockTable value="{!lstPositions}" var="pos">
+            <apex:column value="{!pos.Name}"/>
+            <apex:column value="{!pos.Location__c}"/>
+            <apex:column value="{!pos.Position_Status__c}"/>
+            <apex:column value="{!pos.Maximum_Pay__c}"/>
+            <apex:column value="{!pos.Close_Date__c}"/>
+            
+        </apex:pageblockTable>
+    </apex:pageblock>
+</apex:form>
+</apex:page>
+
+Controller Class:
+-----------------
+public class SyncPositionRecordsController 
+{
+    Public List<Position__C> lstPositions {get;set;}
+    
+    Public void GetPositionRecords()
+    {
+        lstPositions = new List<Position__C>();
+        
+        lstPositions = [select id, name, location__C, position_status__c, close_date__C,
+                        maximum_pay__C, createddate from position__c 
+                        order by createddate desc];
+                        
+    }
+}
+
+Execute Anonymous Window to Create Records:
+-------------------------------------------
+for(integer i=5; i<=12; i++)
+{
+    Position__C pos = new Position__C();
+        pos.Name = 'Test Position '+ i;
+        pos.Location__C = 'Delhi';
+        Pos.Open_date__C = system.today();
+        pos.close_date__C = system.today().AddDays(20);
+        pos.minimum_pay__C = 600000;
+        pos.maximum_pay__c = 1000000;
+        pos.skills_required__C = 'Test Position 1';
+        pos.position_description__c = 'Test Position 1';
+    
+    insert pos;
+    
+    if(pos.id != null)
+    {
+        system.debug('Position Record Created Successfully.');
+    }
+}
+
+ActionFunction:
+---------------
+By using this Tag, we can invoke the controller action methods from javascript.
+
+Upon invoking the actions, we can show the Process status also.
+
+We can have only one ActionFunction inside the VF page and use the ActionFunction in multiple place in the page, by defining it as "Global - define in <form> level"
+
+Syntax:
+	<apex:actionfunction
+				Name = "FunctionName"
+				Action = "<ActionMethod Name>"
+				Rerender = "<Components to Refresh>"
+				Status = "<ActionStatusControl Id>" />
+	
+
+
+Action Status:
+--------------
+This Tag is used to display the action processing status in the VF page, so the customer can wait till the page gets loaded.
+
+Syntax:
+	<apex:actionstatus
+				id ="ControlId"
+				starttext="Message to Display upon loading"
+				StopText="Message to display after process"/>
+
+
+Ex:
+	<apex:actionstatus	
+			id="status"
+			starttext="Please wait.. Loading Data..."
+			stoptext = "Ready" />
+
+/*
+	Create a VisualForce page, to seach the Lead Records based on the name and display the search results in VF Page along with the Process Status.
+*/
+
+VF Page Code:
+-------------
+<apex:page controller="SearchLeadsController" sidebar="false" setup="false" showheader="true" tabStyle="Lead" >
+<apex:sectionHeader title="Ajax Controls" subtitle="Action Function"/>
+<apex:form >
+
+    <apex:actionFunction name="GetLeadRecords" action="{!SearchLeadRecordsByName}" rerender="resultPanel" status="accStatus"/>
+
+    <apex:pageblock title="Search Lead Records">
+    
+        <apex:pageblockSection title="Lead Search" collapsible="true" columns="2">
+            <apex:inputtext label="Enter Lead Name " html-placeholder="Lead Last Name" value="{!leadName}" onkeydown="!if(event.keyCode==13){onblur();SearchLeadRecordsByName();}"/>
+            <apex:commandButton value="Search Leads" onclick="GetLeadRecords();return false;" />
+        </apex:pageblockSection>
+        
+    </apex:pageblock>
+    
+    <apex:pageblock title="Lead Results : {!lstLeads.size}" id="resultPanel">
+        
+        <apex:pageBlockTable value="{!lstLeads}" var="ld">
+            <apex:column value="{!ld.FirstName}"/>
+            <apex:column value="{!ld.LastName}"/>
+            <apex:column value="{!ld.Email}"/>
+            <apex:column value="{!ld.Company}"/>
+            <apex:column value="{!ld.Status}"/>
+            <apex:column value="{!ld.Phone}"/>
+        </apex:pageBlockTable>
+        
+       <apex:actionstatus id="accStatus">
+           <apex:facet name="start">
+               <center>
+                   <image src="/img/loading.gif"/>
+               </center>
+           </apex:facet>
+       </apex:actionstatus>       
+    
+    </apex:pageblock>
+</apex:form>
+</apex:page>
+
+
+Controller Class:
+-----------------
+public class SearchLeadsController 
+{
+    Public List<Lead> lstLeads {get;set;}
+    
+    public string leadName {get;set;}
+    
+    Public void SearchLeadRecordsByName()
+    {
+        if(leadName != null && leadName != '')
+        {
+            leadName += '%';
+            
+            lstLeads = [select id, firstname, lastname, email, company, status, phone, fax, mobilephone
+                            from Lead where lastname like : leadname and isconverted = false];
+        }
+    }
+}
+
+
+Action Region:
+--------------
+- ActionRegionprovides an area of a Visualforce page that decides and separates which components should be processed by the force.com server when an AJAX request is generated. 
+- Only the components which are inside actionregion component are processed by server, so it increases visualforce page performance.
+
+Syntax:
+		<apex:ActionRegion id="ID Value">
+			.... Add the Components...
+			.......
+		</apex:ActionRegion>	
+
+
+

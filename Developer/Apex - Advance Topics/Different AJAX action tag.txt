@@ -1,0 +1,13 @@
+Question # 39. What are the different AJAX action tags? What does each do?
+
+Answer #
+
+actionStatus: used to display start and stop statuses of AJAX requests.
+
+actionSupport: used to call a second component when an event happens to the first component.
+
+actionPoller: similar to actionSupport, but the event is based on a timer instead of a user action.
+
+actionFunction: provides support for invoking a controller action from JavaScript code using an AJAX request by defining a new JavaScript function.
+
+actionRegion: used to demarcate which parts of the page the server should reprocess.

@@ -1,0 +1,5 @@
+Question # 29. What are three types of bindings used in Visualforce? What does each refer to?
+
+Answer # Data bindings refer to the data set in the controller.
+Action bindings refer to action methods in the controller.
+Component bindings refer to other Visualforce components

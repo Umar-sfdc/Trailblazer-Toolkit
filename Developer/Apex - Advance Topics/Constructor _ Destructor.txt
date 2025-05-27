@@ -1,0 +1,38 @@
+The name of the constructor is the same as the name of the class.
+
+It has no return type.
+
+Constructor is a special method of a class that is automatically invoked when you will create the object of the class.
+
+A class can have multiple constructor.
+
+By default C# will create default constructor internally.
+
+Constructor are by default public.
+
+There are 5 types of constructor
+
+1 Default Constructor: A constructor without having any parameter are called default constructor.
+2 Copy Constructor: The constructor which creates an object by copying variables from another object is called a copy constructor
+3 Parameterized Constructor: A constructor with at least one parameter is called as parameterized constructor.
+
+
+
+
+
+The name of the destructor is the same as the name of the class but prefix with tilde ~code.
+
+It has no return type.
+
+A class can have only one destructor.
+
+Destructor can not be inherited or overloaded.
+
+It does not have parameter.
+
+.net framework automatically run the destructor to destroy the object in the memory.
+
+
+
+
+

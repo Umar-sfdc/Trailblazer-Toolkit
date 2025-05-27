@@ -1,0 +1,7 @@
+Question # 5. What is Custom Controller?
+
+Answer # Custom controller is an apex class that implements customized logic to visualfore pages.
+
+We can override or create new functionality by using custom controllers.
+
+Syntax: <apex:page controller=”Account” >

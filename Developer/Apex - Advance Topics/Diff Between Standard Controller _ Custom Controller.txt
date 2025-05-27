@@ -1,0 +1,18 @@
+Standard Controller:
+
+Standard controller in apex, inherits all the standard object properties and standard button functionality directly.
+
+It contain the same functionality and logic that are used for standard Salesforce pages.
+
+It Can be used with standard objects and custom objects.
+
+
+
+Custom Controller:
+
+
+It is an Apex class that implements all of the logic for a page without leveraging a standard controller.
+
+Custom Controllers are associated with Visualforce pages through the controller attribute.
+
+Custom controller defines its own functionality.

@@ -1,0 +1,13 @@
+What are the Salesforce best practices for apex?
+
+
+1. Use Asynchronous Apex methods like @future methods, batch processing, scheduler that does not need to be executed synchronously.
+2. Asynchronous Apex should be “bulkified”. It means able to handle collections of records.
+3. Apex code must have appropriate exception handling.
+4. When querying large data sets use SOQL “for” loop.
+5. Use SOSL over SOQL where possible because it is much faster than SQL.
+6. Avoid hitting governor exceptions in apex methods.
+7. No SOQL or SOSL queries inside loops. If you need to query, query once, retrieve all the necessary data in a single query, then iterate over the results.
+8. No DML statements inside loops.
+9. No Asynchronous methods inside loops.
+10. Do not use hardcoded IDs.

@@ -1,0 +1,131 @@
+Collection
+========
+Collection are just the way to store similer type of information.
+
+In apex there are 3 types of collection
+1. List
+2. Set
+3. Map
+
+Collection is a set of classes that provides an array functionality in a superior manner. Collection classes are more flexible in comparison of array because they are resizable and the size of an array is not changed at run time.
+
+Memory is always waste in case of array but we can manage the waste memory in collection.
+
+Array means data type is defined at compile time and collection means data type is defined at run time.
+
+Collection is higher level and array is subset of collection.
+
+
+Lists
+====
+List are used to store data in sequesnce. List is a collection of similer types of elements. 
+Like if you want to store string in a series you can use list.
+
+There are two important property of list.
+
+Data in the list will be stored in sequential order.
+Data can be duplicated.
+
+List<string> ListOfCities = new List<string>();
+System.debug('Value Of ListOfCities'+ListOfCities);
+
+Methods for Lists
+==============
+
+Following are some most frequently used methods -
+
+size() -- return the size of list
+add() -- add the element in the list
+get() -- 
+remove() -- remove the element from the list.
+set() -- set the value on the particular index.
+Sort -- Sorting the element
+
+// Initialize the List
+List<string> ListOfStatesMethod = new List<string>();
+
+// This statement would give null as output in Debug logs
+System.debug('Value of List'+ ListOfStatesMethod);
+
+// Add element to the list using add method
+ListOfStatesMethod.add('New York');
+ListOfStatesMethod.add('Ohio');
+
+// This statement would give New York and Ohio as output in Debug logs
+System.debug('Value of List with new States'+ ListOfStatesMethod);
+
+// Get the element at the index 0
+String StateAtFirstPosition = ListOfStatesMethod.get(0);
+
+// This statement would give New York as output in Debug log
+System.debug('Value of List at First Position'+ StateAtFirstPosition);
+
+// set the element at 1 position
+ListOfStatesMethod.set(0, 'LA');
+
+// This statement would give output in Debug log
+System.debug('Value of List with element set at First Position' + ListOfStatesMethod[0]);
+
+// Remove all the elements in List
+ListOfStatesMethod.clear();
+
+// This statement would give output in Debug log
+System.debug('Value of List'+ ListOfStatesMethod);
+
+
+SET
+====
+
+Set is also collection of elements. But you can not stored duplicate value here.
+Set is unorder collection of elements.
+You can not access element by using index value.
+
+Set<string> ProductSet = new Set<string>{'Phenol', 'Benzene', 'H2SO4'};
+System.debug('Value of ProductSet'+ProductSet);
+
+
+Method of Set
+============
+
+// Adds an element to the set
+// Define set if not defined previously
+Set<string> ProductSet = new Set<string>{'Phenol', 'Benzene', 'H2SO4'};
+ProductSet.add('HCL');
+System.debug('Set with New Value '+ProductSet);
+
+// Removes an element from set
+ProductSet.remove('HCL');
+System.debug('Set with removed value '+ProductSet);
+
+// Check whether set contains the particular element or not and returns true or false
+ProductSet.contains('HCL');
+System.debug('Value of Set with all values '+ProductSet);
+
+
+MAP
+====
+It is a key value pair which contains the unique key for each value. Both key and value can be of any data type.
+
+Methods for Maps
+===============
+// Define a new map
+Map<string, string> ProductCodeToProductName = new Map<string, string>();
+
+// Insert a new key-value pair in the map where '1002' is key and 'Acetone' is value
+ProductCodeToProductName.put('1002', 'Acetone');
+
+// Insert a new key-value pair in the map where '1003' is key and 'Ketone' is value
+ProductCodeToProductName.put('1003', 'Ketone');
+
+// Assert that the map contains a specified key and respective value
+System.assert(ProductCodeToProductName.containsKey('1002'));
+System.debug('If output is true then Map contains the key and output is:'
+   + ProductCodeToProductName.containsKey('1002'));
+
+// Retrieves a value, given a particular key
+String value = ProductCodeToProductName.get('1002');
+System.debug('Value at the Specified key using get function: '+value);
+
+// Return a set that contains all of the keys in the map
+Set SetOfKeys = ProductCodeToProductName.keySet();
+System.debug('Value of Set with Keys '+SetOfKeys);

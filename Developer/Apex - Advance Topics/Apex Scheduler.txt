@@ -1,0 +1,4 @@
+What is Apex Scheduler?
+
+
+Apex Scheduler is the feature which is used to invoke the Apex classes to help them run at explicit times, first, execute the Schedulable assemblage for the class, then state the schedule by utilizing either the Schedule Apex page or the System.

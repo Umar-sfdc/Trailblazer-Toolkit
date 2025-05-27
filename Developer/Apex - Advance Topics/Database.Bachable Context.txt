@@ -1,0 +1,4 @@
+What is the Database.BatchableContext?
+
+Ans: BatchableContext Interface is Represents the parameter type of a batch job method and
+contains the batch job ID. This interface is implemented internally by Apex.

@@ -1,0 +1,13 @@
+What are the Disadvantages by using Batch Apex processing ?
+
+Answer: Disadvantages of batch processing:
+
+It runs asynchronously, which can make it hard to troubleshoot without some coded debugging, logging, and persistent stateful reporting. 
+
+It also means that it’s queued to run, which may cause delays in starting.
+
+There’s a limit of 5 batches in play at any time, which makes it tricky to start batches from triggers unless you are checking limits.
+
+If you need access within execute() to some large part of the full dataset being iterated, this is not available. Each execution only has access to whatever is passed to it, although you can persist class variables by implementing Database.stateful.
+
+There is still a (fairly large) limit on total Heap size for the entire batch run, which means that some very complex logic may run over, and need to be broken into separate batches.

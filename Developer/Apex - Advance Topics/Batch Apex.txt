@@ -1,0 +1,9 @@
+Q. What is Batch Apex in Salesforce?
+
+
+>>Batch Apex: Batch Apex allows you to define a single job that can be broken up into manageable chunks, whereas every chunk can be processed separately.
+>>In the Batch Apex it will fetch all the records on which you want to perform the field update and divide them into list of 200 records and on every 200 records operation is performed separately.
+>>This would help us to execute on more than 10,000 records as, it won’t perform an operation on all the records in a single transaction instead it dividing them into Number of subtasks where each subtask many contain the records upto 4000.
+Example:
+If you need to make a field update of every record of account object in your organization, then we have governing limits that would restrict us from achieving the above task.
+Reason: In a single transaction we can process only 10,000 records. Now in the above case if we have more than 10,000 records in the organization then we can not perform this field update.

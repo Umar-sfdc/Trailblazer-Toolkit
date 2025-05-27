@@ -1,0 +1,19 @@
+(28.) Difference between Difference between Synchronous and Asynchronous?
+Synchronous:
+In a Synchronous call, the thread will wait until it completes its tasks before proceeding to next. In a Synchronous call, the code runs in single thread.
+
+Example:
+
+Trigger
+Controller Extension
+Custom Controller
+
+
+Asynchronous:
+
+In a Asynchronous call, the thread will not wait until it completes its tasks before proceeding to next. Instead it proceeds to next leaving it run in separate thread. In a Asynchronous call, the code runs in multiple threads which helps to do many tasks as background jobs.
+
+Example:
+
+Batch
+@future Annotation

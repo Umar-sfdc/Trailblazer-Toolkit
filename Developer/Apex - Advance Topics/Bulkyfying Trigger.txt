@@ -1,0 +1,3 @@
+(6.) What do you mean by the bulkifying trigger?
+
+A trigger that can handle both single record and thousands of record. It is capable of handling mass action.

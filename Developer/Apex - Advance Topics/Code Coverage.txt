@@ -1,0 +1,19 @@
+What is code coverage and what is the minimum code coverage for class and trigger?
+
+
+Code Coverage is the percentage number of lines covered by the test class by a total number of lines need to be covered.
+
+Minimum code coverage for the trigger is at least 1% and for class, the overall code coverage of production should be above 75% before a new component can be deployed to the production.
+
+
+To analyze code coverage on unit tests in Test Explorer
+
+On the Test menu, choose Analyze Code Coverage.
+To see which lines have been run, choose Show Code Coverage Coloring. 
+If the results show low coverage, investigate which parts of the code are not being exercised, and write more tests to cover them.
+
+
+Apex code coverage requires that you generate a test record in your test class and test how it behaves under the custom logic in your trigger or apex code.
+This test class should atleast touch 75% of your custom code. In other words the more scenarios or records you create for a test class the greater your coverage would be.
+You can check your code coverage in developer console. The red part depicts code that has not been covered, blue for covered and white lines for code that does not require coverage.
+

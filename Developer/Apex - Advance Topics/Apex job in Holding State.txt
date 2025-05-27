@@ -1,0 +1,4 @@
+Que 15:-  Why Apex job in holding state.
+Ans: When flex queue are used to submit batch job simultanously. you will see the jobs are in the flex queue will be in holding state.
+Normally the batch job which has not started yet will assume that status of queued. The batch which is currently being processed will be in progress state.  Batch job usually have the limit of five queue or active job simultanously. With flex queue any job that are submitted for execution but are not processed immediately by the system go in holding status.
+Up to 100 batch job can be in holding status when system resources become available the system pick up jobs form the Apex flex queue and move them to the batch job queue. The status of these moved jobs changed from holding to queued.

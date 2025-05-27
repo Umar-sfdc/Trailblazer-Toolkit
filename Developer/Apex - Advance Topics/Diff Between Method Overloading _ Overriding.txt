@@ -1,0 +1,25 @@
+Function Overloading:
+
+Function overloading is the concept of the static or compile time polymorphism.
+
+Means more than one function with the same name in a class but function signature are different.
+
+It does not need inheritance.
+
+It des not required more than one class for overloading.
+
+
+
+
+
+Function Overriding:
+
+Function Overriding is the concept of dynamic or run time polymorphism.
+
+Means more than one function with the same name & function signature must be same.
+
+It need inheritance.
+
+It require at least two class for overriding.
+
+ 

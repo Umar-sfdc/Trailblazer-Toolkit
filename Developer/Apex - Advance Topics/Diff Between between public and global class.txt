@@ -1,0 +1,3 @@
+What is the difference between public and global class in Apex?
+
+A public class is accessible to the inside application or namespace. This isn’t precisely similar to a public modifier in Java whereas Global class is visible everywhere, in any application or namespace. Web Service must be proclaimed as Global and which can be accessed inside Javascript as well. It resembles public modifier in Java.

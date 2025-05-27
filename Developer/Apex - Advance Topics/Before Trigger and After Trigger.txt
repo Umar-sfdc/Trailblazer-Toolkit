@@ -1,0 +1,11 @@
+(21.) When to use BEFORE triggers and when to use AFTER triggers?
+
+BEFORE triggers should be used in below scenarios
+Custom validation checks in the same object
+Update the same record/object
+Setting a default values
+
+AFTER triggers should be used in below scenarios
+If we need to use Record's ID
+Inserting or Updating the related records
+To send notification email post commit

@@ -1,0 +1,5 @@
+Action Pollar:  
+
+Action poller acts as a timer in visualforce page. It is used to send an AJAX request to the server depending on the time interval (time interval has to be specified or else it defaults to 60 seconds).
+
+This is a timer componenet which can send AJAX request on predefined interval. Minimum is 5 sec and default is 60 sec.

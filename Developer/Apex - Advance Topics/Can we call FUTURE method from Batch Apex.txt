@@ -1,0 +1,4 @@
+(30.) Is there is any way through which we can call future method from batch apex?
+
+As we know that a webservice can be called from batch class and webservice can call @future method. So in your batch class call webservice and which can call your @future method.         
+Also you can call future method from finish method in batch class.

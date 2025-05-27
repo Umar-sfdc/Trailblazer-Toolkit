@@ -1,0 +1,8 @@
+Best Practices to reduce the view state size
+
+·         Minimize number of form on a page.  Use apex:actionRegion instead of using 2 or more forms.
+·         Refine your SOQL to only retrieve the data needed by the page.
+·         All public and private data members present in Standard, Custom and Controller extensions are saved.
+·         Mark any Apex variables that are not necessary to the view state as Transient. (The transient variables are not passed to view state and therefore not stored in View State)
+·         Create wizards with as few pages as possible
+·         Use outputLink components instead of commandLink or commandButton components where possible as they don’t need to be nested in a form.

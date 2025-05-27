@@ -1,0 +1,10 @@
+1) The view state size of your Visualforce pages must be under 135 KB. By reducing your view state size, your pages can load quicker and stall less often.
+2) Large page sizes directly affects load times. To improve Visualforce page load times:
+·        Cache any data that is frequently accessed, such as icon graphics.
+·        Avoid SOQL queries in your Apex controller getter methods.
+·        Reduce the number of records displayed on a page by adding filter condition in SOQL
+3) Reduce Multiple Concurrent Requests: use <apex:actionpoller>
+4) By using the with sharing keyword when creating your Apex controllers, you have the possibility of improving your SOQL queries by only viewing a data set for a single user.
+5) Preventing Field Values from Dropping Off the Page.
+
+

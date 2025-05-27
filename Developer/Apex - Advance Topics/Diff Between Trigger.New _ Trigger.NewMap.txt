@@ -1,0 +1,5 @@
+What is the difference between Trigger.New & Trigger.NewMap?
+
+Trigger.New is return a list of new version of sObject record.  This sObject list is only available in insert and update triggers, and the records can only be modified in before triggers.
+
+Trigger.NewMap is return a Map of new version of sObject record. This map is only available in before update, after insert and after update triggers.

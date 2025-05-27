@@ -1,0 +1,9 @@
+Question # 9. What is <apex:page> tag in visualforce markup?
+
+Answer # This tag represents a single visualforce page. Every page must start & end with this tag.
+
+<apex:page>
+
+<!– Body of the page –>
+
+</apex:page>
