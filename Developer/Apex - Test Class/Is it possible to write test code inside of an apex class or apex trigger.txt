@@ -1,0 +1,8 @@
+Is it possible to write test code inside of an apex class or apex trigger?
+
+
+we cannot write test code (test methods) inside of the apex trigger.
+From API Version 28.0, we cannot write the test methods inside of an apex class which is not decorated with @isTest.
+We can write test methods only in a class which is decorated with @isTest.
+
+Note: We have a governor limit for the overall Apex Code size of the organization which is of 3 MB. If we decorate a class with @isTest annotation Apex Code Size governor limit will be bypassed.

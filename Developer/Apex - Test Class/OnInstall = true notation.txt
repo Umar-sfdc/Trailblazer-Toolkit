@@ -1,0 +1,5 @@
+OnInstall = true notation?
+
+Use the @IsTest(OnInstall=true) annotation to specify which Apex tests are
+executed during package installation. This annotation is used for tests in
+managed or unmanaged packages.

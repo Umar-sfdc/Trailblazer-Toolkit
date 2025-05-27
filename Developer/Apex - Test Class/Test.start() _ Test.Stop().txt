@@ -1,0 +1,52 @@
+What is the role of Test.start() and Test.Stop()?
+
+
+Test.startTest and Test.stopTest are used for asynchronous apex, like Batch Apex and Future calls. 
+Calling method(s) between Test.startTest and Test.stopTest ensure that any asynchronous transactions finish executing 
+before Test.stopTest() exits. 
+ 
+startTest()
+=========
+Marks the point in our test code when our test actually begins. Use this method 
+when we are testing governor limits.
+
+
+Usage
+======
+We can also use this method with stopTest to ensure that all asynchronous calls 
+that come after the startTest method are run before doing any assertions or
+testing. Each test method is allowed to call this method only once. 
+
+
+stopTest()
+========
+Marks the point in our test code when our test ends. Use this method in 
+conjunction with the startTest method.
+
+
+Usage
+=====
+Each test method is allowed to call this method only once. Any code that executes
+after the stopTest method is assigned the original limits that were in effect before
+startTest was called. 
+ Example: if our class makes 98 SOQL queries before it calls startTest, and the
+ first significant statement after startTest is a DML statement, the program can 
+ now make an additional 100 queries. Once stopTest is called, however, the 
+ program goes back into the original context, and can only make 2 additional
+ SOQL queries before reaching the limit of 100
+
+
+
+Why would a developer use Test.startTest() and Test.stopTest()?
+
+1. To avoid Apex code coverage requirements for the code between these lines.
+2. To start and stop anonymous block execution when executing anonymous Apex
+ code
+3. To indicate test code so that it does not impact Apex line count governor limits
+4. To create an additional set of governor limits during the execution of a single 
+ test class
+
+
+
+
+

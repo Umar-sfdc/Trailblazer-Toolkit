@@ -1,0 +1,11 @@
+How many types of Assert Statements are there and what is their purpose?
+
+Assert statements are used to compare expected value with the actual value.
+
+There are three types of assert statements :
+
+1. assertEquals(expVal, actVal) -->  returns true if expVal Matches actVal.
+
+2. assertNotEqual(expVal, actVal) -->  returns true if expVal does not match actVal.
+
+3. assertEquals(expVal > actVal) -->  returns true if the condition is satisfied.

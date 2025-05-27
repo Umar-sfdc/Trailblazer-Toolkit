@@ -1,0 +1,29 @@
+(1.) Can we use (SeeAllData=true) and (isParallel=true) in same apex test method?
+@isTest(SeeAllData=true) and @isTest(isParallel=true) annotations cannot be used together on the same Apex test method.
+
+(2.) Does Salesforce count calls to system.debug() against the code coverage?
+No, Salesforce does not count it against the code coverage.
+
+(3.) Why to create separate class for testing purpose?
+Advantage of creating a separate class for testing as opposed to adding test methods to an existing class is that classes defined with isTest don’t count against our organization limit of 3 MB for all Apex code.
+
+(4.) How is a class defined as a test class ?
+Use @isTest annotation to define a test class.
+
+(5.) Can we use system.run as in all the methods?
+System.runAs() must be used only in a test method
+
+(6.) How to test future method?
+To test future methods make our call to any future method between 
+Test.startTest(); and Test.stopTest(); statements and the future method will 
+return when Test.stopTest(); is called.
+
+(7.) What is a good practice of testing Batch class?
+We should always test batch class with good amount of data 
+(minimum 200 records) in our test class.
+Use Test.startTest() and Test.stopTest() to test batchable classes
+
+(8.)How to test class for batch apex making http apex callouts?
+We should be able to do this using HttpCalloutMock and Test.startTest/stopTest.
+
+

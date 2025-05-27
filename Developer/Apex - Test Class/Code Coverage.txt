@@ -1,0 +1,18 @@
+What is code coverage and what is the minimum code coverage for class and trigger?
+
+
+After developing an apex class or apex trigger we should write the unit tests and ensure that we are able to execute at least 75% of the lines of code.
+If you are moving the code from sandbox to sandbox regarding code coverage you won't face any issue.
+
+If you are moving the code from sandbox to production, you need to include all the test classes at the time of deployment and salesforce will run all the test classes which you included for the deployment as well as test classes which are already present in production, if the code coverage is less than 75% deployment will fail.
+
+
+Note:
+	A test class is a class which helps in checking the quality of code before it can be deployed to Salesforce Production. It helps in code coverage of an Apex class or Trigger.
+
+
+Note:
+	Code Coverage is the percentage number of lines covered by the test class by a total number of lines need to be covered.
+
+Minimum code coverage for the trigger is at least 1% and for class, the overall code coverage of production should be above 75% before a new component can be deployed to the production.
+	

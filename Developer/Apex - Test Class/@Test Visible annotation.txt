@@ -1,0 +1,12 @@
+What is @testVisible annotation? When you will use it?
+
+
+For example, If you have an Apex class or controller, It has a Private or Protected variable or methods or inner classes. so you can't access them in other classes. But using this @testVisible annotation in a Private or Protected variable or methods or inner classes safely expose them only for test classes.
+
+Ex: In Apex class not in Test class
+// Private variable
+@TestVisible private static String accountName= 'acme';
+// Private method
+@TestVisible private static void showRecord(String name) {
+    // add something
+}

@@ -1,0 +1,17 @@
+What is the use of System.Assert/System.AssertEquals Methods?
+
+These methods are used to ensure that the Apex code executes and returns the 
+expected value.
+
+System.Assert: 
+=============
+It accepts two parameter: First one (mandatory) is the condition 
+test and the second one is used to display a message in case the condition fails.
+Syntax: System.assert(var1 == var2,”msg”)
+
+System.AssertEquals:
+================== 
+It accepts three parameters; the first two (mandatory) are
+the variables that will be tested for equality or inequality, and the third (optional)
+one is used to display a message in case the condition fails.
+Syntax: System.assertEquals(var1, var2,”msg”);

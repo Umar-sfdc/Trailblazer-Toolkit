@@ -1,0 +1,25 @@
+What is @isTest annotation? When you will use it?
+
+
+When you define method or class using @isTest annotation then it only contains code used for testing your application. Test classes should be public or private only. Test class doesn't count against your organization limit of 3 MB for all Apex code.
+
+
+@isTest
+private class MyTestClass {
+   // Methods for testing
+   @isTest static void test1() {
+      // Implement test code
+   }
+}
+
+What are the considerations of using isTest annotation?
+
+1. Classes and methods defined as isTest can be either private or public.
+2. Classes defined as isTest must be top-level classes.
+3. One advantage to creating a separate class for testing is that classes defined with isTest don’t count against our organization limit of 3 MB for all Apex code.
+4. We can also add the @isTest annotation to individual methods
+5. Classes defined as isTest can’t be interfaces or enums
+6. Methods of a test class can only be called from a running test, that is, a test method or code invoked by a test method, and can’t be called by a non-test request.
+7. Test methods can’t be used to test Web service callouts. Instead, use mock callouts
+8. We can’t send email messages from a test method
+9. Methods of a public test class can only be called from a running test, that is, a test method or code invoked by a test method, and can’t be called by a non-test request.

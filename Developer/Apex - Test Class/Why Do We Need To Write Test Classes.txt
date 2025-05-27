@@ -1,0 +1,9 @@
+Why Do We Need To Write Test Classes? How To Identify If A Class Is A Test Class?
+
+Answer :
+
+Software developers from around the world will unanimously agree that writing code in test classes makes debugging more efficient. That is because test classes help in creating robust and error-free code be it Apex or any other programming language. Since Unit tests are powerful in their own right, Salesforce requires you to write test classes in Apex code.
+
+Because test classes and test methods verify whether a particular piece of code is working properly or not. If that piece of code fails, then developers/ testers can accurately locate the test class having the faulty bug.
+
+Test classes can be determined easily because every test class will be annotated with isTest keyword. In fact, if we do not annotate a test class with isTest, then it cannot be defined as a test class. Similarly, any method within a class which has the keyword test method is a test method.

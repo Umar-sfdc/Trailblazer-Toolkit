@@ -1,0 +1,36 @@
+What is Test.isRunningTest()  method?
+
+The Test.isRunningTest()  method is used to identify, if the piece of code being
+executed is invoked from a Test class execution or from other artefacts such as a
+Trigger, Batch Job etc. Returns true if the code being executed is invoked from a 
+test class otherwise returns a false.
+
+Example: 
+========
+Performing web service callouts in Apex are not supported within Test 
+Code. Hence we could use the Test.isRunningTest() to conditionally identify and 
+route the execution of a code block that calls the Test Mock framework to simulate
+a mock, callout response.
+
+
+
+Use Case of Test.isRunningTest() method
+===================================
+When we are setting up test data from Apex test method, we need a way to 
+disable the triggers that will fire. It might cause “LimitException: “Too many SOQL
+queries: 101?. In this case, the triggers are not the target of the test case, hence
+ this scenario will cause the test method to fail. It is not necessary to disable the
+trigger for every test case, instead we can use isRunningTest().
+Setup up the trigger by leveraging isRunningTest(). isRunningTest() – Returns true
+if the currently executing code was called by code contained in a test method,
+false otherwise. Use this method if we need to run different code depending on
+whether it was being called from a test
+Other Usage scenarios
+1. To ensure the trigger doesn’t execute the batch if Test.IsRunningTest() is true, 
+and then test the batch class with it’s own test method.
+
+
+2. Testing callouts – in our callout code we check to see if we‘re executing within a
+unit test context by checking Test.isRunningTest() and instead of getting your 
+callout response from an HttpResponse.send() request, you return a pre-built test 
+string instead.

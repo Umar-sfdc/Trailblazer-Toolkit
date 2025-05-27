@@ -1,0 +1,29 @@
+
+Batch apex is asynchonous process, means it wont fire mmediately.. it will run whenever system is free.
+
+
+
+
+(2.) Does Salesforce count calls to system.debug() against the code coverage?
+
+No, Salesforce does not count it against the code coverage.
+
+
+
+
+(6.) What is System.runAs() Method used for in a test Class?
+
+Default execution mode of a test class is system mode, and if we want to run this test class as a specific user then we use system.runAs().
+
+
+
+
+(14.) What is a Test.setCreatedDate? When you will use it?
+Sometimes we need test data like record created date in past. So we will use Test.setCreatedDate to set the created date meet our requirements. It only used in test classes.
+Ex:
+Account ac = new Account(name='test ac');
+Insert ac;
+Test.setCreatedDate(ac.Id, DateTime.newInstance(2015,01,01));
+
+
+

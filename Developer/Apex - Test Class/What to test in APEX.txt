@@ -1,0 +1,23 @@
+What to Test In Apex?
+
+Salesforce.com recommends the following components need to test.
+
+1. Single Records:
+This includes testing to verify that a single record produces the correct,
+expected result.
+
+2. Bulk Records:
+Any apex code, whether a triggers, a class or on extension may be used 
+for 1to 200 records we must test not only the single record case, but the bulk
+cases as well.
+
+3. Positive scenarios:
+This type of component testing expect a system to save a record without error.
+
+4. Negative scenarios:
+This type of component testing expect a system to give error.
+
+5. Restricted User:
+Test whether a user with restricted access to the objects used in code sees
+the expected behavior, i.e whether they can run the code or receive error 
+messages.

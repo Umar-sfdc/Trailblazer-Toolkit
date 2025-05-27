@@ -1,0 +1,5 @@
+(isParallel=true)?
+
+Use the @isTest(isParallel=true) annotation to indicate test classes that can run 
+in parallel. Default limits on the number of concurrent tests do not apply to these
+test classes. 

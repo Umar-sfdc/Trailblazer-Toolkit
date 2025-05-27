@@ -1,0 +1,16 @@
+What is the use of System.runAs() method?
+
+All Apex code runs in system mode, where the permissions and record sharing of
+the current user are not taken into account. The system method runAs enables
+us to write test methods that change the user context to an existing user or a 
+new user so that the user’s record sharing is enforced. The runAs method doesn’t
+enforce user permissions or field-level permissions, only record sharing.
+The following items use the permissions granted by the user specified with runAs
+running as a specific user:
+ 
+Dynamic Apex Methods using with sharing or without sharing 
+
+
+Shared records
+The original permissions are reset after runAs completes.The runAs method 
+ignores user license limits.

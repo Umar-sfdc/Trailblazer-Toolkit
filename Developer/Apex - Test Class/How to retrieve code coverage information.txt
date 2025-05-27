@@ -1,0 +1,6 @@
+How to retrieve code coverage information?
+
+
+We can query these objects by using SOQL and the Tooling API to retrieve
+coverage information. Using SOQL queries with Tooling API is an alternative way 
+of checking code coverage and a quick way to get more detail.

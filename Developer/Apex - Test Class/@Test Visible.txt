@@ -1,0 +1,16 @@
+What is @testVisible used for while testing an Apex class?
+
+There could be a possibility that we need to access a private class member, but due to its accessibility, it is not visible to test method. To make them visible to test method we use @Testvisible before any private member in Apex class.
+
+
+Some methods are declared as private so we won’t be able to call them outside
+the class. However, sometimes we really want to be able to invoke it from a unit
+test method.
+
+To resolve this, we can mark the method with a @TestVisible annotation. Then
+ although it is still private, it is invokable from our unit test methods.
+
+
+
+
+

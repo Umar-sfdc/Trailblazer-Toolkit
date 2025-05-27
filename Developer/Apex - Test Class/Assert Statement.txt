@@ -1,0 +1,11 @@
+What are the assert statements?
+
+What is the purpose?
+
+To compare Actual value and Expected value we use assert statements.
+
+Types of assert statements
+
+system.assertEquals(val1,val2): If both val1 and val2 are same then test class run successfully otherwise test class will fail.
+system.assertNotEquals(val1,val2): If both val1 and val2 are not same then test class run successfully otherwise test class will fail.
+system.assertEquals(val1> val2): If the condition satisfied then test class run successfully otherwise test class will fail.

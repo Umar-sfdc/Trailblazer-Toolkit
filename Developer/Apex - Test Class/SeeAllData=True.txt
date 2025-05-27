@@ -1,0 +1,23 @@
+SeeAllData=true annotation ?
+
+Use the @isTest(SeeAllData=true) annotation to grant test classes and individual test methods access to all data in the organization. 
+
+
+
+Which Objects can we access without using seeAllData=true?
+
+We use seeAllData = true to get real-time data in test class, but without using this also you can get the data from following objects.
+User, profile, organization, AsyncApexjob, Corntrigger, RecordType, ApexClass, ApexComponent , ApexPage and custom metadata types. 
+
+
+What is the purpose of seeAllData?
+
+By default test class cannot recognize the existing data in the database.
+if you mention @isTest(seeAllData = true) then test class can recognize the existing data in the database.
+
+See the below examples -
+From a List Custom Settings we cannot fetch the existing data without seeAllData = true in test class.
+Suppose you have a custom object called 'CustomObject__c' and it contains many records, we cannot fetch the existing data without seeAllData = true in test class.
+Note: It is not recommended to use seeAllData = true for a test class. Based on the existing data in database code coverage will impact.
+
+

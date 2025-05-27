@@ -1,0 +1,6 @@
+Thinks to remember when you use @testSetup method
+
+1. We can use only one test setup method per class.
+2. Test setup method will execute first in the test class.
+3. If any DML error occurs in this test setup method, rest of the method not executed.
+4. If a test setup method calls a non-test method of another class, no code coverage is calculated for the non-test method.
