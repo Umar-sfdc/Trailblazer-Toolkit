@@ -1,0 +1,8 @@
+What are the various event on which a trigger can fire?
+
+1. Insert
+2. Update
+3. Delete
+4. Merge
+5. Upsert
+6. Undelete

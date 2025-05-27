@@ -1,0 +1,17 @@
+What is @testSetup annotation? When you will use it?
+For example, we have a test class, It has two test methods and each test method required 5 account records.So without creating 5 records for each test method, we will create a new method with annotation @testSetup then create only 5 account records. These records can access all test methods using SOQL query in that test class.   
+Ex: @testSetup method
+@testSetup static void setup() {
+    // Create common test accounts
+    List<Account> accountsLst = new List<Account>();
+    for(Integer i=0;i<5;i++) {
+  testAccts.add(new Account(Name = 'TestAc '+i));
+    }
+    Insert accountsLst;      
+}
+
+Thinks to remember when you use @testSetup method:
+We can use only one test setup method per class.
+Test setup method will execute first in the test class.
+If any DML error occurs in this test setup method, rest of the method not executed.
+If a test setup method calls a non-test method of another class, no code coverage is calculated for the non-test method.

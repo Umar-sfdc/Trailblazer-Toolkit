@@ -1,0 +1,6 @@
+Using the super Keyword
+The super keyword can be used by classes that are extended from virtual or abstract classes. By using super, you can override constructors and methods from the parent class.
+
+Best Practices for Using the super Keyword
+• Only classes that are extending from virtual or abstract classes can use super.
+• You can only use super in methods that are designated with the override keyword.

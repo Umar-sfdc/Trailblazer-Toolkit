@@ -1,0 +1,23 @@
+What are Resursive triggers?
+If any trigger calls itself then such triggers are called Recursive Triggers.
+
+There is a possibility that the result of trigger can end up calling the same trigger again and can run in a loop, this is known as a recursive trigger. To avoid this scenario we should create a static variable and check the value of this variable before we execute anything in the trigger.
+
+class:
+public class AvoidRecursive {
+   public static boolean firstRun = true;
+}
+
+
+Trigger: 
+trigger TestTrigger on Contact (after insert) {
+    if(AvoidRecursive.firstRun)
+    {
+        AvoidRecursive.firstRun = false;
+        insert new Contact(Lastname=’Venu’, Phone=12345);
+    }   
+}
+
+
+How to handle Recursive triggers?
+We can handle these recursive Triggers using "Static Boolean".

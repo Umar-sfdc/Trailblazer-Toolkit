@@ -1,0 +1,18 @@
+What is the role of Test.start() and Test.Stop()?
+
+
+Test class also abide by the governor limit of Salesforce and we often find ourself hitting governor limits in the test class. To avoid hitting this scenario Salesforce provided us with Test.start() and test.stop().
+
+ 
+Code written between these methods receives a fresh set of governor limits.
+It runs asynchronous methods synchronously.
+These can be used only once per testMethod.
+
+
+test.start() :- if you want test asynchonous process then we will use test.start(), test.stop() method.
+we will use for batcch apex, batch schedule, future method.
+
+
+
+
+

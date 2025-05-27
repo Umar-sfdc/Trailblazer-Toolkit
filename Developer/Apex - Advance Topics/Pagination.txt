@@ -1,0 +1,50 @@
+What is pagination and what are the ways to achieve it?
+
+Assume that we need to display 100 records on the page. If the requirement is to display only 10 records at a time - 
+
+First: Displays first set of 10 records.
+Previous: Displays previous set of 10 records.
+Next: Displays next set of 10 records.
+Last: Displays last set of 10 records. 
+
+We can achieve the pagination in two ways-
+Using standardSetController
+Using Limit and Offset keywords in SOQL query. 
+
+Pagination Methods:
+		=================
+		5. First():
+			This method will return the Set of records to be displayed upon click on "First" button during the pagination.
+			
+			Ex:
+				{!First}
+				
+		6. Next():
+			This method is used to display the next set of records, upon click on "Next" button.
+			
+			Ex:
+				{!Next}
+				
+		7. Previous():
+			This method is used to display the previous set of records.
+			
+			Ex:
+				{!Previous}
+		
+		8. Last():
+			This method is used to display the Last Page record, upon click on "Last" button.
+			
+			Ex:
+				{!Last}
+				
+		9. hasPrevious():
+			This method returns a boolean indicator, which is used to navigate the user to previous page records.
+			
+			Ex:
+				{!hasPrevious}
+				
+		10. hasNext():
+			This method returns  a Boolean indicator, which is used to navigate the user to next page records.
+			
+			Ex:
+				{!hasNext}

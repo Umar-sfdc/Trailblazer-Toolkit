@@ -1,0 +1,28 @@
+(1.) If one object in Salesforce have 2 triggers which runs “before insert”. Is there any way to control the sequence of execution of these triggers?
+
+Salesforce.com has documented that trigger sequence cannot be predefined. As a best practice create one trigger per object and use comment blocks to separate different logic blocks. 
+By having all logic in one trigger you may also be able to optimize on your SOQL queries.
+
+(2.) If we insert 100 records how many times will Trigger fire?
+The Trigger will fire only once but the logic written in the trigger will run 100 times (i.e, on each record once)
+
+(3.) Can a trigger call a batch class?
+Yes, we can call a batch class in the trigger as we do in the normal apex code.
+
+(4.) How many trigger we can define on a object?
+We can define more then one trigger but for the best practice we should define one trigger on one object.
+
+(5.) How can we insert a value to a parent and child record at the same time?
+With the help of the trigger we can insert value to a parent and child at the same time.   
+
+(6. )What is the bulkifying triggers?
+Ans: By default every trigger is a bulk trigger which is used to process the multiple records at a time as a batch. For each batch of 200 records.
+
+(7.) What is the use of future methods in triggers?
+Ans: Using @Future annotation we can convert the Trigger into a Asynchrinous Class and we can use a Callout method.
+
+(8.) Is there any limit on number of triggers define on an object?
+We can define as many triggers on an object as we want but it is recommended to have one trigger per object because the order of execution of different trigger is not guaranteed and any trigger can fire first.
+
+(9.) What is the use of future methods in triggers?
+Ans: Using @Future annotation we can convert the Trigger into a Asynchrinous Class and we can use a Callout method.

@@ -1,0 +1,14 @@
+Using the this Keyword
+There are two different ways of using the this keyword.
+You can use the this keyword in dot notation, without parenthesis, to represent the current instance of the class in which it appears.
+Use this form of the this keyword to access instance variables and methods. For example:
+public class myTestThis {
+string s;
+{
+this.s = 'TestString';
+}
+}
+In the above example, the class myTestThis declares an instance variable s. The initialization code populates the variable using the
+this keyword.
+Or you can use the this keyword to do constructor chaining, that is, in one constructor, call another constructor. In this format, use
+the this keyword with parentheses.

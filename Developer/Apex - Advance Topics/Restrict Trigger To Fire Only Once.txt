@@ -1,0 +1,30 @@
+How to restrict Trigger to fire only once?
+
+
+A trigger can fire twice, once before workflow and once after workflow.
+
+The before and after triggers fire one more time only if something needs to be updated. If the fields have already been set to a value, the triggers are not fired again.
+
+Workaround:
+
+Add a static boolean variable to a class, and check its value within the affected triggers.
+
+view sourceprint?
+public class HelperClass {
+   public static boolean firstRun = true;
+}
+trigger affectedTrigger on Account (before delete, after delete, after undelete) {
+
+    if(Trigger.isBefore){
+
+        if(Trigger.isDelete){
+
+            if(HelperClass.firstRun){
+
+                Trigger.old[0].addError('Before Account Delete Error');
+
+                HelperClass.firstRun=false;
+            }
+        }
+    }
+}

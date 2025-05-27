@@ -1,0 +1,18 @@
+What is the System.runAs() ?
+
+Generally, all Apex code runs in system mode, and the permissions and record sharing of the current user are not taken into account. The system method, System.runAs(), lets you write test methods that change user contexts to either an existing user or a new user. All of that user’s record sharing is then enforced. You can only use runAs in a test method. The original system context is started again after all runAs() test methods complete.
+
+
+Example :
+
+System.runAs(u) {
+
+// The following code runs as user ‘u’
+
+System.debug(‘Current User: ‘ + UserInfo.getUserName());
+
+System.debug(‘Current Profile: ‘ + UserInfo.getProfileId()); }
+
+// Run some code that checks record sharing
+
+}

@@ -1,0 +1,30 @@
+What is View State?
+
+Visualforce pages that contain a form component also contain an encrypted, hidden form field that encapsulates the view state of the page. This view state is automatically created, and as its name suggests, it holds the state of the page - state that includes the components, field values and controller state. 
+
+
+What does view state contains?
+
+1. The data in the view state should be sufficient to recreate the state of the page when the postback is received. To do this, it stores the following data: 
+2. All non-transient data members in the associated controller (either standard or custom) and the controller extensions. 
+3. Objects that are reachable from a non-transient data member in a controller or controller extension. 
+4. The component tree for that page, which represents the page’s component structure and the associated state, which are the values applied to those components. 
+5. A small amount of data for Visualforce to do housekeeping. 
+
+
+How to reduce view state?
+
+1. Add transient keyword before variables, like lists used just for printing the tables.
+2. Try recreating state, by querying again the database, storing in local lists, sets or maps will not work.
+3. Declare some variable as static if possible, create static code block to recreate them in each request. 
+4. Check your SOQL queries, if you are querying additional fields, never used or required on visualforce page. 
+
+
+Best Practices to reduce the view state size
+
+·         Minimize number of form on a page.  Use apex:actionRegion instead of using 2 or more forms.
+·         Refine your SOQL to only retrieve the data needed by the page.
+·         All public and private data members present in Standard, Custom and Controller extensions are saved.
+·         Mark any Apex variables that are not necessary to the view state as Transient. (The transient variables are not passed to view state and therefore not stored in View State)
+·         Create wizards with as few pages as possible
+·         Use outputLink components instead of commandLink or commandButton components where possible as they don’t need to be nested in a form.

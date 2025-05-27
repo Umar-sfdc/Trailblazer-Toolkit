@@ -1,0 +1,126 @@
+Pagination:
+===========
+By default, VF page allows to show max. of 1,000 records.
+
+To display more then 1,000 records on the VF Page, we have to set the "Readonly = true" in page level as below.
+
+Ex:
+	<apex:page .......   readonly="true">
+		....
+		....
+	</apex:page>
+
+Note: 
+	By assigning the "Readonly=true", we can show max. of 10,000 records in the VF Page.
+
+To display more than 10,000 records on the page, we have to go with "Pagination".
+
+By using pagination, we can divide all the resultset records into the various small pieces called as "Pages"
+
+Each page will be identified by using an index position, starting from "Zero".
+
+Each page contains a set of records based on the size specified by the user (10 / 20/ 50/100/. ...)
+
+Inorder to get all the required records from the Database, we have to use "Database.getQueryLocator()" method.
+
+Ex:
+	Database.getQueryLocator([select id, name, rating from
+								account]);
+
+It will collect all the millions of records from the object and store into the buffer memory. 
+
+To divide the records into the various small units, we have to use "StandardSetController" class.
+
+Note:
+	StandardSetController class provides all the required features to implement the pagination.
+	
+Methods:
+--------
+1. SetPageSize(Number):
+	This method is used to specify the size of the page, based on which the whole records will divided into pieces / units / pages.
+	
+	Ex:
+		<objectName>.SetPageSize(20);
+		
+2. List<ObjectName> GetRecords():
+	This method returns  the collection of records based on the page index. Records will be returned in terms of "List" collection.
+	
+	Ex:
+		List<Account> lstAccounts = <objectName>.getRecords()
+		
+3. First():
+	This method will returns the First Page records from the buffer memory.
+	
+	Ex:
+		<objectName>.First()
+	
+4. Next():
+	This method will returns the next page records, to be get visible on the Pagination control.
+	
+	Ex:
+		<objectName>.Next()
+		
+5. Previous():
+	This method is used to get the previous page records from the buffer memory.
+	
+	Ex:
+		<objectName>.Previous()
+		
+6. Last():
+	This method is used to get the Last page records from the Buffer memory.
+	
+	Ex:
+		<objectName>.Last()
+		
+7. Boolean HasPrevious():
+	It returns TRUE, if the previous page records exist. Else it returns FALSE.
+	
+	Based on the result of the method, we can make the Navigation buttons to be visible on the Page.
+	
+8. Boolean HasNext():
+	It returns TRUE, if the next page records exist. Else it returns FALSE.
+	
+	Based on the result of the method, we can make the Navigation buttons to be visible on the Page.
+
+9. Integer PageNumber:
+	This property returns the Current Page Index value.
+	
+10. Integer TotalPages:
+	This property returns an integer, which indicates the Number of pages exist in side the Buffer Memory.
+
+/*
+	Design a visualforce page to show the account records by using pagination.
+*/	
+
+VF Page Code:
+-------------
+<apex:page controller="AccountsPaginationController" tabStyle="Position__c" sidebar="false" setup="false" showheader="true">
+<apex:sectionHeader title="Account Records" subtitle="Accounts Pagination"/>
+    <apex:form >
+        <apex:pageBlock id="pgBlock" title="Accounts Pagination" >
+            <apex:pageBlockTable value="{!Accounts}" var="acc">
+                <apex:column headerValue="Account Name">
+                    <apex:outputLink value="/{!acc.id}" target="_blank">{!acc.Name}</apex:outputLink>
+                </apex:column>
+
+                <apex:column value="{!acc.Industry}"/>
+                <apex:column value="{!acc.Type}"/>
+                <apex:column value="{!acc.rating}"/>
+                <apex:column value="{!acc.Annualrevenue}"/>
+                <apex:column value="{!acc.Phone}"/>
+                <apex:column value="{!acc.Active__c}"/>
+            </apex:pageBlockTable>
+           
+            <apex:commandlink rendered="{!setCon.hasPrevious}" value="First" action="{!setCon.first}" rerender="pgBlock" /> &nbsp;&nbsp;
+            <apex:commandlink rendered="{!setCon.hasPrevious}" value="Previous" action="{!setCon.previous}" rerender="pgBlock"/> &nbsp;&nbsp;
+            <apex:outputText rendered="{!(setCon.pageNumber * setCon.pageSize) < setCon.ResultSize}" value="{!setCon.pageNumber * setCon.pageSize} Of {!setCon.ResultSize}"></apex:outputText>
+            <apex:outputText rendered="{!(setCon.pageNumber * setCon.pageSize) >= setCon.ResultSize}" value="{!setCon.ResultSize} Of {!setCon.ResultSize}"></apex:outputText> &nbsp;&nbsp;
+           
+            <apex:commandlink rendered="{!setCon.hasNext}" value="Next" action="{!setCon.next}" rerender="pgBlock"/> &nbsp;&nbsp;
+           
+            <apex:commandlink rendered="{!setCon.hasNext}" value="Last" action="{!setCon.last}" rerender="pgBlock"/>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
+

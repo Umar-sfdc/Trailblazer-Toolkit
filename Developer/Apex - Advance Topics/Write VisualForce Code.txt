@@ -1,0 +1,7 @@
+Where to write Visualforce code?
+
+
+You can write the code basically in 3 ways.
+1.     setup->App Setup->Develop->Pages and create new Visulaforce page.
+2.     Setup -> My Personal Information -> Personal Information -> Edit check the checkbox development mode. When you run the page like this, https://ap1.salesforce.com/apex/MyTestPage.you will find the Page editor at the bottom of the page. You can write you page as well as the controller class associated with it, there itself.
+3.     Using Eclipse IDE you can create the Visulaforce page and write the code.

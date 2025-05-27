@@ -1,0 +1,13 @@
+What is a seeAllData=true?
+
+In Apex test classes every time we need to create a new set of data for your test class. But some objects we can't create a data for testing. for example Profiles. we can't create profiles in test classes. so we will query the profiles and assign to users.
+@isTest (SeeAllData = true)
+
+
+
+Which Objects can we access without using seeAllData=true?
+
+We use seeAllData = true to get real-time data in test class, but without using this also you can get the data from following objects.
+User, profile, organization, AsyncApexjob, Corntrigger, RecordType, ApexClass, ApexComponent , ApexPage and custom metadata types. 
+
+

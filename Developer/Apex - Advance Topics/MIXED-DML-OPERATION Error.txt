@@ -1,0 +1,11 @@
+What is MIXED-DML-OPERATION error and how to avoid?
+
+If we perform DML operation on standard/custom object and global objects(User, UserRole, Group, GroupMember, Permission Set, etc...) in same transaction this error will come. 
+
+To avoid this error, we should perform DML operation on standard/custom object records in a different transaction. 
+
+In general all the apex classes and apex triggers execute synchronously (execute immediately). 
+
+if we perform DML operation on standard/custom object records asynchronously (execute in future context), we can avoid MIXED-DML-OPERATION error. 
+
+To execute logic asynchronously keep the logic in an apex method (in a separate apex class, not in same apex trigger) which is decorated with @future annotation. 

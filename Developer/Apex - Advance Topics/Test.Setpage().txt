@@ -1,0 +1,3 @@
+57. Explain Test.setPage().
+Ans:
+It is used to set the context to current page, normally used for testing the visual force controller.

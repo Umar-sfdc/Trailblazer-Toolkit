@@ -1,0 +1,56 @@
+Ways to Create a VisualForce Page:
+==================================
+Salesforce provides the below 4 ways to create a visualforce page.
+
+1. By using Standard Navigation:
+	Goto "Setup" menu 
+		1. Goto "Build" menu in left panel.
+		2. Click on "Develop" and expand it.
+		3. Click on "VisualForce Pages" link.
+		4. Click on "New" button, to create a New VisualForce Page.
+		5. Enter the VisualForce Page Name in the Text box.
+		6. Write the VF Page Code.
+		7. Click on "Save" button.
+		
+	Note:
+		To execute the VF pages in future, we need to use "Preview" button.
+		
+2. By using Developer Console:
+	
+	Goto Your Name "Ex: Training Batch27"
+		1. Click on "Developer console" option.
+		2. Goto the "File Menu" in the Editor.
+		3. Click on "New" menu item.
+		4. Click on "VisualForce Pages" from the Submenu.
+		5. Enter the "VisualForce PAge Name" in the Text box provided by salesforce.
+		6. Click on "Submit" button.
+		7. Write the VisualForce Page code in the editor.
+		8. Save the code by using "CTRL +S".
+		
+	Observation:
+		It provides an auto save option for each 10 fraction of seconds.
+		
+	Note:
+		Use "Preview" button, to execute the VF page.
+		
+3. URL Format:
+	It provides the realtime development style, upon designing the VF pages.
+	
+	Syntax:
+		https://ap2.salesforce.com/apex/<VFPageName>
+	
+	Ex:
+		https://ap2.salesforce.com/apex/MyVFPage
+		
+	Note:
+		To create the VF pages by using "URL format", "Development Mode" checkbox has to be enabled.
+		
+	Goto Your Name "Ex: Training.CISBatch"
+		1. Click on "My Settings" link.
+		2. Goto "Personal" in the Left panel and expand it.
+		3. Click on "Advanced User Details" link.
+		4. Click on "Edit" button.
+		5. Select the checkbox "Development Mode"
+		6. Click on "Save" button.
+		
+4. Eclipse IDE.

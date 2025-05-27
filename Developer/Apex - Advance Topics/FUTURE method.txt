@@ -1,0 +1,29 @@
+Future Method:
+
+A future method runs in the background, asynchronously. You can call a future method for executing long-running operations, such as callouts to external Web services or any operation you'd like to run in its own thread, on its own time. ... Each future method is queued and executes when system resources become available.
+
+to define a future method, simply annotate it with the future annotation.
+
+global class futureclass
+{
+	@future public static void myfuturemethod()
+	{
+	}
+}
+
+
+Points:
+Method with the future annotation
+Must be static method.
+It can be return only a void type.
+
+the specified parameter must me primitive data type, array or primitive data type, or collection of primitive data type.
+
+Method with the future annotation aand can not take sObjectt or object as argument.
+
+Fuure method does not generated the JOBID, So we can not track the future method.
+
+
+
+ 
+

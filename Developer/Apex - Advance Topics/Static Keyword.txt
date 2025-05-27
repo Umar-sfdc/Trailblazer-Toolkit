@@ -1,0 +1,7 @@
+Question: What are some points to remember regarding Static Keyword in apex.
+
+Apex classes cannot be static.
+Static variables are static only in scope of request.
+Static variables and static blocks runs in the same order as they are declared inside the class.
+Static variables are not transferred as a part of view state.
+ 

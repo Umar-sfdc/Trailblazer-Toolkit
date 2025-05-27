@@ -1,0 +1,43 @@
+Exception is a run time error. When an exception is occur in an application the system throw an error.
+
+The system.systemexception class is the base class of all exception class.
+
+You can handle the error through the process exception handling.
+
+There are three types of error
+1. Syntax error 
+2. Logical error
+3. Runtime error
+
+Syntax error are occuring when your code is not properly constructed or some keyword is missing. In this error compiler can not compile code.
+
+It's most dangerous error. Logical error are occuring when your application compile and run sucessfully but does not provide expected result.
+
+Run time error are occuring when your application ready to perform an operation, which is not allowed at runtime.
+
+You can handle the error by using these technique.
+
+1 Try:- Try block hold that statement which may throw an error. Try block must have at least one catch block.
+
+try
+{
+statement that may throw an error;
+}
+
+
+2 Catch: Ctach block is used to handle any kind of exception which occured in try block. Catch block are come immediately after try block. 
+
+
+3 Finally: Finally block is used to execute a task weather the exception is caught or not.
+
+
+
+Throw: Throw is a keyword that is used to raised the user defined exception.
+
+Go To: GoTo is a keyword that is used to jump the cursor at the particular location. 
+
+
+
+ 
+ 
+

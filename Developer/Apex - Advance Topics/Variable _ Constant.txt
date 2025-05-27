@@ -1,0 +1,26 @@
+Variable is a location in the memory that is used to store the value and the value could be integer or character. 
+
+Variable can hold only single value at a time. And the value can be changed if requierd.
+
+A variable can be declared and initialized later or it can be declared and initialized at the same time.
+
+<data_type> <variable_name> = <value>;
+
+Declaring Variables
+
+String strName = 'My String';  //String variable declaration
+Integer myInteger = 1;         //Integer variable declaration
+Boolean mtBoolean = true;      //Boolean variable declaration
+
+
+
+
+
+The value of constant are fixed it can not be changed. Apex constants are declared with the keyword 'final'.
+
+By default constant are static.
+
+const <data_type> <constant_name> = value;
+
+
+

@@ -1,0 +1,10 @@
+What are Merge fields? Explain with example?
+
+Merge fields are fields that we can put in Email templates, mail merge templates, custom link or formula fields to incorporate values from a record.
+Example: {!CustomObject.FieldName__c}
+
+
+
+Will Visual force still supports the merge fields usage like S-control?
+
+Just like S-Controls, Visualforce Pages support embedded merge fields, like the {!$User.FirstName} used in the example.

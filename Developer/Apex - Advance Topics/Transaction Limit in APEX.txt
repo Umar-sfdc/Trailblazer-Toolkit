@@ -1,0 +1,7 @@
+What are the transaction limitations in apex?
+
+
+Ans: Each execution of a batch Apex job is considered a discrete transaction.
+For example, a batch Apex job that contains 1,000 records and is executed without the optional scope parameter from Database.executeBatch is considered five transactions of 200 records each.
+The Apex governor limits are reset for each transaction.
+If the first transaction succeeds but the second fails, the database updates made in the first transaction are not rolled back.

@@ -1,0 +1,4 @@
+What is Governor Limit?
+
+
+Since Salesforce runs on multi-tenancy environment and in order to have same performance to the database,it has imposed some run time limits called governor limits. There are many types of Salesforce Governor limits like Pre transaction limits, Force.com platfform apex limits, static apex limits and many other limits.

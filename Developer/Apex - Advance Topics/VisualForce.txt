@@ -1,0 +1,3 @@
+What is VisualForce?
+
+Visualforce is tag based markup language to develop customized user interface in salesforce.

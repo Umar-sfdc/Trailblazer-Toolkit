@@ -1,0 +1,11 @@
+Que 13:  VisualForce page Slow Load:
+Ans: There are variour reason to slow load visualforce page.
+1. Large Soql query when VF load.
+2. Heavy CSS used.
+3. Maximum use of view state.
+4. Maximum data is comming from server.
+Solution:
+1. Reduce view state 
+2. Load only necessary data from server
+3. Light SOQL must be used
+4. Use lightning design system rather than cuustomized css.

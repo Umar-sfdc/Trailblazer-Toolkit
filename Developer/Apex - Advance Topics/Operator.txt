@@ -1,0 +1,55 @@
+Operator is a special symbol that perform a operation on operands.
+
+Example: x + y, here is x & y is operand and + is operator.
+
+There are 5 types of operator are:
+(1.) Arithmatic Operator:
+Arithmatic operation are used to perform arithmatic operation such as addition, subtraction, division, multiplication. 
+
+Modulo return the reminder value when one number is divisible by another.
+
+int a, b;
+
+a = 10;
+b = 20;
+
+(a+b), (a-b), (a*b), (a/b), (a%b)
+
+(2.) Logical Operator: Logical operator are used to perform some logical operation such as and, or, not. Logical operator are used in decesion making and loops.
+
+And, Or, Not
+ 
+(3.) Unary Operator: Unary operator are used to increment or decrement the value of an operand by 1.
+
+PreIncrement:
+x = 10;
+y = ++x;
+
+x = 11;
+y = 11;
+
+PostIncrement:
+x = 10;
+y = x++;
+
+x = 11;
+y = 10;
+
+
+(4.) Comparison Operator: Comparison operator are used to check the relationship between two operands. If the relationship is true the result will be true otherwise it will result in false.
+
+int a, b;
+a = 10;
+b = 20;
+
+(a == b), (a = b), (a > b), (a < b), (a >= b), (a <= b), (a != b)
+
+(5.) Arithmatic Assignment Operator: Are used to perform arithmatic operator and assign the result to a variable.
+
+int a = 10;
+
+(a += b), (a -= b)
+
+
+
+ 

@@ -1,0 +1,41 @@
+We are used loop to execute a block of statement or code repetively.
+
+There are three types of loops are:
+
+(1.) While loop: while loop always check the condition first before execute the statement.
+
+while(condition)
+{
+	statement;
+}
+ 
+(2.) Do While loop: Do while loop always execute the statement at least once and after that check the condition.
+
+do 
+{
+	statement;
+} 
+while(condition);
+
+
+(3.) For loop: Is used to execute a block of statement or code for a specific number of time. 
+
+for (initialization; condition; increment/ decrement)
+{
+	Statement;
+} 
+
+(4.) Foreach Loop: Foreach loop is similer to the for loop implementation is different.
+
+This loop access the data from the source one by one and we have no need to mentoned the lenght of the foreach loop. It can be acess by itself.
+
+foreach (datatype variable_name in expression)
+{
+	Statement;
+} 
+
+
+
+
+
+

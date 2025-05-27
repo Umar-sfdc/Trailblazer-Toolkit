@@ -1,0 +1,73 @@
+Polymorphism was derived a greek word 'poly' and 'morphos' which means many and forms respectively.
+
+Polymorphism is creating more than one function that have the same name within a class.
+
+There are two types of polymorphism
+
+1. Static Polymorphism:- Means response to a function decided at the compile time. It also called early binding.
+
+there are two types of static polymorphism
+
+1. Function Overloading: Means more than one function with the same name but each function have different type of parameter, number of parameter, sequence of parameter.
+This is called function overloading.
+
+The type, sequence and number of parameter for a function are called function signature.
+
+1. number of parameter
+
+void addnumber(int); 
+void addnumber(int, float);
+
+
+2. data type of parameter
+
+void display(int);
+void display(char);
+
+
+3. sequence of parameter
+
+void display(int, char);
+void display(char, int);
+
+
+2. Operator Overloading:- The operator like +,-,* are performing operation on standard data type. But C# provide us technique all these operator to operate on user defined data type.And user defined data type behave as a standard data type.
+
+we can add two variable of user defined data type with the same syntax that is applied to the basic data type.
+
+This is called operator overloading.
+
+<access_specifier> class_name operator + (parameter list)
+{
+ code;
+} 
+
+we can extend only operator functionality in operator overloading but we can not change their orignal task.
+
+
+  
+2. Dynamic Polymorphism:- Means response to a function decided at the run time. It also called late binding.
+
+there are two types of dynamic polymorphism
+
+1. Virtual Function:- By default method are called according to the reference variable but virtual function provide you a functionality to call appropirate method at runtime according to the object.
+
+If you declared a method of a class is virtual then child class override that method by using override keyword.
+
+ 
+2. Abstract Class
+
+Abstract is a keyword that is used with class or function.
+
+You can not create the object of the abstract class.
+
+Abstarct classes are classes that contain one or more abstract method.
+
+To access the abstract class method first you will create a new class that inherit the attribute of abstract class. Then you will create the object of the child class to access the method of abstract class.
+
+
+Abstract method are method without anybody.   
+ 
+
+
+

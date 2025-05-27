@@ -1,0 +1,28 @@
+ What is Queueable Class?
+
+Take control of your asynchonous apex processes by using the Queueable interface.
+
+This interface enable you to add jobs to tthe queue and monitor them.
+
+This is an enhanced way of running your  asynchonous apex code compared to using future method.
+
+For apex process that run for a long time.
+
+you can run them asynchonously by implementing the queuebale interface and adding a job to the apex job queue.
+
+each queue job will run when system resources become available.
+
+Queueable job are similer to the future method in that they are both queued for execution.
+
+1 Getting ID for your job.
+2 Using non primitive data type
+3 Chainning Jobs
+
+public class q_class1 implements Queueable
+{
+	public static void execute (QueueableContext con)
+	{
+		account a = new Account(Name='New Account');
+		insert a;
+	}
+}

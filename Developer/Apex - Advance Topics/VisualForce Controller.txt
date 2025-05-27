@@ -1,0 +1,7 @@
+What is VisualForce Controller?
+
+Visualforce controller is a set of instructions that specify what happens, when user interacts with components on visualforce pages, such buttons & links.
+
+There are three types of controllers. They are.
+
+Standard Controller, Custom controller & Controller extensions.

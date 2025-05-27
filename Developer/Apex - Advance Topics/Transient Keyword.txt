@@ -1,0 +1,4 @@
+Why we used transient key word?
+
+
+The transient key word prevents the data from being saved into the view state. This should be used for very temporary variables. 

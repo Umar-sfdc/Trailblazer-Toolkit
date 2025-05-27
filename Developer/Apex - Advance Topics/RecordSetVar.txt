@@ -1,0 +1,1 @@
+RecordSetVar:  RecordSetVar is used, on the standard controller page to display multiple record. we will use recordsetvar. 

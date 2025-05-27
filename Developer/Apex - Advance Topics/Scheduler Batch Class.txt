@@ -1,0 +1,15 @@
+What is a scheduler class?
+
+A scheduler class implements the Schedulable interface and have to implement its execute method.
+
+ 
+
+How to schedule a batch class ?
+
+There are two ways to schedule a batch class:-
+
+1. Using developer console: By Developer console we have to pass a cron variable like below:-
+
+2. Using System Scheduler: 
+Go to setup and in quick search bar type schedule. Then click on schedule apex.
+Select schedule created and set the time with help of the Salesforce UI.

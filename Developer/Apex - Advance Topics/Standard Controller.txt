@@ -1,0 +1,5 @@
+Question # 3. What is Standard Controller?
+
+Answer # Standard controller provides the salesforce in built functionality to interact with visualforce pages. You can use the standard actions like Save, Edit, Cancel & delete by using standard controllers.
+
+Syntax : <apex:page standardController=”Account”>

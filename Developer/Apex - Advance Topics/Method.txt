@@ -1,0 +1,15 @@
+Method is a set of one or more program statements which are executed by referring to the method name.
+
+To use method, you need to:
+
+1. Defining the method:
+<Access_Specifier> <Return_type> <Method_Name> (Parameter List)
+{
+	method_body;
+}
+
+2. Calling the method:
+
+1. Create Object 
+2. Call Object
+3. Object Store

@@ -1,0 +1,3 @@
+(7.) Is there any limit on number of triggers define on an object?
+
+We can define as many triggers on an object as we want but it is recommended to have one trigger per object because the order of execution of different trigger is not guaranteed and any trigger can fire first.

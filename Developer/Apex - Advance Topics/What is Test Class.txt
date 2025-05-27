@@ -1,0 +1,33 @@
+What is test class and why it is necessary?
+
+
+A test class is a class which helps in checking the quality of code before it can be deployed to Salesforce Production. 
+
+To check your business functionality weather our logic is working fine or not
+
+If you want to move your code to production then code coverage should be 75%
+
+We should give an annotation @isTest for the class. (Annotation means salesforce will understand we are going to write test class)
+
+How many ways we need to test our business logics
+1 Positive behaviour
+2 Negative behaviour
+3 Unit testing
+4 Bulk testing
+ 
+it won't take data from your database and it wont save the data also your database.
+
+types of method in testClass
+
+1 system.assertequal()
+2 test.start()
+3 test.stop()
+4 system.runas()
+5 test.isrunningtest()
+6 seeAllData = true:  if you want to use the existing database then we will use this in test class.
+
+
+How is a test method defined?
+
+A test method is defined as mentioned below:-
+Syntax: static testMethod void testMethodName(){….. Your Code here ……..}

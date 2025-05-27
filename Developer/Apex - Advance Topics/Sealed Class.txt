@@ -1,0 +1,8 @@
+It is just opposite of  an abstract class. You can create the object of the sealed class but can not inherite the sealed class.
+
+sealed class class_name
+{
+
+}
+
+

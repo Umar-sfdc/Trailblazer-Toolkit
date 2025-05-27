@@ -1,0 +1,24 @@
+Multiple inheritance is not supported by C#, to achieve this functionality we use interface concept. IN interface a single class can implement multiple interface.
+
+An interface is look like a class.
+
+An interface contain only declaration of the method, properties, events but not the implementation.
+
+An interface can not contain any variable, constructor, destructor.
+
+A class can implement more then one interface.
+
+An interface can be defined using the interface keyword.  The declaration of interface is similer to the class declaration.
+
+public interface interface_name
+{
+method declaration;
+}
+
+An interface in C# is a reference type.
+
+All the member of an interface are abstract & public.
+
+An interface can not contain constructor or destructor.
+
+Interface member can not be declare static. 

@@ -1,0 +1,12 @@
+Maximum no of record displayed on the VF page.
+
+1000
+
+
+
+How to display record beyond the limit of the page.
+
+We can enable read only attribute value as true.
+
+1 No of query rows will increased from 50,000 to 1 million rows.
+2 no of records displayed on VF page will be increased from 1,000 to 10,000  

@@ -1,0 +1,49 @@
+Taking the properties of one class into another class is called inheritance.
+
+Inheritance provides us code resuability. 
+
+Inheritance concept is based on base class and derived class.
+
+A class which attribute are inherited are called base class or parent class or super class.
+
+A class that inherite the attribute of another class are called derived class or child class or sub class
+
+There are 5 types of inheritance.
+
+1. Single Inheritance: It is the type of the inheritance in which there is one base class and one derived class.
+
+class A (Base Class)
+{
+}
+
+Class B:A (Derived Class)
+{
+}
+
+2. Multilevel Inheritance: When one class is derived from another derived class this type of inheritance is called multilevel inheritance. 
+
+Class A
+{
+}
+
+Class B:A
+{
+}
+
+Class C:B
+{
+}
+
+
+3. Multiple Inheritance: Multiple inheritance can not be achieve in C#. It can be achieve through interface. I this inheritance a derived class is created more than one base class.
+
+4. Hybrid Inheritance: This inheritance is a combinnation of more then one inheritance.
+
+5. Hierarchy Inheritance: in this type of inheritance more than one derived class is created from a single base class. 
+
+
+NOte:
+
+Private are never inherited and never call the outside the class through the object.
+
+Protected are inherited but it can not be accessed outside the class through the object.  

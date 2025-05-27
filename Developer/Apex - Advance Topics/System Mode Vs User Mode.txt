@@ -1,0 +1,12 @@
+What is the difference between system mode(system context) and user mode(user context)?
+
+System mode -
+1. System mode is nothing but running apex code by ignoring user's permissions. For example, logged in user does not have to create permission but he/she is able to create a record. 
+2. In system mode, Apex code has access to all objects and fields— object permissions, field-level security, sharing rules aren't applied to the current user. This is to ensure that code won’t fail to run because of hidden fields or objects for a user. 
+3. In Salesforce, all apex code run in system mode. It ignores user's permissions. The only exception is anonymous blocks like developer console and standard controllers. Even runAs() method doesn't enforce user permissions or field-level permissions, it only enforces record sharing. 
+
+
+
+User mode - 
+1. User mode is nothing but running apex code by respecting user's permissions and sharing of records. For example, logged in user does not have to create permission and so he/she is not able to create a record. 
+2. In Salesforce, only standard controllers and anonymous blocks like developer console run in user mode. 

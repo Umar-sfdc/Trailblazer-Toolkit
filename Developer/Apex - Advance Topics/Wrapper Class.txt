@@ -1,0 +1,11 @@
+What is Wrapper class?
+
+A Wrapper class is a class whose instances are collection of other objects.
+It is used to display different objects on a VF (Visual Force) page in same table.
+
+
+
+What is the use of wrapper class?
+
+
+Wrapper class in Apex Salesforce. A wrapper or container class is a class, a data structure, or an abstract data type which contains different objects or collection of objects as its members. A wrapper class is a custom object defined by programmer wherein he defines the wrapper class properties.

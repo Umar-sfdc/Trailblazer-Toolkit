@@ -1,0 +1,23 @@
+VisualForce Components:
+=====================
+
+Each visualforce page contains two components.
+1. VisualForce Markup:
+	It contains a set of VisualForce Tags, has been used to design the user interface.
+	Each VisualForce Tag is a Dependent Tag, i.e. each starting tag should requires an ending tag.
+	VisualForce Tags are not case sensitive.
+	Each VisualForce Page Tag should be prefixed with the word "apex".
+	
+	Ex:
+		<apex:page>
+			....
+			....
+		</apex:page>
+	
+	Each Tag contains one or more attributes, which are used to supply the input values.
+	
+2. VisualForce Controller:
+	It contains the corresponding business logic, using by the visualforce page controles.
+	It can be implemented by using "Apex, SOQL, SOSL, DML" statements.
+	
+	Note: A visualforce page can reference one or more controller classes.

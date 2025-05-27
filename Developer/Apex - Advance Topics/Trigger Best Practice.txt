@@ -1,0 +1,27 @@
+What is the Salesforce Trigger best Practice
+
+
+1. There should only be one trigger for each object.
+
+2. Avoid complex logic in triggers. To simplify testing and resuse, triggers should delegate to Apex classes which contain the actual execution logic.
+
+3. Avoid SOQL Queries or DML statements inside FOR Loops
+
+4. Bulkify your Helper Methods
+
+5. Using Collections, Streamlining Queries, and Efficient For Loops
+
+6. Streamlining Multiple Triggers on the Same Object
+
+7. Use of the Limits Apex Methods to Avoid Hitting Governor Limits
+
+8. Use @future Appropriately
+
+9. Writing Test Methods to Verify Large Datasets
+
+10. Avoid Hardcoding IDs
+
+11. Trigers should be "bulkified" and be able to process up to 200 records for each call.
+
+
+

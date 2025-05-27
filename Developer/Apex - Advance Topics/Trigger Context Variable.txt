@@ -1,0 +1,21 @@
+What are the Trigger Context Variable?
+
+Trigger.IsInsert: It return true if the trigger was fired due to insert operation.
+
+Trigger.IsUpdate: It return true if the trigger was fired due to update operation.
+
+Trigger.IsDelete: It return true if the trigger was fired due to delete operation.
+
+Trigger.IsBefore: It return true if the trigger was fired before record is saved.
+
+Trigger.IsAfter: It return true if the trigger was fired after record is saved.
+
+Trigger.New: It return a list of new version of sObject records.
+
+Trigger.Old: It return a list of old version of sObject records.
+
+Trigger.NewMap: It return a Map of new version of sObject records. 
+
+Trigger.OldMap: It return a Map of old version of sObject records.
+
+Trigger.Size: Return a Integer

@@ -1,0 +1,5 @@
+23. What are setter and getter methods?
+
+Getter and Setter methods in salesforce are used to pass data from controller to visualforce and vice versa. 
+
+setter method value will be passed from visualforce page to controller ( Apex class) and same can be retrieved back to visualforce page through controller getter method. 

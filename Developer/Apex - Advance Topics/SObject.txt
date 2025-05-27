@@ -1,0 +1,25 @@
+What is sObject?
+
+This is a special data type in Salesforce. sObject is nothing but any object that stored in the force.com platform database we called as sObject.
+sObject is a generic datatype which we can put anything. Means In sObject you can put object of any type.
+
+
+There are two types of sObjects – Standard and Custom.
+
+For example, Account is a standard sObject and any other user-defined object (like Customer object that we created) is a Custom sObject.
+
+
+//Declaring an sObject variable of type Account
+Account objAccount = new Account();
+
+//Assignment of values to fields of sObjects
+objAccount.Name = 'ABC Customer';
+objAccount.Description = 'Test Account';
+System.debug('objAccount variable value'+objAccount);
+
+//Declaring an sObject for custom object APEX_Invoice_c
+APEX_Customer_c objCustomer = new APEX_Customer_c();
+
+//Assigning value to fields
+objCustomer.APEX_Customer_Decscription_c = 'Test Customer';
+System.debug('value objCustomer'+objCustomer);

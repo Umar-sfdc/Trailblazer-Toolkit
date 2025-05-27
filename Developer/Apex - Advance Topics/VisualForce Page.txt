@@ -1,0 +1,16 @@
+What is a Visualforce Page ?
+
+Ans: Visualforce is the new markup language from salesforce, by using which, We can render the standard styles of salesforce. We can still use HTML here in Visualforce. Each visualforce tag always begins with “apex” namespace. All the design part can be acomplished by using Visualforce Markup Language and the business logic can be written in custom controllers associated with the Page.
+
+
+How can you create visualforce page in salesforce?
+
+We can create visualforce pages in two ways.
+
+1. From the setup menu go to Setup-> develop -> Build->Pages-> click on new button to create a page & enter name & code for visualforce page.
+
+2. From the vsualforce editor. Enter /apex/pagename at the url & create new page in visualforce editor.
+
+
+
+

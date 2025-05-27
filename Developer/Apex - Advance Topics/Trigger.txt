@@ -1,0 +1,19 @@
+What is Trigger?
+
+Trigger is a pieace of code that is executed before and after a record is update or inserted.
+
+
+There are two types of trigger in Salesforce.
+
+1. Before Trigger: These trigger are fired before the data is saved into the database.
+2. After Trigger: These trigger are fired after the data is saved into the database.
+
+
+Trigger syntax:
+
+Trigger <Trigger Name> On <Object Name> (<trigger events>){
+
+// logic to be implemented.
+
+}
+

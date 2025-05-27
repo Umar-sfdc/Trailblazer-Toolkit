@@ -1,0 +1,5 @@
+Question # 7. What are the tasks of standard controller?
+
+Answer # Standard controllers provides ability to access and interact with structured business data contained in records displays in the proper user interface.
+
+Standard controller tasks: controlling data, controlling actions and controlling navigation.

@@ -1,0 +1,3 @@
+What is Scheduled Class? 
+
+A scheduler class implements the Schedulable interface and have to implement its execute method.

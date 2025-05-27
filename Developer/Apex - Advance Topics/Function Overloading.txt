@@ -1,0 +1,21 @@
+Function Overloading: Means more than one function with the same name but each function have different type of parameter, number of parameter, sequence of parameter.
+This is called function overloading.
+
+The type, sequence and number of parameter for a function are called function signature.
+
+1. number of parameter
+
+void addnumber(int); 
+void addnumber(int, float);
+
+
+2. data type of parameter
+
+void display(int);
+void display(char);
+
+
+3. sequence of parameter
+
+void display(int, char);
+void display(char, int);

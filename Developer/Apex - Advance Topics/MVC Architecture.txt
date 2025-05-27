@@ -1,0 +1,32 @@
+MVC Architecture:
+=================
+
+MVC is popular as it isolates the application logic from the user interface layer and supports separation of concerns.
+
+The Model-View-Controller (MVC) is an architectural pattern that separates an application into three main logical components: the model, the view, and the controller. 
+
+Each of these components are built to handle specific development aspects of an application. 
+
+MVC is one of the most frequently used industry-standard web development framework to create scalable and extensible projects.
+	
+- Visual Force supports MVC Archtecture for application development.
+
+	Model : 
+		It describes, how the data has been organized in the backend. Model represents the Data Structure with the help of Database Tables. 
+		Ex: 
+			Standard Objects, Custom Objects, Fields and Relationships
+	
+	View:
+		It represents the Presentation / Front End / View part of the application.
+		- It describes, how the Data is represented in the USer Interface.
+___		Ex: 
+			Page Layouts, Tabs --> Standard User Interfaces
+			VF Pages --> Custom User Interfaces
+			
+	Controller:
+		Controller is used to perform the actions on the objects and represent the data and results in the user interface.
+		- This is also referred as "Business Logic"
+		Ex:
+			Standard Business Logic : Validation Rules, Workflow Rules, Approval processes, etc.
+		
+			Custom Business Logic: Apex Classes, Trigger, SOQL, SOSL, etc.

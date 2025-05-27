@@ -1,0 +1,4 @@
+Q5). What is Scheduler class in Apex?
+
+
+The Apex class is the class which is planned to run at some predefined intermission of programming classes. A Scheduler Class must necessarily execute a schedulable crossing point and it should also contain the method ‘named execute ()’.

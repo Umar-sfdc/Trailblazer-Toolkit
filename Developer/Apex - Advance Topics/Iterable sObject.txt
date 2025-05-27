@@ -1,0 +1,6 @@
+What is the iterable <sObject>
+
+
+If we use the iterable, the governor limit for the total number of record retrieved by SOQL queries is stil enforced.
+
+We can use upto 50,000 record only.

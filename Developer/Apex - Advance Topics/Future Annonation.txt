@@ -1,0 +1,22 @@
+What is Future Annotation(@Future)?
+
+
+Use the future annotation to specify that these methods that are executed asynchronously.
+>>Methods with future annotation must be static methods
+>>Methods with future annotation can only return a void type.
+Syntax: 
+global class class_name
+{
+@future
+Static void methodname(parameters)
+  {
+//body of the method
+}
+
+
+Method must be static
+Cannot return anything ( Only Void )
+To test @future methods, you should use startTest and stopTest to make it synchromouse inside Test class.
+Parameter to @future method can only be primitive or collection of primitive data type.
+Cannot be used inside VF in Constructor, Set or Get methods.
+@future method cannot call other @future method.

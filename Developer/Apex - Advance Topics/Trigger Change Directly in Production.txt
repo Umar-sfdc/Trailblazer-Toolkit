@@ -1,0 +1,3 @@
+How can you done changes in apex trigger direct in production?
+
+This is not possible direct in production first you need to done changes in sandbox then deploy it to production.

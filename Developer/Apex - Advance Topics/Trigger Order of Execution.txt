@@ -1,0 +1,18 @@
+What is the standard Salesforce.com order of execution
+
+
+Old record loaded from database (or initialized for new inserts)
+New record values overwrite old values
+System Validation Rules
+All Apex “before” triggers
+Custom Validation Rules
+Record saved to database (but not committed)
+Record reloaded from database
+All Apex “after” triggers
+Assignment rules
+Auto-response rules
+Workflow rules
+Escalation rules
+Parent Rollup Summary Formula value updated (if present)
+Database commit
+Post-commit logic (sending email)

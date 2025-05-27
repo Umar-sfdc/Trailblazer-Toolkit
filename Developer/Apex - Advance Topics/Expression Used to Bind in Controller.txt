@@ -1,0 +1,7 @@
+What are the expression used in page to bind a controller?
+
+Using method we can bind.
+
+Getter: will return value from controller to visualforce page.
+Setter: will pass value from visualforce page to controller.
+Action:  Will redirect to another page. 

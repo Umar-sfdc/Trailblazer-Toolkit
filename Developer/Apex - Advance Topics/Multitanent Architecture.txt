@@ -1,0 +1,3 @@
+Q) What is Multitenant Architecture ?
+
+An application model in which all users and apps share a single, Common infrastructure and code base.

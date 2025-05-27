@@ -1,0 +1,15 @@
+What is the difference between with sharing and without sharing?
+
+With sharing Keyword: This keyword enforces sharing rules that apply to the current user. If absent, code is run under default system context. Use the with sharing keywords when declaring a class to enforce the sharing rules that apply to the current user. Use With Sharing when the User has access to the records being updated via Role, Sharing Rules, Sales Teams – any sort of sharing really. 
+
+
+Without sharing keyword: Ensures that the sharing rules of the current user are not enforced. Use the without sharing keywords when declaring a class to ensure that the sharing rules for the current user are not enforced. For example, you may want to explicitly turn off sharing rule enforcement when a class acquires sharing rules when it is called from another class that is declared using with sharing. Without Sharing is reserved for cases where the User does not have access to the records, but there is a need to update them based on user input. 
+
+
+
+36.) Difference between with sharing and without sharing?
+
+"with sharing" keyword in apex class so that it will enforce only sharing rules of current user but not, object permissions, field level permissions
+
+But “without sharing” will not enforce only sharing rules of current user . does it mean it will enforce current user object and field level permissions.
+

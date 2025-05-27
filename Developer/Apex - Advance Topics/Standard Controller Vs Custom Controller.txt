@@ -1,0 +1,5 @@
+What is the difference between Standard Controller & Custom Controller
+
+Standard controller inherit all the standard object properties, standard button functionalities can be directly used.
+
+Custom controller define custom functionalities "a standard controller can be extended to develop custom functionalities by using keyword Extension" 

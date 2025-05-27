@@ -1,0 +1,12 @@
+Operator Overloading:- The operator like +,-,* are performing operation on standard data type. But C# provide us technique all these operator to operate on user defined data type.And user defined data type behave as a standard data type.
+
+we can add two variable of user defined data type with the same syntax that is applied to the basic data type.
+
+This is called operator overloading.
+
+<access_specifier> class_name operator + (parameter list)
+{
+ code;
+} 
+
+we can extend only operator functionality in operator overloading but we can not change their orignal task.

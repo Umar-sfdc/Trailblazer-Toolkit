@@ -1,0 +1,22 @@
+How to scheduled BATCH Class?
+
+there are two ways to schedule a batch class:-
+
+Using developer console
+Using System Scheduler
+By Developer console we have to pass a cron variable like below:-
+
+AScheduleClass A = new AScheduleClass();
+
+String schedule =  ’20 30 8 10 2 ?’; // cron object
+
+String jobID = system.schedule(‘Merge Job’, schedule, A);
+
+ 
+
+Via System Scheduler:
+
+ 
+
+Go to setup and in quick search bar type schedule. Then click on schedule apex.
+Select schedule created and set the time with help of the Salesforce UI.

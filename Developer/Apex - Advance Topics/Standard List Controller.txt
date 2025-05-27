@@ -1,0 +1,7 @@
+Question # 4. What is Standard List Controller?
+
+Answer # Standard List Controller allows to display list of records in visualvalfoce page. Standard list controller provides additional pagination actions (First, Lat, Next & Previous) compared to standard controller.
+
+Syntax: <apex:page standardController=”Account” recordSetVar=”accounts”>
+
+defining this controller is similar to standard controller. But need to add one more attribute recordSetVar

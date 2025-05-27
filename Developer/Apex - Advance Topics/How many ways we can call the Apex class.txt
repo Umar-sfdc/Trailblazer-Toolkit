@@ -1,0 +1,23 @@
+How many ways we can call the Apex class?
+
+1 Anonymous code block
+2 VisualForce Classes
+3 Apex Trigger
+4 Asynchonou Apex
+	1 Future method
+	2 Queueable Apex 
+	3 Apex scheduler
+	4 Batch Apex
+5 Apex email services.
+
+
+Anonymous code block:	An anonymous block is apex code that does not get stored in the metadata.
+but that can be compiled & executed using developer console.
+You can use Anonymous code block to quickely evaluate apex on the fly, or to write code that change dynamically at runitime.
+
+
+Asynchonou Apex:	Which run in the backend, it automatically happened.
+
+Future Method: 
+
+

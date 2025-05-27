@@ -1,0 +1,3 @@
+Virtual Function:- By default method are called according to the reference variable but virtual function provide you a functionality to call appropirate method at runtime according to the object.
+
+If you declared a method of a class is virtual then child class override that method by using override keyword.

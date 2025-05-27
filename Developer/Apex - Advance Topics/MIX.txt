@@ -1,0 +1,33 @@
+
+
+(1.) Which SOQL statement can be used to fetch all records even from recycle bin ?
+Answer: “ALL Rows”  clause of SOQL can retrieve all records, including the records from recycle bin.
+SELECT COUNT() FROM Contact WHERE AccountId = a.Id ALL ROWS
+
+(2.) How can you lock a record using SOQL to prevent it from being modified by another user?
+Answer: We will need “FOR UPDATE” clause of SOQL.
+Account [] accts = [SELECT Id FROM Account LIMIT 2 FOR UPDATE];
+
+
+18. How can you sort a select SOQl query ?
+Ans: use order by clause in select query for sorting a list of records.
+
+28.How many records can a select query return ?
+Ans : As of now it can return upto 50000 records.
+
+29. How many records can a sosl query return ?
+Ans: as of now it can return upto 2000 records
+
+30. How to fire dynamic query in soql?
+Ans: Using database.query
+Example: List accList = Database.query('select name from account');
+
+56.What is sosl?
+Ans: select query that can return records of multiple objects as list of lists.
+
+57. How many records a select query soql can return?
+Ans: as of now the limit is 50000
+
+66. How many records can a sosl return ?
+Ans: It can return 2000 records as of now as per governers limit
+

@@ -1,0 +1,39 @@
+What is the difference between rendered, rerender, renderAs and contentType?
+
+rendered: Accepts true or false. If it is true then component will display on the page, if it is false then it won't display on the page. 
+
+rerender: To refresh certain area of a page based on component id. 
+
+renderAs: Used in page tag, We can display VF page in PDF format if we give renderAs = "PDF". 
+
+contentType: Used in page tag, we can download VF page in MS Word/Excel etc. based on the input to contentType. 
+
+Q: Rendered Vs. ReRender Vs. RenderAs
+======================================
+Rendered:
+
+ -This Attribute is used to indicate, whether the object/  page/component should be display or not.
+ - This is a Boolean Flag, Which contains wither TRUE / FALSE.
+	- TRUE - Indicates the display the page/component
+	- FALSE - Indicates Don't display the page/component
+
+RenderAs:
+	- This attribute is available in Page Tag.
+	- This is used to display the Visual Force Page as a "pdf"
+	
+	Ex: <apex:page renderAs="pdf">
+		.....
+		</apex:page>
+
+ReRender:
+- This attribute is available for the object/command buttons
+- Used to Refresh the specified objects, instead of the whole page.
+
+Ex: <apex:commandButton rerender ="<objectname1>,<objectname2>">
+	</apex:commandButton>
+				
+		
+		
+/*
+	Design a VisualForce Page to Create the Candidate Records.
+*/

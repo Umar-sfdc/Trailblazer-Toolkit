@@ -1,0 +1,2 @@
+Q). What is the purpose of controllers?
+ Controllers provide the data and actions that are available to a Visualforce page.

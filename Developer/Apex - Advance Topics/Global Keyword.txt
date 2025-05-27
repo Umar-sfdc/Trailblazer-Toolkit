@@ -1,0 +1,12 @@
+Question # 43.What are the Global Key words?
+
+Answer # We have global keywords like component,User,url,current page etc., to access various values from components on page, from user object or from url or from current page fields. To access value from each source, we have different global keywords. One such keyword is explained in above question(!$component)
+
+Various global keywords are:
+i. URL
+ii. USER
+iii. PROFILE
+iv. Resource
+v. Component
+vi. Current page
+vii. Page reference etc.

@@ -1,0 +1,4 @@
+What is S-Control?
+
+
+S-Controls are the predominant salesforce.com widgets which are completely based on Javascript. These are hosted by salesforce but executed at client side. S-Controls are superseded by Visualforce now.
