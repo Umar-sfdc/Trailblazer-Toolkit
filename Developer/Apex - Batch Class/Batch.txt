@@ -1,0 +1,117 @@
+Batch
+======
+
+Batch apex is asynchonous process and it is used to process huge amount of records. It can process up to 50 million records.
+
+It is a class which is capable of accepting record in bulk and them depending upon the batch size the group of record are broken into batches and are processed asunchonously.
+
+Minimum Batch size - 1
+Maximum Batch size - 2000
+Default Batch size - 200
+
+
+When using a Batch class in Salesforce, the <database.batchable> interface needs to be implemented first. It has the following three methods:
+
+1. Start ()
+2. Execute ()
+3. Finish ()
+
+Note Point 1:
+==============
+All the batch processes will execute outside of the salesforce org, So all the batch class should be defined as "Global".
+
+Syntax:
+	Global class <BatchClassName> implements Database.bachable<SObject>
+	{
+		Global Database.QueryLocator start(Database.BachableContext bc, list<SObject>)
+		{
+			//Write the code to fetch the record to get processed.
+		}
+		Global void execute(Database.BachableContext bc, list<SObject>)
+		{
+			//Write the code to process the record.
+				(Insert, Update, Delete, Undelete)
+		}
+		Global void Finish(Database.BachableContext bc, list<SObject>)
+		{
+			//Write the post execution logic.
+			
+		}
+		
+	}
+
+
+Note Point 2:
+==============
+Each batch will be treated as a discrete transaction.
+i.e. one batch result will not be carry forward te the next batch.
+i.e. failure of one batch will not impact on other batch.
+
+
+Note Point 3:
+==============
+For each and every batch governor limit be reset. and by default batch process is stateless.
+
+
+
+ 
+Start():
+========
+The Start method is one of the three methods of the Database.Batchable interface.
+
+Syntax
+
+global void execute(Database.BatchableContext BC, list<sobject>) 
+{
+
+}
+
+This method will be called at the starting of the Batch Job and collects the data on which the Batch job will be operating.
+
+Use the Database.QueryLocator object when you are using a simple query to generate the scope of objects used in the batch job. In this case, the SOQL data row limit will be bypassed.
+
+
+Execute()
+==========
+This method executes after the Start method, and it does the actual processing for each batch, separately.
+
+Syntax
+
+global void execute(Database.BatchableContext BC, list<sobject>) 
+{
+
+}
+where, list<sObject> is returned by the Database.QueryLocator method.
+
+This method gets called after the Start method and does all the processing required for Batch Job.
+
+
+Finish()
+=========
+this method is called in the end, it is responsible to perform post-processing operations such as sending an email. When this process is called all batches are already executed.
+
+Syntax
+
+global void finish(Database.BatchableContext BC) 
+{
+
+}
+
+This method gets called at the end and you can do some finishing activities like sending an email with information about the batch job records processed and status.
+
+
+Key Points of Batch Class
+==========================
+To write a Batch Apex class, your class must implement the Database.Batchable interface and include the following three methods:
+
+1. start()
+2. execute()
+3. finish()
+
+If your code accesses external objects and is used in batch Apex, use Iterable<sObject> instead of Database.QueryLocator.
+
+The default batch size is 200 record.
+
+
+
+ 

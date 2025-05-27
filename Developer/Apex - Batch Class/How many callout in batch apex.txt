@@ -1,0 +1,18 @@
+How many callout we can call in `batch apex?
+Batch execution are limited so we can calll only callout per transaction.
+
+Can we call callout from batch class?
+Yes we can call callot from batch capex.
+
+Can we call a batch class from another batch class?
+Yes, we can call one batch class from another batch class but only if it is called from its finish method.
+ 
+Can we call a Future method from batch class?
+no, we cannot directly call a future method from a batch class.
+
+How many can concurrent batch jobs be added to the queue?
+At most, there can be 5 bath jobs queued at a time.
+
+How can we track the status of the current running batch job?
+The job Id returned by the batchable context variable helps us in finding the status of a batch through AsyncApexJob.Status.
+

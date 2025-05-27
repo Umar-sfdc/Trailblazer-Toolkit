@@ -1,0 +1,200 @@
+(1.) When should we use a batch class?
+
+We should batch apex when we are dealing with records in bulk mainly the record size above 10000 and cannot be handled by the normal DML operations.
+
+
+(2.) What is a scheduler class?
+A scheduler class implements the Schedulable interface and have to implement its execute method.
+
+
+(3.) How to schedule a batch class ?
+
+There are two ways to schedule a batch class:-
+
+1. Using developer console: By Developer console we have to pass a cron variable like below:-
+
+2. Using System Scheduler: 
+Go to setup and in quick search bar type schedule. Then click on schedule apex.
+Select schedule created and set the time with help of the Salesforce UI.
+
+
+(4.) Can we call a batch class from another batch class?
+Yes, we can call one batch class from another batch class but only if it is called from its finish method.
+
+
+(5.) Can we call a Future method from batch class?
+No, we cannot directly call a future method from a batch class.
+
+
+(6.) What is Database.Stateful used for in batch class?
+As batch class runs asynchronously, to maintain the state of a variable across each batch we implement Database.Stateful.
+
+
+(10.) How many can concurrent batch jobs be added to the queue?
+At most, there can be 5 batch jobs queued at a time.
+
+
+(11.) How can we track the status of the current running batch job?
+You can check the AsyncApexJob.Status using the JobId from the Database.BatchableContext.
+
+
+(12) What is database.getQuerylocator and what are its advantages?
+It is used to fetch records from the database, if used in batch class it can fetch up to 50 millions records. 
+
+
+(13) What is the need of batch apex?
+By using Batch apex classes we can process the bulk records in batches in asynchronously.
+
+
+(14) What is Database.Batchable interface?
+The class that implements this interface can be executed as a batch Apex job.
+
+
+
+(16.) What is the Database.QueryLocator?
+If we use a Database.QueryLocator, the governor limit for the total number of records retrieved by SOQL queries is bypassed. (Default 50,000 It allow up to 50 million records).
+
+A maximum of 50 million records can be returned in the Database.QueryLocator object. If more than 50 million records are returned, the batch job is immediately terminated and marked as Failed
+
+
+(17.) What is the iterable<Sobject>?
+Ans: If you use an iterable, the governor limit for the total number of records retrieved by SOQL queries is still enforced.
+
+
+(19.) how many times do start and execute methods execute when we run the batch apex?
+
+The start method excutes once, at the begining.
+For the execute method, it depends on you.
+
+You can launch it through an Apex command :  if the batch has to deal with 10 elements, the execute method will executes 10 times.
+
+(20.) .What is the scope of execute method?
+The maximum value for the optional scope parameter is 2,000
+
+
+(21.) Can we call callouts from batch apex?
+Yes we can call.
+
+
+(22.) How many callouts we can call in batch apex?
+Batch executions are limited to one callout per execution.
+
+
+(23.) Batch is synchronous or Asynchronous operations?
+Asynchronous operations.
+
+
+(24.) How many batch jobs can be added to queue?
+Up to five queued or active batch jobs are allowed for Apex.
+
+
+(25.) what is the min and max size of batch apex?
+Minimum Batch size - 1
+Maximum Batch size - 2000
+Default Batch size - 200
+
+
+(26.) What is Database.State full interface?
+Ans:To maintain variable value inside the Batch class, Database.Stateful is used.
+
+
+(27.) What is the Database.BatchableContext?
+Ans: BatchableContext Interface is Represents the parameter type of a batch job method and
+contains the batch job ID. This interface is implemented internally by Apex.
+
+Note: The start, execute, and finish methods can implement up to 10 callouts each
+
+7) The maximum number of batch executions is 250,000 per 24 hours
+
+(28.) Difference between Difference between Synchronous and Asynchronous?
+
+Synchronous:
+In a Synchronous call, the thread will wait until it completes its tasks before proceeding to next. In a Synchronous call, the code runs in single thread.
+
+Example:
+
+Trigger
+Controller Extension
+Custom Controller
+
+
+Asynchronous:
+
+In a Asynchronous call, the thread will not wait until it completes its tasks before proceeding to next. Instead it proceeds to next leaving it run in separate thread. In a Asynchronous call, the code runs in multiple threads which helps to do many tasks as background jobs.
+
+Example:
+
+Batch
+@future Annotation
+
+(29.) Can we call scheduler from future method?
+Yes
+
+
+(30.) Is there is any way through which we can call future method from batch apex?
+As we know that a webservice can be called from batch class and webservice can call @future method. So in your batch class call webservice and which can call your @future method.         
+Also you can call future method from finish method in batch class.
+
+(31.)  In an apex invocation how many methods that we can write as future annotations?
+
+10
+
+(32.)  Can we call @future method in Batch apex?
+@Future method can not be called from a batch class but a webservice can call the @Future method. So from your batch class, you can call an Apex webservice and that webservice can than call the @future method. So this is the work around to call the @future method from a Batch Apex.
+
+
+(33.) Can we call Future method inside Batch Class?
+Due to the salesforce limitation, we can't call a future method from inside a batch job. 
+
+
+(34.) Difference between batch and trigger
+
+Apex Trigger
+
+Triggers run each time a DML operation is called against a record
+A trigger is Apexcode that executes before or after some event 
+trigger not queued for run, which cause immediat action.
+
+Apex Batch
+Batch Apex runs across a (possibly large) set of data and performs some type of processing on it
+Batch Apex runs whenever it is specifically called (or scheduled to run).
+Batch queued to run, which may cause delays in starting.There's a limit of 5 batches in play at any time. 
+but when that queue is full (Max. limit 5 concurrent batches), the job fails instead of being rescheduled for later processing.
+
+(35.) What is Asynchronous Job?
+In an Asynchronous call, the thread will not wait until it completes its tasks before proceeding to next. Instead it proceeds to next leaving it runs in separate thread. In an Asynchronous call, the code runs in multiple threads which helps to do many tasks as background jobs Apex offers multiple ways for running your Apex code asynchronously. Choose the asynchronous Apex feature that best suits your needs. In an Asynchronous call, the code runs in multiple threads which help to do many tasks as background jobs. 
+
+Example:
+
+Types of Asynchronous Job
+
+Future Methods
+Batch Apex
+Queueable Apex
+Scheduled Apex
+
+(36.) Difference between with sharing and without sharing?
+      Ans- "with sharing" keyword in apex class so that it will enforce only sharing rules of current user but not, object permissions, field level permissions
+
+     But “without sharing” will not enforce only sharing rules of current user . does it mean it will enforce current user object and field level permissions.
+
+
+What is use of batch class in salesforce?
+
+Batch class in salesforce is used to run large jobs (think thousands or millions of records!) that would exceed normal processing limits. Using Batch Apex, you can process records asynchronously in batches (hence the name, “Batch Apex”) to stay within platform limits.
+
+Can we call batch class from future method?
+
+A future method runs in the background, asynchronously. You can call a future method for executing long-running operations, such as callouts to external Web services or any operation you'd like to run in its own thread, on its own time. Yes, we can't call future method from batch class.
+
+What is the default batch size in Salesforce?
+
+The default batch size is 200 and the maximum batch size is 2000.
+
+
+What is the maximum batch size in Salesforce?
+A batch can contain a maximum of 10,000 records. A batch can contain a maximum of 10,000,000 characters for all the data in a batch.
+
+
+
+

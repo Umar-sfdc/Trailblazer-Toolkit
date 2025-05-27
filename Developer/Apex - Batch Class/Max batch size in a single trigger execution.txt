@@ -1,0 +1,3 @@
+What is the maximum batch size in a single trigger execution
+
+Default batch size is 200 ,However maximum batch size is 2000. 

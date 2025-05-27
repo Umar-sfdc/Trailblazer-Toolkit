@@ -1,0 +1,14 @@
+Database.Query
+===============
+
+1. We can retrieve up to 50,000 records.
+2. If VF page does not have read only attribute you can use Database.query() 
+3. In batch apex, if we use database.query. It support 50,000 records.
+
+
+Database.QueryLocator
+=====================
+
+1. We can retrieve up to 10,000 records.
+2. If VF page have read only attribute you can use Database.getquerylocator() 
+3. In batch apex, if we use database.getquerylocator. It support 50 million records.

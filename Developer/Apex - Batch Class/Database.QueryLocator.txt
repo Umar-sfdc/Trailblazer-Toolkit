@@ -1,0 +1,8 @@
+What is database.QueryLocator?
+
+If we use database.queryLOcator the governor limit for the total number of records retrieved by SOQL queries is bypassed.
+
+It allow up to 50 million records.
+
+
+It is used to fetch the record from the database, If used in batch class it can fetch upto 50 million records. 

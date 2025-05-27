@@ -1,0 +1,16 @@
+By default Batch process is stateless. For each and every batch governor limit will be reset.
+
+i.e. it will not remember the information about the previous batch in the next batch.
+
+For each batch of record, the governor limit get reset to zero by default.
+
+To carry forward the result from the one batch to another batch, we have to make the batch process as "statefull" by implementing an interface called as "Database.Statefull".
+
+We can able to remember the previous batch operation result in the next batch.
+
+Syntax:
+=======
+Global class <ClassName> implements database.Bachable<SObject>.Database.Statefull
+{
+	//Write the code
+}  

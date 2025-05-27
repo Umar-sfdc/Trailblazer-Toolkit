@@ -1,0 +1,3 @@
+What is database.getQuerylocator and what are its advantages?
+
+It is used to fetch records from the database, if used in batch class it can fetch up to 50 millions records.

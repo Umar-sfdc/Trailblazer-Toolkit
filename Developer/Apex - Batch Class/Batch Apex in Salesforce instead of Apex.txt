@@ -1,0 +1,9 @@
+There are various reasons why Batch Apex is better than normal Apex.
+
+SOQL queries: Normal Apex uses 100 records per cycle to execute SOQL queries. Whereas, Batch Apex does the same in 200 records per cycle.
+
+Retrieval of SOQL queries: Normal Apex can retrieve 50,000 SOQL queries but, in Batch Apex, 50,000,000 SOQL queries can be retrieved.
+
+Heap size: Normal Apex has a heap size of 6 MB; whereas, Batch Apex has a heap size of 12 MB.
+
+Errors: When executing bulk records, Normal Apex classes are more vulnerable to encountering errors as compared to Batch Apex.

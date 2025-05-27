@@ -1,0 +1,25 @@
+Schedule the batch process
+==========================
+
+By using this approach, we can make the batch job will get run on the specified time based on the period interval's specified by the user.
+
+We need to create a seperate class, by implementing an interface called as "System.schedulable"
+
+Global class ScheduleMyBatchJOb implements system.Schedulable
+{
+
+}
+
+system.Schedulable interface contain a method calles as "execute", which will be invoked automatically upon the scheduling time.
+
+Global class ScheduleMyBatchJOb implements system.Schedulable
+{
+	Global void execute(System.schedulableContext Scon)
+	{
+		// Call the batch job
+	}
+
+}
+
+
+  

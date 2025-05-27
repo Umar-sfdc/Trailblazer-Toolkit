@@ -1,0 +1,3 @@
+What is Database.Stateful used for in batch class?
+
+As batch class runs asynchronously, to maintain the state of a variable across each batch we implement Database.Stateful.

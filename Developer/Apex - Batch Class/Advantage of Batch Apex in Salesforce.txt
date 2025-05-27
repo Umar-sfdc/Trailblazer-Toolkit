@@ -1,0 +1,17 @@
+Advantages of Batch Apex in Salesforce
+=======================================
+1. Whenever a transaction is executed, Batch Apex ensures that the code stays within the governor limit.
+
+2. Until a batch is not successfully executed, Batch Apex won’t execute the following batches.
+
+3. A large set of records can be processed together on a regular basis using Batch Apex classes.
+
+4. The interface can be scheduled to run batches at different time periods.
+
+5. Asynchronous operations can be implemented by Batch Apex classes.
+
+6. Batch jobs are invoked programmatically during the runtime and can be operated on any size of records, with a maximum of 200 records per batch. You can break down a larger record data into 200 records per batch to execute it better.
+
+7. Every transaction starts with a new set of governor limits.
+
+8. If one batch fails to process successfully, all other successful batch transactions aren’t rolled back.
