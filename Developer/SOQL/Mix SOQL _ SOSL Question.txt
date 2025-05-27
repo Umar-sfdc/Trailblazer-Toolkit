@@ -1,0 +1,44 @@
+(1.)  Which SOQL statement can be used to fetch all records even from recycle bin ?
+Answer: “ALL Rows”  clause of SOQL can retrieve all records, including the records from recycle bin.
+	SELECT COUNT() FROM Contact WHERE AccountId = a.Id ALL ROWS
+
+(2.) How can you lock a record using SOQL to prevent it from being modified by another user?
+Answer: We will need “FOR UPDATE” clause of SOQL.
+	Account [] accts = [SELECT Id FROM Account LIMIT 2 FOR UPDATE];
+
+(3.) How can you sort a select SOQl query ?
+Ans: by using "order by clause" in select query for sorting a list of records.
+
+(4.) How many records can a SOQL query return ?
+Ans : As of now it can return upto 50,000 records.
+
+(5.) How many records can a sosl query return ?
+Ans: as of now it can return upto 2000 records
+
+(6.) How to fire dynamic query in soql?
+Ans: By using database.query method.
+	Example: List accList = Database.query('select name from account');
+
+(7.) What is the return type of SOSL?
+Answer   Return type of SOSL is list of lists of sObjects “List<List<sObject>>”.
+
+(8.) What is the batch size in SOQL?
+Answer: The maximum batch size is 2,000 records.
+
+(9.) Can we perform DML operation on SOQL and SOSL.
+Ans : We can perform DML operations with SOQL but not with SOSL.
+
+(10.) What form of data the SOQL and SOSL returns?
+Ans: SOQL returns record while SOSL returns field.
+
+(11.) What are restrictions while writing query with SOSL?
+Ans: SOSL can query on Email, Phone and Text while SOQL can query with any field type.
+
+(12.) How to count the number of SOQL statement received in a request?
+Ans : This can be done using following methods
+
+Database.countQuery
+Database.getQueryLocator
+Database.query
+
+(13.) Total number of SOQL queries issued – 100 (Synchronous) 200 (Asynchronous)

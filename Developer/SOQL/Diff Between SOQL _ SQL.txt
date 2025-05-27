@@ -1,0 +1,14 @@
+SQL Is a Query Language to retrive data on Relational Database(Oracle,My SQL).
+SOQL is a  Query Language to retrive data from salesforce objects.
+
+SQL is used for getting data from one or more tables.
+SOQL is used for getting the data of a particular object and its related objects.
+
+SQL is standard ANSI  standard query language where as SOQL is specially optimized version of SQL specially designed for working with Salesforce.com underlying database.
+SOQL does not support very advance level SQL specific functions like using wild cards, join operations etc...
+
+SQL support join.
+SOQL support relationship query.
+
+SQL support DML statement
+SOQL support SELECT statement.

@@ -1,0 +1,24 @@
+SOQL:
+=====
+1. SOQL is stand for standard object query language.
+2. In SOQL we can search only one object at a time.
+3. SOQL return records.
+4. SOQL is used in trigger and classes.
+5. In SOQL we can perform DML operation on query result.
+6. SOQL query retrieve record from the database by using "Select" keyword.
+7. SOQL query per transaction is: 100 
+8. SOQL query total number of records retrieved is : 50,000
+
+
+SOSL:
+=====
+1. SOSL is stand for standard object standard language.
+2. In SOSL we can search only more then one object at a time.
+3. SOSL return fields.
+4. SOSL is used in classe not in trigger.
+5. In SOSL we can not perform DML operation on query result.
+6. SOSL query retrieve record from the database by using "find" keyword.
+7. SOSL query per transaction is: 20 
+8. SOSL query total number of records retrieved is : 2,000
+
+Return type of SOSL is list of lists of sObjects “List<List<sObject>>”.

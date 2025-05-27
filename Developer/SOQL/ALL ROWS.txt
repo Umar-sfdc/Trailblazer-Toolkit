@@ -1,0 +1,53 @@
+ALL ROWS in SOQL
+================
+
+All rows is used to retrieve the record from recyle bin.
+
+ALL ROW clause is an optional statement in SOQL query.
+
+Note:
+	ALL ROWS clause should be last statement in SOQL query.
+	
+Note:
+	For each object salesforce will maintain the common field called as "isDeleted".
+	Which is a checkbox field. Which hold either true or false values.
+ 	
+	isDeleted field indicate whether the record has been deleted from the object or not.
+
+ 	IsDeleted true --> Record has been removed from the object
+
+	IsDeleted false --> Record is not deleted from the object
+
+
+Syntax:
+========
+
+/*
+	Write an apex program, to fetch all contact record along with the deleted contact record also.
+*/
+
+
+Public class class1 
+{	
+	Public static void GetAllContactsAlongWithDeletedContacts()
+	{
+		Map<Id, Contact> mapContact = New Map<Id, Contact>([Select id, firstname, lastname, email, title, phone, fax from contact ALL ROWS]);
+		
+		System.debug('Contacts Collection size is :' + mapContact.size());
+		
+		if(! mapContact.isEmpty)
+		{
+			for(Contact con : mapContact.Values())
+			{
+				System.debug('Contact record is :' + con;
+			}
+		}
+	}
+}
+
+Execution
+=========
+
+// Invoke the static method
+
+Class1.GetAllContactsAlongWithDeletedContacts();

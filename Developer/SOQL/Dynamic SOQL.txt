@@ -1,0 +1,25 @@
+Dynamic SOQL Query
+==================
+
+Dynamic SOQL enable you to create more then flexible application.
+
+Dynamic SOQL Query will be execute manully with the help of "Database.Query()" method.
+
+We have to execue the Dynamic SOQL Query by using the "Database.Query()" method.
+
+Syntax:
+	List<ObjectName> object = Database.Query(<SOQL Query String>);
+Example:	
+	List<Account> lstAccount = Database.Query(selectAccount);
+	
+Note:
+
+Difference between dynamic SOQL query and static SOQL query
+===========================================================
+
+Static SOQL query has been placed inside the braces but Dynamic SOQL query has been placed inside a string variable.
+
+Static SOQL query, no need to execute it will be execute automatically but Dynamic SOQL query, has to be execute manually with the help of "Database.Query()" method
+
+Dynamic SOQL Query return type always be "List" collection.
+

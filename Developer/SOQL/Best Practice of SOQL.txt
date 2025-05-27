@@ -1,0 +1,7 @@
+1. Should not write the SOQL in for loop or any loop.
+
+2. Don't use any formula field in query
+
+3. Always do DML operation in bulk.
+
+4. If need write the query in for loop condition

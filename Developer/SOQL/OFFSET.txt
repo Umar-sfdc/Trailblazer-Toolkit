@@ -1,0 +1,5 @@
+OFFSET is a clause which is used in SOQL query.
+
+When using OFFSET only first batch of record are returned for a given query.
+
+If you want to retrieve next bacth you will need to re execute query with the higeset OFFSET value.

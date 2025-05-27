@@ -1,0 +1,37 @@
+SOQL
+=====
+A query language that allows you to construct simple but powerful query strings and to specify the criteria that should be used to select the data from the platform database. SOQL Stands for Slaesforce Object Query Language.
+
+
+Salesforce Object Query Language is used to query that records from the database.com based on the requirement.
+
+There are 2 types of SOQL Statements.
+
+1. Static SOQL
+2. Dynamic SOQL
+
+
+1.Static SOQL: 
+==============
+The Static SOQL Statement is written in []  (Array Brackets)
+This statements are similar to IINQ(Ion Integrated Query)
+Example: String search for =’Jones’;
+Contact[] contacts=[select testfield__c, FirstName, LastName from Contact Where Last Name=:search for];
+
+2. Dynamic SOQL: 
+================
+It is used to refer to the creation of a SOQL string at run time with Apex code.
+Dynamic SOQL enables you to create more flexible application.
+To create Dynamic SOQL query at run time use Database.Query() method, in one of the following ways.
+
+Return a single sObjects when the query returns a single record.
+sObjects s = Database. Query(String_limit_l);
+
+Return a list of sObjects when the query returns more than a single record.
+Examples:
+Eg1:
+String myTestString = ‘TestName’;
+List List= Database.Query(SELECT Id FROM MyCustomObject__c WHERE Name = :myTestString);
+Eg2:
+String resolviedfield L = myvariable.field__c;
+List L = Database.Query(‘SELECT Id FROM myCustomObject__c WHERE field__c = ‘+resolvedfield_L);
